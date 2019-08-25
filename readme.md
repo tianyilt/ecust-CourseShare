@@ -17,6 +17,14 @@
 2. 文字介绍：↓
 ### 1) 下载
 1. 直接下载zip TODO
+
+   链接：https://pan.baidu.com/s/1e78wue1uyM6p9-66kvi2cw 
+   提取码：neu5 
+
+   ![1566721497422](readme.assets/1566721497422.png)
+
+   ![1566721466825](readme.assets/1566721466825.png)
+
 2. clone到本地，然后享受实时同步 TODO
 ### 2) 贡献
 **欢迎贡献！**
