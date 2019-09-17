@@ -1,7 +1,7 @@
 
 
 # 华东理工大学课程攻略共享计划
-该文档仍在编辑中，以[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )为模板，TODO表示计划进一步撰写、细化的部分
+该文档几乎处处仍在编辑中，以[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )为模板，TODO表示计划进一步撰写、细化的部分
 
 ## 教材
 请到学校[课程网站](http://e-learning.ecust.edu.cn/Portal/CC#Index)查询教材
