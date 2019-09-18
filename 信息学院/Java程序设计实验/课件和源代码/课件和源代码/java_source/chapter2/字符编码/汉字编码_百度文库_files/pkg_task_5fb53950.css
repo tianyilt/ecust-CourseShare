@@ -1,0 +1,6 @@
+.accordion-item .accordion-control {
+	cursor: pointer;
+}
+.accordion-item .accordion-content {
+	overflow: hidden; _position: relative;
+}
