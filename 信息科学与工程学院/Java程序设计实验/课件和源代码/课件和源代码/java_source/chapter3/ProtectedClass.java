@@ -1,0 +1,5 @@
+ protected class   ProtectedClass
+{
+    
+	 
+}

@@ -1,1 +1,0 @@
-document.write('<li><a href="http://www.csdn.net/article/2013-05-19/2815345" target=_blank>[对话CTO]热酷网邱金柱：技术牛人是核心竞争力</a></li>');

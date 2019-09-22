@@ -1,1 +1,0 @@
-document.write('<li><a href="http://www.csdn.net/article/2013-05-20/2815348-wearable-technology-market" target=_blank>得益于苹果谷歌，未来可穿戴技术市场规模可达500亿美元</a></li><li><a href="http://www.csdn.net/article/2013-05-20/2815346-yahoo-tumblrs-for-cool-board" target=_blank>雅虎11亿美元押注Tumblr三大因素：用户、社交、内容</a></li>');

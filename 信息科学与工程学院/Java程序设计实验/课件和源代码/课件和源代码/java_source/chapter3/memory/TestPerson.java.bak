@@ -1,0 +1,10 @@
+public class  TestPerson 
+{	 
+	public static void main(String[] args) 
+	{  
+		 Person tom=new Person(1,"tom","ÄÐ" );
+		 Person rose=new Person(2,"rose","Å®" );
+		 tom.speak();
+		 rose.speak();	
+	}
+}

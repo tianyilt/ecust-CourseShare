@@ -1,1 +1,0 @@
-document.write("<a class=\"\" href=\"http://www.szaptech.com.cn/benet.asp\"  target=\"_blank\"><font color=\"#ff0000\">Windows高级工程师的培训地<\/font><\/a><br> <a class=\"\" href=\"http://www.51tarena.com/?it1\" target=\"_blank\">java培训到达内，行业领先品牌<\/a>");
