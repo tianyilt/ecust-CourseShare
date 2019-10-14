@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: OpenGL对话框 - Win32 Pseudo-Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\yugert\AppData\Local\Temp\RSPA452.tmp" with contents
+[
+/nologo /MD /W3 /Gm /GX /Zi /Od /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_PSEUDO_DEBUG" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /Fp"Debug/OpenGL对话框.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Users\yugert\Desktop\图形学\实验报告\第一次\opengl初始化\openGL初始库\OPENGL对话框\Debug.cpp"
+"C:\Users\yugert\Desktop\图形学\实验报告\第一次\opengl初始化\openGL初始库\OPENGL对话框\OpenGL对话框.cpp"
+"C:\Users\yugert\Desktop\图形学\实验报告\第一次\opengl初始化\openGL初始库\OPENGL对话框\OpenGL对话框Aw.cpp"
+]
+Creating command line "cl.exe @C:\Users\yugert\AppData\Local\Temp\RSPA452.tmp" 
+Creating temporary file "C:\Users\yugert\AppData\Local\Temp\RSPA453.tmp" with contents
+[
+/nologo /MD /W3 /Gm /GX /Zi /Od /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_PSEUDO_DEBUG" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /Fp"Debug/OpenGL对话框.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Users\yugert\Desktop\图形学\实验报告\第一次\opengl初始化\openGL初始库\OPENGL对话框\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\yugert\AppData\Local\Temp\RSPA453.tmp" 
+Creating temporary file "C:\Users\yugert\AppData\Local\Temp\RSPA454.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/OpenGL对话框.pdb" /debug /machine:I386 /out:"Debug/OpenGL对话框.awx" /implib:"Debug/OpenGL对话框.lib" 
+".\Debug\Debug.obj"
+".\Debug\OpenGL对话框.obj"
+".\Debug\OpenGL对话框Aw.obj"
+".\Debug\StdAfx.obj"
+".\Debug\OpenGL对话框.res"
+]
+Creating command line "link.exe @C:\Users\yugert\AppData\Local\Temp\RSPA454.tmp"
+Creating temporary file "C:\Users\yugert\AppData\Local\Temp\RSPA465.bat" with contents
+[
+@echo off
+if not exist "D:\program files\Microsoft Visual Studio\Common\MSDev98\Template\nul" md "D:\program files\Microsoft Visual Studio\Common\MSDev98\Template"
+copy ".\Debug\OpenGL对话框.awx" "D:\program files\Microsoft Visual Studio\Common\MSDev98\Template"
+if exist ".\Debug\OpenGL对话框.pdb" copy ".\Debug\OpenGL对话框.pdb" "D:\program files\Microsoft Visual Studio\Common\MSDev98\Template"
+]
+Creating command line "C:\Users\yugert\AppData\Local\Temp\RSPA465.bat"
+Compiling...
+StdAfx.cpp
+Compiling...
+Debug.cpp
+OpenGL对话框.cpp
+OpenGL对话框Aw.cpp
+Generating Code...
+Linking...
+<h3>Output Window</h3>
+Copying custom AppWizard to Template directory...
+子目录或文件 D:\program files\Microsoft Visual Studio\Common\MSDev98\Template 已经存在。
+已复制         1 个文件。
+已复制         1 个文件。
+
+
+
+<h3>Results</h3>
+OpenGL对话框.awx - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,63 @@
+.remind_content {
+	height: 156px; padding-top: 19px;
+}
+.remind_content .remindtitle {
+	font-size: 14px;
+}
+.remind_content .progressbar {
+	width: 236px; height: 12px; margin-top: 30px; margin-left: 12px; position: relative; background-color: rgb(229, 229, 229);
+}
+.remind_content .progressbar span {
+	background: url("http://static.wenku.bdimg.com/static/view/ui/course_remind/images/bg-progress-bar_2fba3d3d.png") no-repeat; width: 12px; height: 12px; font-size: 0px; float: left; display: block; position: absolute;
+}
+.remind_content .progressbar .tips {
+	background: url("http://static.wenku.bdimg.com/static/view/ui/course_remind/images/bg-progress-tips_53d550f0.png") no-repeat; left: 140px; top: -23px; width: 56px; height: 22px; text-align: center; color: rgb(255, 255, 255); padding-top: 1px; position: absolute;
+}
+.remind_content .progressbar .progress_start_null {
+	left: -10px;
+}
+.remind_content .progressbar .progress_start_target {
+	background-position: left -31px; left: -10px;
+}
+.remind_content .progressbar .progress_start {
+	background-position: left -15px; left: -10px;
+}
+.remind_content .progressbar .progress_body {
+	background: rgb(86, 162, 132); left: 0px; width: 40px; z-index: 89;
+}
+.remind_content .progressbar .progress_target {
+	background: rgb(179, 208, 196); left: 0px; width: 140px; z-index: 80;
+}
+.remind_content .progressbar .progress_end {
+	background-position: right -44px; right: -10px;
+}
+.remind_content .progressbar .progress_end_full {
+	background-position: right -59px; right: -8px;
+}
+.remind_content .continue {
+	height: 34px; margin-top: 20px;
+}
+.remind_content .continue a {
+	float: left;
+}
+.remind_content .continue .ignore {
+	color: rgb(153, 153, 153); line-height: 34px; font-size: 12px; margin-left: 97px; display: inline-block;
+}
+.remind_content .continue .continue-btn {
+	background: url("http://static.wenku.bdimg.com/static/view/ui/course_remind/images/bg-continue-btn_08bc9c6c.png") no-repeat; width: 90px; height: 34px; text-indent: -9999px; margin-left: 20px; display: inline-block;
+}
+.remind_content .famous {
+	width: 278px; color: rgb(102, 102, 102); line-height: 30px; padding-left: 20px; margin-top: 20px; margin-left: -20px; border-top-color: rgb(236, 236, 236); border-top-width: 1px; border-top-style: solid; display: inline-block; _margin-bottom: -10px; _width: 258px;
+}
+.rbc-pop .inner .hd {
+	height: 28px;
+}
+.rbc-pop .close-pop {
+	margin-top: 0px; margin-right: -11px;
+}
+.rbc-pop .hd h3 {
+	margin-top: 3px;
+}
+.rbc-pop .inner {
+	border-right-color: rgb(47, 128, 93); border-left-color: rgb(47, 128, 93); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
+}

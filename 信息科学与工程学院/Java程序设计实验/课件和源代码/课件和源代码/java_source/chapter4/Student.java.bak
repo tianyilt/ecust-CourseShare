@@ -1,0 +1,78 @@
+class Person{
+	public String name;//姓名
+	public String Id; //身份证 
+	private int   age;  //年龄 ：私有属性
+
+	public Person(){	}
+	public Person(String name,String Id, int age){	
+	    this.name=name; this.Id=Id;  this.age=age;
+	}
+    
+	public void setName(String name){ this.name=name;}
+	public String getName(){return name;}
+
+	public void setId(String Id){ this.Id=Id;}
+	public String getId(){return Id;}
+
+	public void setAge(int age){ this.age=age;}
+	public int getAge(){return age;} 
+
+	public String toString(){return "Person类";}
+}
+
+public class  Student  extends Person{
+	public String no;//学号
+	public String school; //学校 
+    
+	public Student(){	}
+	public Student(String name,String Id, int age,
+		String no,String school ){	
+	    this.name=name; this.Id=Id;  setAge(age);
+		this.no=no;this.school=school; 
+	}
+
+	public void setNo(String no){ this.no=no;}
+	public String getNo(){return no;}
+
+	public void setSchool(String school){ this.school=school;}
+	public String getSchool(){return school;}
+
+    //overriding
+    public String toString(){return "Student类";}
+
+	public static void main(String[] args) 	{
+		int  age=0;
+		String  name=null; 
+
+		Student rose=new Student();
+		//tom.setNo("0001");  //编译报错
+         
+		 rose.setName("rose");
+		 rose.setId("3300");
+		 rose.setAge(20);
+		 rose.setNo("2006");
+		 rose.setSchool("Ecust");
+
+		  age=rose.getAge();
+		  name=rose.getName();
+		System.out.println( age);
+		System.out.println( name);
+		System.out.println(rose.toString());
+
+
+        System.out.println("----------------------------");
+		Person tom=new Student();
+		//tom.setNo("0001");  //编译报错
+         
+		 tom.setName("Tom");
+		 tom.setId("3301");
+		 tom.setAge(19);
+
+		age=tom.getAge();
+		name=tom.getName();
+		System.out.println( age);
+		System.out.println( name);
+		System.out.println(tom.toString());
+
+	}
+}

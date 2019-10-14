@@ -1,0 +1,15 @@
+#wk-2d-bar-code {
+	display: none;
+}
+#wk-2d-bar-code a {
+	padding: 5px; border: 1px solid rgb(237, 237, 237); width: 100px; text-align: center; color: rgb(101, 101, 101); line-height: 16px; display: block; background-color: rgb(251, 251, 251);
+}
+#wk-2d-bar-code a:hover {
+	border: 1px solid rgb(217, 231, 225); text-decoration: none; background-color: rgb(235, 243, 239);
+}
+#wk-2d-bar-code img {
+	margin: 5px 0px; width: 90px; height: 90px;
+}
+#wk-2d-bar-code .close-btn {
+	background: url("http://static.wenku.bdimg.com/static/widget/common/2d_bar_code/images/bg_2d_close_9fb96f58.png") no-repeat right top; height: 10px; text-align: right; margin-right: 2px; display: block; cursor: pointer;
+}

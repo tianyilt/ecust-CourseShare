@@ -1,0 +1,29 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: OpenGL单文档 - Win32 Pseudo-Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ZHAO\LOCALS~1\Temp\RSP29.bat" with contents
+[
+@echo off
+if not exist "C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Template\nul" md "C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Template"
+copy ".\Debug\OpenGL单文档.awx" "C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Template"
+if exist ".\Debug\OpenGL单文档.pdb" copy ".\Debug\OpenGL单文档.pdb" "C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Template"
+]
+Creating command line "C:\DOCUME~1\ZHAO\LOCALS~1\Temp\RSP29.bat"
+<h3>Output Window</h3>
+Copying custom AppWizard to Template directory...
+子目录或文件 C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Template 已经存在。
+已复制         1 个文件。
+已复制         1 个文件。
+
+
+
+<h3>Results</h3>
+OpenGL单文档.awx - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
