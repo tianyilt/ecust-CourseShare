@@ -8,7 +8,7 @@ def AutoMkdir(path,name):
         os.mkdir(dir_path)
     return dir_path
 
-main_path = "../物理系/"
+main_path = "../数学系/专业选修/"
 class_list = sorted(os.listdir(main_path))
 for class_name in class_list:
     class_path=os.path.join(main_path,class_name)

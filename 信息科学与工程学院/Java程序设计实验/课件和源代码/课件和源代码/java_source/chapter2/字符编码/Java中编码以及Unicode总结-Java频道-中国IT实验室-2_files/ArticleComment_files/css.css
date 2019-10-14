@@ -1,0 +1,93 @@
+BODY {
+	TEXT-ALIGN: center; MARGIN: 2px 0px 0px; WIDTH: 100%; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; HEIGHT: 100%; FONT-SIZE: 12px; VERTICAL-ALIGN: bottom
+}
+#quote {
+	BACKGROUND-IMAGE: url(mo01.gif); WIDTH: 768px; BACKGROUND-POSITION: center bottom; HEIGHT: 35px
+}
+#quo {
+	BACKGROUND-IMAGE: url(mo03.gif); TEXT-ALIGN: left; TEXT-INDENT: 20pt; WIDTH: 768px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 38px; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+#da {
+	BACKGROUND-COLOR: #ffffff; WIDTH: 960px
+}
+#dagg {
+	BACKGROUND-IMAGE: url(images/index2.gif); WIDTH: 960px; HEIGHT: 71px
+}
+#tiao {
+	BACKGROUND-IMAGE: url(images/z001.gif); WIDTH: 960px; HEIGHT: 31px
+}
+#tiao2 {
+	BACKGROUND-COLOR: #636363; TEXT-INDENT: 10pt; WIDTH: 960px; BACKGROUND-POSITION: center 50%; HEIGHT: 23px; FONT-SIZE: 12px
+}
+#tiao3 {
+	BACKGROUND-IMAGE: url(images/z011.gif); WIDTH: 960px; HEIGHT: 100%
+}
+#bian1 {
+	TEXT-ALIGN: center; WIDTH: 729px; BACKGROUND-POSITION: center 50%; FLOAT: left; HEIGHT: 100%
+}
+#bian2 {
+	WIDTH: 230px; FLOAT: right; HEIGHT: 23px; RIGHT: 0px
+}
+#zuo {
+	BACKGROUND-COLOR: #f4f4f4; WIDTH: 227px; BACKGROUND-POSITION: left 50%; FLOAT: left; HEIGHT: 100%
+}
+#biao {
+	TEXT-ALIGN: center; WIDTH: 710px; PADDING-TOP: 30px
+}
+#wenzhang {
+	TEXT-ALIGN: left; WIDTH: 710px
+}
+#biao2 {
+	BACKGROUND-IMAGE: url(images/z004.gif); TEXT-ALIGN: left; TEXT-INDENT: 32pt; WIDTH: 230px; HEIGHT: 23px
+}
+#biao3 {
+	BACKGROUND-IMAGE: url(images/z012.gif); TEXT-ALIGN: left; TEXT-INDENT: 32pt; WIDTH: 230px; HEIGHT: 23px
+}
+#wz {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 3px; LINE-HEIGHT: 19px; PADDING-LEFT: 3px; WIDTH: 230px; PADDING-RIGHT: 3px; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; PADDING-TOP: 3px
+}
+#you {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #ffffff; WIDTH: 540px; FLOAT: right; PADDING-TOP: 20px
+}
+#peixun {
+	BORDER-BOTTOM: #7cc255 1px solid; BORDER-LEFT: #7cc255 1px solid; PADDING-BOTTOM: 1px; BACKGROUND-COLOR: #f6fbef; PADDING-LEFT: 1px; WIDTH: 675px; PADDING-RIGHT: 1px; BORDER-TOP: #7cc255 1px solid; BORDER-RIGHT: #7cc255 1px solid; PADDING-TOP: 1px
+}
+#peixun1 {
+	BACKGROUND-IMAGE: url(images/z013.gif); PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; WIDTH: 100%; PADDING-RIGHT: 1px; HEIGHT: 25px; PADDING-TOP: 1px
+}
+#logo1 {
+	BACKGROUND-IMAGE: url(001.jpg); TEXT-ALIGN: left; WIDTH: 313px; BACKGROUND-POSITION: left 50%; FLOAT: left; HEIGHT: 144px
+}
+#logo2 {
+	BACKGROUND-IMAGE: url(002.jpg); WIDTH: 455px; BACKGROUND-POSITION: right 50%; FLOAT: right; HEIGHT: 144px
+}
+.zhi {
+	TEXT-ALIGN: left; TEXT-INDENT: 30pt; HEIGHT: 26px; COLOR: #ffffff; FONT-SIZE: 12px; VERTICAL-ALIGN: bottom; FONT-WEIGHT: bold; PADDING-TOP: 8px
+}
+.zhi25 {
+	TEXT-ALIGN: center; COLOR: #ffffff; FONT-SIZE: 22px; FONT-WEIGHT: bold; PADDING-TOP: 8px
+}
+.zhi12 {
+	TEXT-ALIGN: left; LINE-HEIGHT: 18px; COLOR: #000000; FONT-SIZE: 12px
+}
+.zhi14 {
+	LINE-HEIGHT: 20px; FONT-FAMILY: "宋体"; FONT-SIZE: 14px
+}
+A:link {
+	FONT-FAMILY: "宋体"; COLOR: #000000; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-FAMILY: "宋体"; COLOR: #000000; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:active {
+	FONT-FAMILY: "宋体"; COLOR: #ff6600; FONT-SIZE: 9pt; TEXT-DECORATION: underline
+}
+A:hover {
+	FONT-FAMILY: "宋体"; COLOR: #ff6600; FONT-SIZE: 9pt; TEXT-DECORATION: underline
+}
+.lanyu {
+	BORDER-BOTTOM: #808080 1px solid; BORDER-LEFT: #808080 1px solid; DISPLAY: inline; HEIGHT: 17px; FONT-SIZE: 12px; BORDER-TOP: #808080 1px solid; BORDER-RIGHT: #808080 1px solid
+}
+.zhi13 {
+	FONT-FAMILY: "宋体"; COLOR: #ffffff; FONT-SIZE: 13px; FONT-WEIGHT: bold; PADDING-TOP: 5px
+}

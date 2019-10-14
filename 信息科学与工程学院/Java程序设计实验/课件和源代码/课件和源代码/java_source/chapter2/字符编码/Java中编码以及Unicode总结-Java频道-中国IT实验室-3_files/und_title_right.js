@@ -1,0 +1,1 @@
+document.write("<a href='http://www.ccxx.com/new_ccie.htm' target=_blank style='padding-left:4px'><font color=#ff0000>【安博亚威】CCIE考试通过率第一！</font></a><br>")
