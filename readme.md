@@ -16,9 +16,9 @@
     - [x] 百度网盘
     - [x] 硬盘直拷
 - [x] 解决单独部分文件下载的问题
-    - [ ] 在网页上用[downgit](http://zhoudaxiaa.gitee.io/downgit/#/home)下载
-    - [ ] 百度网盘
-    - [ ] 用软件TortoiseSVN下载
+    - [x] 在网页上用[downgit](http://zhoudaxiaa.gitee.io/downgit/#/home)下载
+    - [x] 百度网盘
+    - [x] 用软件TortoiseSVN下载
 - [ ] 制作项目文档，形成作品网站,参考[中科大的项目](https://ustc-resource.github.io/USTC-Course/)
 - [ ] 邀请志同道合者
 - [ ] 形成项目传承长效机制，每一位来到学校的同学都能享受历年传承的攻略并可以贡献自己的智慧。
