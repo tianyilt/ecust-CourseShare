@@ -84,6 +84,7 @@ as
 select Sl40,sum(Sl1)
 from Dhshow
 group by Sl40
+
 select Zjm.Jmbm '电信局编码',SUM(D.sum1) '电话局的长话费总额'
 from D,Zjm
 where D.sd=Zjm.Zjmbm
