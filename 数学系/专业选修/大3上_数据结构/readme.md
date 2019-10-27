@@ -17,3 +17,9 @@
 7. [Dev-cpp（通用编辑器）：](https://yunpan.ecust.edu.cn/p/DdIPnxMQitkDGOID)注意：第一次运行的时候要进行语言环境配置，本软件适合所有windows系统，不懂大家可以百度查询使用方法。
 
 8. [苹果操作系统（Mac OS X）自带的C语言编译工具及使用方法--XCode](http://www.2cto.com/kf/201310/249049.html)
+
+
+
+课堂小测验Warning:
+
+- 测试题在每章课程PPT最后一页,请提前做好准备.
