@@ -24,6 +24,12 @@
 
 8. 苹果系统的同学 可以下载Navicat for SQL Server for Mac版 （需要破解版）
 
+# 编程规范
+
+[如何在Microsoft sql server Management Studio中查询代码自动格式化](https://jingyan.baidu.com/article/9c69d48f99a91b13c9024ebf.html)
+
+
+
 # 考试提醒
 
 基本概念,就是回家作业那些背的
