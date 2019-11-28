@@ -1,6 +1,9 @@
 
 
 # 华东理工大学课程攻略共享计划
+
+![1574474713395](readme.assets/1574474713395.png)
+
 该文档几乎处处仍在编辑中，以[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )为模板
 
 
@@ -21,9 +24,8 @@
 
  网盘链接如下:
 
-   链接：https://pan.baidu.com/s/1e78wue1uyM6p9-66kvi2cw 
-
-   提取码：neu5 
+链接：https://pan.baidu.com/s/1vfkhGXe6BeQebj0Ct-7DVw 
+提取码：2q1y
 
 
 
