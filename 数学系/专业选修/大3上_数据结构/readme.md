@@ -1,3 +1,5 @@
+# [教学网站](http://thechoose.com.cn/ecust_main/)
+
 1. 本课程教材：严蔚敏，数据结构（C语言版），清华大学出版社，不必买新书，到二手书店淘即可。
 
 2. [课堂程序源代码](http://pan.baidu.com/share/link?shareid=1948092412&uk=2902882121)
