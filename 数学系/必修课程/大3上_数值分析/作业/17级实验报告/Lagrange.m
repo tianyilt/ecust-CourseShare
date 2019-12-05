@@ -19,7 +19,7 @@ else
     simplify(p);
     sprintf('长成这幅鬼样子: ')
     p=collect(p);
-    p=vpa(p,6),
+    p=vpa(p,6)
     
 end
 end
