@@ -1,0 +1,4 @@
+MRS：marginal rate  of substitution 边际替代率
+U: utility 效用
+TU： total utility 总效用
+MU：Marginal utility 边际效用
