@@ -29,3 +29,4 @@ SAC: short-run average cost  短期平均成本
 LMC: long-run marginal cost 长期边际成本
 LAC: long-run average cost 长期平均成本
 AR：average revenue 平均收益
+π：总收益
