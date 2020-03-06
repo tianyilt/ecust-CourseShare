@@ -373,7 +373,7 @@ Lie algebra	李代数
 lifting	提升
 likelihood	似然的
 limit	极限
-linear combination  线性组合
+linear combination	线性组合
 linear filter	线性滤波
 linear fraction transformation	线性分式变换
 linear functional	线性泛函
