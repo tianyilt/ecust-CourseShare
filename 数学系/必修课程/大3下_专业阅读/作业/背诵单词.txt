@@ -115,7 +115,7 @@ conformal	共形的
 conic	圆锥的
 conjugate	共轨的
 connected	连通的
-connected domain 连通域	
+connected domain 连通域
 consistence	相容，一致
 constrained	约束的
 continuable	可延拓的
@@ -175,7 +175,7 @@ dichotomy	二分法
 diffeomorphism	微分同胚
 differentiable	可微的
 differential	微分
-differential geometry微分几何	
+differential geometry	微分几何
 difference	差，差分
 digit	数字
 dimension	维数
@@ -190,7 +190,7 @@ disconnected	不连通的
 discontinuous	不连续
 discrete	离散的
 discriminant	判别式
-disjoint不相交	
+disjoint	不相交
 disorder	混乱，无序
 dissection	剖分
 dissipation	损耗
@@ -359,7 +359,7 @@ kernel	核
 keyword	关键词
 knot	纽结
 known	已知的
-1arge sample	大样本
+large sample	大样本
 last term	末项
 lateral area	侧面积
 lattice	格子
@@ -368,16 +368,16 @@ law of identity	同一律
 leading coefficient	首项系数
 leaf	蔓叶线
 least squares solution	最小二乘解
-1emma	引理
+lemma	引理
 Lie algebra	李代数
 lifting	提升
 likelihood	似然的
-limit极限	
-linear combination线性组合	
-linear filter线性滤波	
-linear fraction transformation	线性分式变换	
-linear functional	线性泛函	
-linear operator	线性算子	
+limit	极限
+linear combination  线性组合
+linear filter	线性滤波
+linear fraction transformation	线性分式变换
+linear functional	线性泛函
+linear operator	线性算子
 linearly dependent	线性相关
 linearly independent	线性无关
 local coordinates	局部坐标
@@ -398,7 +398,7 @@ marginal	边缘
 master equation	主方程
 mathematical analysis	数学分析
 mathematical expectation	数学期望
-matrix(pl. matrices)	矩阵	
+matrix(pl. matrices)	矩阵
 maximal	极大的，最大的
 maximum norm	最大模
 mean	平均，中数
