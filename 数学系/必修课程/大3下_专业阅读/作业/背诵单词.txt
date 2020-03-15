@@ -1,4 +1,4 @@
-Abelian	阿贝尔的,交换的
+Abelian	阿贝尔的，交换的
 absolute convergent	绝对收敛
 absolute intergrable	绝对可积
 absolute value	绝对值
@@ -115,7 +115,7 @@ conformal	共形的
 conic	圆锥的
 conjugate	共轨的
 connected	连通的
-connected domain 连通域
+connected domain	连通域
 consistence	相容，一致
 constrained	约束的
 continuable	可延拓的
