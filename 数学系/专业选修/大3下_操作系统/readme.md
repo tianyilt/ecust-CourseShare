@@ -11,35 +11,35 @@ from[教学网站](http://thechoose.com.cn/ecust_main/class/shownews.php?lang=cn
    3. [高清教材-在线阅读（目前开放前五章，需要注册）](https://lib-nuanxin.wqxuetang.com/read/pdf/3204974)
 3. 教学课件：请点击左边栏
 4. [教学大纲](http://thechoose.com.cn/ecust_main/class/shownews.php?lang=cn&id=91)
-5. [实验报告](http://thechoose.com.cn/ecust_main/class/shownews.php?lang=cn&id=55)需要提交电子版
+5. [实验报告](http://thechoose.com.cn/ecust_main/class/shownews.php?lang=cn&id=59)需要提交电子版
 6. 教学具体安排：
    1. 理论课（1-17 周周四 7-8节）
       - 15:25-16:35  签到+自主学习ppt+参考视频；
       - 16:35-17:05  课程答疑、互动、不定期雨课堂测试；
       - 如有课后作业，需要大家要在本章结束之后、下一章开始学习之前提交
    2. 实验课（2-17 周周四 11-12 节 19:40-21:00）
-      - 布置实验报告，强调实验要求；
-      - 随时 QQ 群答疑大家实验过程中遇到的问题；
+      - 19:40-20:40 自主完成实验报告
+      - 20:40-21:00 答疑、互动。
    3. 待定
 
 1.   本课程教学计划进度表（2020 年 3 月 2 日为第一周开始）：
 
 2. | 周   | 教学内容                                                     | 课后作业   | 实验报告   | 视频    | 备注 |
    | ---- | ------------------------------------------------------------ | ---------- | ---------- | ------- | ---- |
-   | 1    | **[第0章 计算机系统概述](http://pan.baidu.com/s/1sjZsWrj)**  |            |            | p1-p2   |      |
-   | 2    | **[第1章 操作系统引论 ](http://pan.baidu.com/s/1qXiOxu0)**   | 第一章作业 | 实验报告 1 | p3-p4   |      |
-   | 3    | **[第2章 进程与线程 ](http://pan.baidu.com/s/1hrq6jYW)**     |            |            | p5-p6   |      |
-   | 4    | **[第2章 进程与线程 ](http://pan.baidu.com/s/1hrq6jYW)**     | 第二章作业 | 实验报告 2 | p7-p8   |      |
-   | 5    | **[第3章 进程同步与通信](http://pan.baidu.com/s1/1pKcKKqv)** |            |            | p9-p10  |      |
-   | 6    | **[第3章 进程同步与通信](http://pan.baidu.com/s1/1pKcKKqv)** | 第三章作业 | 实验报告 3 | p11-p12 |      |
-   | 7    | **[第4章 调度与死锁](http://pan.baidu.com/s1/1pKzf2uZ)**     |            |            | p13-p14 |      |
-   | 8    | **[第4章 调度与死锁](http://pan.baidu.com/s1/1pKzf2uZ)**     | 第四章作业 | 实验报告 4 | p15-p16 |      |
-   | 9    | **[第5章 存储管理](http://pan.baidu.com/s1/1i3WRuZj)**       |            |            | p17-p18 |      |
-   | 10   | **[第5章 存储管理](http://pan.baidu.com/s1/1i3WRuZj)**       | 第五章作业 | 实验报告 5 | p19-p20 |      |
-   | 11   | **[第6章 虚拟存储管理](http://pan.baidu.com/s1/1bnKSqRX)**   |            |            | p21-p22 |      |
-   | 12   | **[第6章 虚拟存储管理](http://pan.baidu.com/s1/1bnKSqRX)**   | 第六章作业 | 实验报告 6 | p23-p24 |      |
-   | 13   | **[第7章 设备管理](http://pan.baidu.com/s1/1c1bLknm)**       |            |            | p25-p26 |      |
-   | 14   | **[第7章 设备管理](http://pan.baidu.com/s1/1c1bLknm)**       | 第七章     | 实验报告 7 | p27-p30 |      |
+   | 1    | **[第0章 计算机系统概述](http://pan.baidu.com/s/1sjZsWrj)**  |            |            | p1      |      |
+   | 2    | **[第1章 操作系统引论 ](http://pan.baidu.com/s/1qXiOxu0)**   | 第一章作业 | 实验报告 1 | p2-p3   |      |
+   | 3    | **[第2章 进程与线程 ](http://pan.baidu.com/s/1hrq6jYW)**     |            |            | p4-p5   |      |
+   | 4    | **[第2章 进程与线程 ](http://pan.baidu.com/s/1hrq6jYW)**     | 第二章作业 | 实验报告 2 | p6-p7   |      |
+   | 5    | **[第3章 进程同步与通信](http://pan.baidu.com/s1/1pKcKKqv)** |            |            | p8-p9   |      |
+   | 6    | **[第3章 进程同步与通信](http://pan.baidu.com/s1/1pKcKKqv)** | 第三章作业 | 实验报告 3 | p10-p12 |      |
+   | 7    | **[第4章 调度与死锁](http://pan.baidu.com/s1/1pKzf2uZ)**     |            |            | p13     |      |
+   | 8    | **[第4章 调度与死锁](http://pan.baidu.com/s1/1pKzf2uZ)**     | 第四章作业 | 实验报告 4 | p14     |      |
+   | 9    | **[第5章 存储管理](http://pan.baidu.com/s1/1i3WRuZj)**       |            |            | p15-p16 |      |
+   | 10   | **[第5章 存储管理](http://pan.baidu.com/s1/1i3WRuZj)**       | 第五章作业 | 实验报告 5 | p17     |      |
+   | 11   | **[第6章 虚拟存储管理](http://pan.baidu.com/s1/1bnKSqRX)**   |            |            | p18-p19 |      |
+   | 12   | **[第6章 虚拟存储管理](http://pan.baidu.com/s1/1bnKSqRX)**   | 第六章作业 | 实验报告 6 | p20-p21 |      |
+   | 13   | **[第7章 设备管理](http://pan.baidu.com/s1/1c1bLknm)**       |            |            | p28-p29 |      |
+   | 14   | **[第7章 设备管理](http://pan.baidu.com/s1/1c1bLknm)**       | 第七章     | 实验报告 7 | p30     |      |
    | 15   | 复习                                                         |            |            |         |      |
    | 16   | 复习                                                         |            |            |         |      |
    | 17   |                                                              |            |            |         |      |
@@ -47,40 +47,47 @@ from[教学网站](http://thechoose.com.cn/ecust_main/class/shownews.php?lang=cn
 
  
 
-参考视频（操作系统（哈工大李治军老师）32讲）
+参考视频（浙江大学 ）  
 
-- [P1L1 什么是操作系统](https://www.bilibili.com/video/av51437944?p=1)
-- [P2L2 开始揭开钢琴的盖子](https://www.bilibili.com/video/av51437944?p=2)
-- [P3L3 操作系统启动](https://www.bilibili.com/video/av51437944?p=3)
-- [P4L4 操作系统接口](https://www.bilibili.com/video/av51437944?p=4)
-- [P5L5 系统调用的实现](https://www.bilibili.com/video/av51437944?p=5)
-- [P6L6 操作系统历史](https://www.bilibili.com/video/av51437944?p=6)
-- [P7L7 我们的学习任务](https://www.bilibili.com/video/av51437944?p=7)
-- [P8L8 CPU管理的直观想法](https://www.bilibili.com/video/av51437944?p=8)
-- [P9L9 多进程图像](https://www.bilibili.com/video/av51437944?p=9)
-- [P10L10 用户级线程](https://www.bilibili.com/video/av51437944?p=10)
-- [P11L11 内核级线程](https://www.bilibili.com/video/av51437944?p=11)
-- [P12L12 内核级线程实现](https://www.bilibili.com/video/av51437944?p=12)
-- [P13L13 操作系统之“树”](https://www.bilibili.com/video/av51437944?p=13)
-- [P14L14 CPU调度策略](https://www.bilibili.com/video/av51437944?p=14)
-- [P15L15 一个实际的schedule函数](https://www.bilibili.com/video/av51437944?p=15)
-- [P16L16 进程同步与信号量](https://www.bilibili.com/video/av51437944?p=16)
-- [P17L17 信号量临界区保护](https://www.bilibili.com/video/av51437944?p=17)
-- [P18L18 信号量的代码实现](https://www.bilibili.com/video/av51437944?p=18)
-- [P19L19 死锁处理](https://www.bilibili.com/video/av51437944?p=19)
-- [P20L20 内存使用与分段](https://www.bilibili.com/video/av51437944?p=20)
-- [P21L21 内存分区与分页](https://www.bilibili.com/video/av51437944?p=21)
-- [P22L22 多级页表与快表](https://www.bilibili.com/video/av51437944?p=22)
-- [P23L23 段页结合的实际内存管理](https://www.bilibili.com/video/av51437944?p=23)
-- [P24L24 内存换入-请求调页](https://www.bilibili.com/video/av51437944?p=24)
-- [P25L25 内存换出](https://www.bilibili.com/video/av51437944?p=25)
-- [P26L26 IO与显示器](https://www.bilibili.com/video/av51437944?p=26)
-- [P27L27 键盘](https://www.bilibili.com/video/av51437944?p=27)
-- [P28L28 生磁盘的使用](https://www.bilibili.com/video/av51437944?p=28)
-- [P29L29 从生磁盘到文件](https://www.bilibili.com/video/av51437944?p=29)
-- [P30L30 文件使用磁盘的实现](https://www.bilibili.com/video/av51437944?p=30)
-- [P31L31 目录与文件系统](https://www.bilibili.com/video/av51437944?p=31)
-- [P32L32 目录解析代码实现](https://www.bilibili.com/video/av51437944?p=32)
+
+
+2/33
+
+- [P11.1_操作系统导学](https://www.bilibili.com/video/av13165555?p=1)
+- [P21.2_操作系统引论](https://www.bilibili.com/video/av13165555?p=2)
+- [P31.3_操作系统结构](https://www.bilibili.com/video/av13165555?p=3)
+- [P42.1_进程概念](https://www.bilibili.com/video/av13165555?p=4)
+- [P52.2_进程操作与进程通信](https://www.bilibili.com/video/av13165555?p=5)
+- [P62.3_线程](https://www.bilibili.com/video/av13165555?p=6)
+- [P72.4_CPU调度](https://www.bilibili.com/video/av13165555?p=7)
+- [P83.1_临界区问题](https://www.bilibili.com/video/av13165555?p=8)
+- [P93.2_临界区互斥软件实现算法](https://www.bilibili.com/video/av13165555?p=9)
+- [P103.3_临界区互斥硬件实现算法](https://www.bilibili.com/video/av13165555?p=10)
+- [P113.4_信号量](https://www.bilibili.com/video/av13165555?p=11)
+- [P123.5_经典同步问题](https://www.bilibili.com/video/av13165555?p=12)
+- [P134.1_死锁的概念](https://www.bilibili.com/video/av13165555?p=13)
+- [P144.2_死锁处理](https://www.bilibili.com/video/av13165555?p=14)
+- [P155.1_内存管理基本概念](https://www.bilibili.com/video/av13165555?p=15)
+- [P165.2_页式内存管理](https://www.bilibili.com/video/av13165555?p=16)
+- [P175.3_段氏内存管理](https://www.bilibili.com/video/av13165555?p=17)
+- [P186.1_虚拟存储思想](https://www.bilibili.com/video/av13165555?p=18)
+- [P196.2_按需调页](https://www.bilibili.com/video/av13165555?p=19)
+- [P206.3_页面置换](https://www.bilibili.com/video/av13165555?p=20)
+- [P216.4_页帧分配和系统抖动](https://www.bilibili.com/video/av13165555?p=21)
+- [P226.5_教学示例](https://www.bilibili.com/video/av13165555?p=22)
+- [P237.1_文件系统基本概念](https://www.bilibili.com/video/av13165555?p=23)
+- [P247.2_目录、文件共享与保护](https://www.bilibili.com/video/av13165555?p=24)
+- [P257.3_文件系统实现](https://www.bilibili.com/video/av13165555?p=25)
+- [P267.4_外存分配方法](https://www.bilibili.com/video/av13165555?p=26)
+- [P277.5_教学示例](https://www.bilibili.com/video/av13165555?p=27)
+- [P288.1_大容量存储结构](https://www.bilibili.com/video/av13165555?p=28)
+- [P298.2_磁盘调度](https://www.bilibili.com/video/av13165555?p=29)
+- [P308.3_磁盘管理和RAID结构](https://www.bilibili.com/video/av13165555?p=30)
+- [P319.1_IO设备访问方式和类型](https://www.bilibili.com/video/av13165555?p=31)
+- [P329.2_操作系统内核的IO子系统](https://www.bilibili.com/video/av13165555?p=32)
+- [P339.3_复习课](https://www.bilibili.com/video/av13165555?p=33)
+
+-  
 
 1. 上机安排：
    1. 时间：周四 11-12节 （2-17周）
