@@ -24,8 +24,9 @@
  由于资料库比较大,可以先通过百度网盘链接下载,然后进行同步
 
  网盘链接如下:
-链接：https://pan.baidu.com/s/14GRA3pv_HXCesQJVSx8VBg 
-提取码：0y09
+链接：https://pan.baidu.com/s/1toHeEz0oMvN1H5lXhZrCHw 
+提取码：f2fm 
+
 
 
 
