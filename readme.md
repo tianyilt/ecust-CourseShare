@@ -23,7 +23,7 @@
  由于资料库比较大,可以先通过百度网盘链接下载,然后进行同步
 
  网盘链接如下:
-链接：https://pan.baidu.com/s/1toHeEz0oMvN1H5lXhZrCHw 
+链接： 
 提取码：f2fm 
 
 
@@ -131,10 +131,16 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！
 * [浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )
 * [中国科技大学课程攻略共享计划](https://ustc-resource.github.io/USTC-Course/)
 
+## 传送门
+
+以下是非本仓库但是其他极客同学贡献的一些关于课程的仓库.
+大物实验自动化脚本:[github仓库](https://github.com/ff6757442/experiment_kit)
+[马原答题程序](https://github.com/YifeiYang210/2020ecustMAYUAN)
+
 ## 致谢名单
 16级：以PanJR XieYJ LuLW ChenGR TaoZH为代表的奆佬学长学姐帮助（现在不知道奆佬们的Github用户名，所以用姓拼音加名首字母代指）
 17级：互相帮助合作 a.e.
-
+18级-0xffffffff级:欢迎每一个关注该项目的你们
 
 ## 许可
 
