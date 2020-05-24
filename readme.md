@@ -22,9 +22,10 @@
 * 更加方便快捷地下载
  由于资料库比较大,可以先通过百度网盘链接下载,然后进行同步
 
- 网盘链接如下:
-链接： 
+ 网盘链接如下:(辣鸡网盘,屏蔽我的分享,有什么其他好方法请issue告知我)
+链接：https://pan.baidu.com/s/1toHeEz0oMvN1H5lXhZrCHw 
 提取码：f2fm 
+
 
 
 
@@ -134,8 +135,9 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！
 ## 传送门
 
 以下是非本仓库但是其他极客同学贡献的一些关于课程的仓库.
-大物实验自动化脚本:[github仓库](https://github.com/ff6757442/experiment_kit)
-[马原答题程序](https://github.com/YifeiYang210/2020ecustMAYUAN)
+
+* 大物实验自动化脚本:[github仓库](https://github.com/ff6757442/experiment_kit)
+* [马原答题程序](https://github.com/YifeiYang210/2020ecustMAYUAN)
 
 ## 致谢名单
 16级：以PanJR XieYJ LuLW ChenGR TaoZH为代表的奆佬学长学姐帮助（现在不知道奆佬们的Github用户名，所以用姓拼音加名首字母代指）
