@@ -4,9 +4,8 @@
 
 ![1574474713395](readme.assets/1574474713395.png)
 
-该文档几乎处处仍在编辑中，以[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )为模板
+本项目以[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )为模板
 
-**前排提示,想clone的同学可以先在百度网盘上把库连着.git文件夹一起下载下来.然后修改上游为fork的仓库,然后fetch一下.百度网盘被设置为备份盘,理论上是保持一致的,有不一致就pull一下**
 
 ## 这个项目是什么
 
@@ -23,9 +22,11 @@
 * 更加方便快捷地下载
  由于资料库比较大,可以先通过百度网盘链接下载,然后进行同步
 
- 网盘链接如下:
-链接：https://pan.baidu.com/s/14GRA3pv_HXCesQJVSx8VBg 
-提取码：0y09
+ 网盘链接如下:(辣鸡网盘,屏蔽我的分享,有什么其他好方法请issue告知我)
+链接：https://pan.baidu.com/s/1toHeEz0oMvN1H5lXhZrCHw 
+提取码：f2fm 
+
+
 
 
 
@@ -90,7 +91,7 @@
 TODOlist表示计划进一步撰写、细化的部分
 - [ ] 向没有git基础的广大同学介绍简便使用方式
     - [x] 下载
-    - [X] 同步 百度网盘连着git下载
+    - [X] 同步 百度网盘连着git下载**想clone的同学可以先在百度网盘上把库连着.git文件夹一起下载下来.然后修改上游为fork的仓库,然后fetch一下.百度网盘被设置为备份盘,理论上是保持一致的,有不一致就pull一下,以上操作在github desktop中轻松搞定**
     - [ ] 贡献 口口相传中
 - [ ] 移动设备中简单使用优化
     - [x] 百度网盘使用
@@ -104,7 +105,7 @@ TODOlist表示计划进一步撰写、细化的部分
     - [x] 百度网盘
     - [x] 用软件TortoiseSVN下载
 - [ ] 制作项目文档，形成作品网站,参考[中科大的项目](https://ustc-resource.github.io/USTC-Course/)
-- [ ] 邀请志同道合者
+- [ ] 邀请志同道合者,
 - [ ] **形成项目传承长效机制，每一位来到学校的同学都能享受历年传承的攻略并可以贡献自己的智慧。**
 
 ## 贡献规范
@@ -131,10 +132,17 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！
 * [浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )
 * [中国科技大学课程攻略共享计划](https://ustc-resource.github.io/USTC-Course/)
 
+## 传送门
+
+以下是非本仓库但是其他极客同学贡献的一些关于课程的仓库.
+
+* 大物实验自动化脚本:[github仓库](https://github.com/ff6757442/experiment_kit)
+* [马原答题程序](https://github.com/YifeiYang210/2020ecustMAYUAN)
+
 ## 致谢名单
 16级：以PanJR XieYJ LuLW ChenGR TaoZH为代表的奆佬学长学姐帮助（现在不知道奆佬们的Github用户名，所以用姓拼音加名首字母代指）
 17级：互相帮助合作 a.e.
-
+18级-0xffffffff级:欢迎每一个关注该项目的你们
 
 ## 许可
 
