@@ -1,0 +1,264 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8088,        256]
+NotebookOptionsPosition[      7123,        231]
+NotebookOutlinePosition[      7510,        248]
+CellTagsIndexPosition[      7467,        245]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"rule1", "=", 
+   RowBox[{
+    RowBox[{"Product", "[", 
+     RowBox[{"a_Times", ",", 
+      RowBox[{"b", ":", 
+       RowBox[{"{", 
+        RowBox[{"i_", ",", "__"}], "}"}]}]}], "]"}], "\[RuleDelayed]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Select", "[", 
+        RowBox[{"FreeQ", "[", "i", "]"}], "]"}], "[", "a", "]"}], "^", "n"}], 
+     " ", 
+     RowBox[{"Product", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Select", "[", 
+         RowBox[{"Not", "@*", 
+          RowBox[{"FreeQ", "[", "i", "]"}]}], "]"}], "[", "a", "]"}], ",", 
+       "b"}], "]"}]}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"i_", ",", "\[Theta]_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"\[Theta]", "+", "1"}], ")"}], 
+   RowBox[{
+    RowBox[{"x", "[", "i", "]"}], "^", "\[Theta]"}]}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"L", "[", "\[Theta]_", "]"}], "=", 
+   RowBox[{"Product", "[", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"i", ",", "\[Theta]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"%", "/.", "rule1"}], "//", "Echo"}], "//", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Log", "[", "#", "]"}], "/.", 
+               RowBox[{
+                RowBox[{"Log", "[", 
+                 RowBox[{
+                  RowBox[{"a_", "^", "n_"}], " ", "b_"}], "]"}], 
+                "\[RuleDelayed]", 
+                RowBox[{
+                 RowBox[{"n", " ", 
+                  RowBox[{"Log", "[", "a", "]"}]}], "+", 
+                 RowBox[{"Log", "[", "b", "]"}]}]}]}], "&"}]}], "//", 
+            "Echo"}], "//", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"#", "/.", 
+             RowBox[{
+              RowBox[{"Log", "[", 
+               RowBox[{
+                UnderoverscriptBox["\[Product]", 
+                 RowBox[{"i", "=", "1"}], "n"], 
+                SuperscriptBox[
+                 RowBox[{"x", "[", "i", "]"}], "\[Theta]"]}], "]"}], ":>", 
+              RowBox[{"Log", "[", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  UnderoverscriptBox["\[Product]", 
+                   RowBox[{"i", "=", "1"}], "n"], 
+                  RowBox[{"x", "[", "i", "]"}]}], ")"}], "\[Theta]"], 
+               "]"}]}]}], "&"}]}], "//", "Echo"}], "//", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"#", "/.", 
+           RowBox[{
+            RowBox[{"Log", "[", 
+             RowBox[{
+              RowBox[{"Product", "[", 
+               RowBox[{"X_", ",", 
+                RowBox[{"b", ":", 
+                 RowBox[{"{", 
+                  RowBox[{"i_", ",", "__"}], "}"}]}]}], "]"}], "^", 
+              "\[Theta]_"}], "]"}], "\[RuleDelayed]", 
+            RowBox[{"\[Theta]", " ", 
+             RowBox[{"Sum", "[", 
+              RowBox[{
+               RowBox[{"Log", "[", "X", "]"}], ",", "b"}], "]"}]}]}]}], 
+          "&"}]}], "//", "Echo"}], "//", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"D", "[", 
+         RowBox[{"#", ",", "\[Theta]"}], "]"}], "&"}]}], "//", "Echo"}], "//",
+      "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Solve", "[", 
+       RowBox[{
+        RowBox[{"#", "\[Equal]", "0"}], ",", "\[Theta]"}], "]"}], "&"}]}], "//",
+     "FullSimplify"}], "//", "Echo"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.802840491335641*^9, 3.8028405566948223`*^9}, {
+   3.8028406203452454`*^9, 3.8028406421532545`*^9}, 3.8028406937771115`*^9, {
+   3.8028408781945653`*^9, 3.802840922381442*^9}, 3.8028409660714*^9, {
+   3.8028410311084414`*^9, 3.80284103293744*^9}},
+ CellLabel->"In[73]:=",ExpressionUUID->"446e024c-dc8d-4922-be99-db853c7bfe22"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"1", "+", "\[Theta]"}], ")"}], "n"], " ", 
+  RowBox[{
+   UnderoverscriptBox["\[Product]", 
+    RowBox[{"i", "=", "1"}], "n"], 
+   SuperscriptBox[
+    RowBox[{"x", "[", "i", "]"}], "\[Theta]"]}]}]], "Echo",
+ CellChangeTimes->{
+  3.8028410340604324`*^9},ExpressionUUID->"7b9be611-3f68-419b-b075-\
+da56b34acae5"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"n", " ", 
+   RowBox[{"Log", "[", 
+    RowBox[{"1", "+", "\[Theta]"}], "]"}]}], "+", 
+  RowBox[{"Log", "[", 
+   RowBox[{
+    UnderoverscriptBox["\[Product]", 
+     RowBox[{"i", "=", "1"}], "n"], 
+    SuperscriptBox[
+     RowBox[{"x", "[", "i", "]"}], "\[Theta]"]}], "]"}]}]], "Echo",
+ CellChangeTimes->{
+  3.8028410340724363`*^9},ExpressionUUID->"257b4e27-5b21-4a3b-a904-\
+6d60dc4f84d0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"n", " ", 
+   RowBox[{"Log", "[", 
+    RowBox[{"1", "+", "\[Theta]"}], "]"}]}], "+", 
+  RowBox[{"Log", "[", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      UnderoverscriptBox["\[Product]", 
+       RowBox[{"i", "=", "1"}], "n"], 
+      RowBox[{"x", "[", "i", "]"}]}], ")"}], "\[Theta]"], "]"}]}]], "Echo",
+ CellChangeTimes->{
+  3.8028410341024456`*^9},ExpressionUUID->"14f1487b-426f-4250-a8ff-\
+6e1d5030aec3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"n", " ", 
+   RowBox[{"Log", "[", 
+    RowBox[{"1", "+", "\[Theta]"}], "]"}]}], "+", 
+  RowBox[{"\[Theta]", " ", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"i", "=", "1"}], "n"], 
+    RowBox[{"Log", "[", 
+     RowBox[{"x", "[", "i", "]"}], "]"}]}]}]}]], "Echo",
+ CellChangeTimes->{
+  3.8028410341154385`*^9},ExpressionUUID->"6e474d7a-9b76-426e-8100-\
+7cc9d645e1ad"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["n", 
+   RowBox[{"1", "+", "\[Theta]"}]], "+", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"i", "=", "1"}], "n"], 
+   RowBox[{"Log", "[", 
+    RowBox[{"x", "[", "i", "]"}], "]"}]}]}]], "Echo",
+ CellChangeTimes->{
+  3.8028410341414356`*^9},ExpressionUUID->"79c8d4ff-4f79-4576-b1e7-\
+1b06dd716df6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"\[Theta]", "\[Rule]", 
+    RowBox[{
+     RowBox[{"-", "1"}], "-", 
+     FractionBox["n", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "1"}], "n"], 
+       RowBox[{"Log", "[", 
+        RowBox[{"x", "[", "i", "]"}], "]"}]}]]}]}], "}"}], "}"}]], "Echo",
+ CellChangeTimes->{
+  3.802841034168439*^9},ExpressionUUID->"7f7c15b4-fed5-47c6-a1fe-\
+cbf343092c0b"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1551, 890},
+WindowMargins->{{59, Automatic}, {38, Automatic}},
+Magnification:>1.9 Inherited,
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (2018\:5e743\:670828\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4016, 114, 655, "Input",ExpressionUUID->"446e024c-dc8d-4922-be99-db853c7bfe22"],
+Cell[CellGroupData[{
+Cell[4621, 140, 380, 12, 91, "Echo",ExpressionUUID->"7b9be611-3f68-419b-b075-da56b34acae5"],
+Cell[5004, 154, 421, 13, 91, "Echo",ExpressionUUID->"257b4e27-5b21-4a3b-a904-6d60dc4f84d0"],
+Cell[5428, 169, 452, 14, 92, "Echo",ExpressionUUID->"14f1487b-426f-4250-a8ff-6e1d5030aec3"],
+Cell[5883, 185, 416, 13, 91, "Echo",ExpressionUUID->"6e474d7a-9b76-426e-8100-7cc9d645e1ad"],
+Cell[6302, 200, 347, 11, 91, "Echo",ExpressionUUID->"79c8d4ff-4f79-4576-b1e7-1b06dd716df6"],
+Cell[6652, 213, 443, 14, 68, "Echo",ExpressionUUID->"7f7c15b4-fed5-47c6-a1fe-cbf343092c0b"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
