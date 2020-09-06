@@ -10,3 +10,7 @@
 
 hd 是标清，shd 是高清
 
+1.1.2 http://d.e.ecust.edu.cn/video/77/d26abb18cea4cdba7a2260e4ff9154f3/shd.mp4
+
+1.2.1 http://d.e.ecust.edu.cn/video/7c/f33c1d8dc97a6733eaf1478716f67dc4/shd.mp4
+
