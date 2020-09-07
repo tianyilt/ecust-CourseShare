@@ -46,6 +46,6 @@ e)       移动客户端访问
 
 2.2.1 http://d.e.ecust.edu.cn/video/a6/c3204e7b51e5d1520fc0e5a14744c34d/shd.mp4
 
-
+2.2.2 http://d.e.ecust.edu.cn/video/ef/fc6e13f6c19045d101f9ea8f3efe0667/shd.mp4
 
 
