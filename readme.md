@@ -4,6 +4,8 @@
 
 ![1574474713395](readme.assets/1574474713395.png)
 
+![size](https://img.shields.io/github/repo-size/tianyilt/ecust-CourseShare)
+
 本项目以[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )为模板
 
 
