@@ -149,9 +149,9 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！
 * [马原答题程序](https://github.com/YifeiYang210/2020ecustMAYUAN)
 
 ## 致谢名单
-16级：以PanJR XieYJ LuLW ChenGR TaoZH为代表的奆佬学长学姐帮助（现在不知道奆佬们的Github用户名，所以用姓拼音加名首字母代指）
-17级：互相帮助合作 a.e.
-18级-0xffffffff级:欢迎每一个关注该项目的你们
+- 16级：以PanJR XieYJ LuLW ChenGR TaoZH为代表的奆佬学长学姐帮助（现在不知道奆佬们的Github用户名，所以用姓拼音加名首字母代指）
+- 17级：互相帮助合作 a.e.
+- 18级-0xffffffff级:欢迎每一个关注该项目的你们
 
 ## 许可
 
