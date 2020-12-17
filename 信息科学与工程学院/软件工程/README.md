@@ -18,34 +18,36 @@ hd 是标清，shd 是高清
 
 1.2.3 http://d.e.ecust.edu.cn/video/4f/67e96f91cb052a7ca0dab37b0b937f7e/shd.mp4
 
-1.2.4
-
-```
-项目名称：面向疫情防控的网上生鲜超市
-一、需求描述
-随着疫情到来，城市菜市场关闭，而郊区的很多货物都不能快速送出。因此，构造一个网上生鲜超市，避免大家直接接触，同时可以快速采购生鲜货物。
-功能包括但不限于：
-a)       产品目录管理
-b)       进货管理。（为实现方便，设只有一个采买基地）
-c)       产品搜索、采购与物流配送
-d)       Web 访问界面
-e)       移动客户端访问
-核心难点，高供货频率以及货物配送速度。
-二、项目组织方式
-    团队自由组织，一个团队 5 到 6 个人。可以有项目经理，作为需求分析师、架构师 (可执行的架构、分模块、集成)、配置管理，程序员，测试人员等构成。
-三、项目要求与作业交付
-1）项目管理文档（采用过程描述 / 项目计划与跟踪 /） (第四周 / 第 14 周)超过两次的会议纪要。
-2）配置管理文档（包括目录与代码规范） （第 6 周）
-3）需求分析文档 软件规格说明书（SRS），包含需求模型与分析模型。UML 图形请用 Rational 工具绘制。 （第 6 周）
-4) 概要设计文档 （架构设计，接口设计，数据库设计，类设计，参考书上第七章）（第 10 周）
-5) 可执行的架构。（将检查代码目录） （第 10 周）
-6) 系统演示 + 完整的文档（第 15 周）
-```
-
 2.1 http://d.e.ecust.edu.cn/video/aa/96568c00239952571546988d0bfedf7d/shd.mp4
 
 2.2.1 http://d.e.ecust.edu.cn/video/a6/c3204e7b51e5d1520fc0e5a14744c34d/shd.mp4
 
 2.2.2 http://d.e.ecust.edu.cn/video/ef/fc6e13f6c19045d101f9ea8f3efe0667/shd.mp4
 
+## PPT 链接
 
+http://cs.e.ecust.edu.cn/download/d60ef3d0ce273a3dba6eb0f728536f58
+http://cs.e.ecust.edu.cn/download/8abec94f58f3400c5cd38619227ebd44
+http://cs.e.ecust.edu.cn/download/791a730a24865c46c1142021a5d0414c
+http://cs.e.ecust.edu.cn/download/c2d94f0e357b8cf25d9526eb49324864
+http://cs.e.ecust.edu.cn/download/80addd4543f265c21d87a1cfd0061b3d
+http://cs.e.ecust.edu.cn/download/55439a7fe56b8508e889f81698dda391
+http://cs.e.ecust.edu.cn/download/6526a8eada1ae1fbcd3c4ee4e6b261d5
+http://cs.e.ecust.edu.cn/download/675ed520cb4ceea4d258adccb82b6f2d
+http://cs.e.ecust.edu.cn/download/738c16b30ae20d454c549968a143b8cc
+http://cs.e.ecust.edu.cn/download/03fa130d51b4acdef9cdc72b5a78b777
+http://cs.e.ecust.edu.cn/download/65ffc621bb276a4ebae3029db502b453
+http://cs.e.ecust.edu.cn/download/e9b14c75b97bac8479d50e5ac22af80d
+http://cs.e.ecust.edu.cn/download/d4ae516128c88e12fd172e86d1bfafcd
+http://cs.e.ecust.edu.cn/download/7e0352892ef224addab111e053cf39f0
+http://cs.e.ecust.edu.cn/download/d564af420bb16100616d5eebbb0e68be
+http://cs.e.ecust.edu.cn/download/8312983c22910bcc9067b9c772e204e9
+http://cs.e.ecust.edu.cn/download/1a2bc980a49701d9ef9e85cc651eca5d
+http://cs.e.ecust.edu.cn/download/7638782082cd9974044c6f56e654c54d
+http://cs.e.ecust.edu.cn/download/4c849470c6337a51e20a5a35d19cb1a5
+
+---
+
+以下是碎碎念
+
+这课的老师教得相当一言难尽，做好心理准备。
