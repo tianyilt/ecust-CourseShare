@@ -1,7 +1,13 @@
 # 
 
-PPT 都是图片
+PPT 链接
 
-http://d.e.ecust.edu.cn/doc/8d/c1125b679dfa4a44b0e01c790bc372ce/thumb/1.png
+http://cs.e.ecust.edu.cn/download/435dae1d1fec88e887ad09aa49351c6d
+http://cs.e.ecust.edu.cn/download/a149799e68be901e5d985e42b7b33916
+http://cs.e.ecust.edu.cn/download/fd28073c0970352fb3efe7401aa5dd50
+http://cs.e.ecust.edu.cn/download/f07496da862f77111ac319b75779ff0a
+http://cs.e.ecust.edu.cn/download/d3fba1436f0957d231313d0c1bb3ac93
 
-把数字 1 改成别的就能看了。
+复习要点
+
+http://cs.e.ecust.edu.cn/download/4fbbf9622c89096fa1b085637f3b58ee
