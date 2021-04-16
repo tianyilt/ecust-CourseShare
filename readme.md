@@ -126,6 +126,7 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！
 * [清华大学计算机系课程攻略](https://github.com/PKUanonym/REKCARC-TSC-UHT)
 * [浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )
 * [中国科技大学课程攻略共享计划](https://ustc-resource.github.io/USTC-Course/)
+* [上海交通大学求生手册（雾）](https://github.com/SurviveSJTU/SurviveSJTUManual)
 
 ## 致谢名单
 16级：以PanJR XieYJ LuLW ChenGR TaoZH为代表的奆佬学长学姐帮助（现在不知道奆佬们的Github用户名，所以用姓拼音加名首字母代指）
