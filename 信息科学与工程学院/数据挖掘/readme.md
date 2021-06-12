@@ -1,4 +1,13 @@
-Mooc 资料链接
+## 实验要求实现的算法
+
+1. Apriori 算法 https://gist.github.com/wuyudi/b7801bb2110ca8aea3278a5f72de9d0b
+2. SVM 调库实现 https://gist.github.com/wuyudi/b46c84dd4b08ca865fa2988fc72e60a7
+3. k-means https://gist.github.com/wuyudi/c25aa4a4b1b0a98b24a0a858be1f060d
+4. k-medoids https://gist.github.com/wuyudi/173f9af89a9fe253d1b8a0ca93c3d872
+
+使用方法：把数据文件和代码放同一个文件夹运行。觉得好用请 ⭐~ 一下
+
+## Mooc 资料链接
 
 http://cs.e.ecust.edu.cn/download/a1ffb8b16c9ff65ca269061e77fffdf8
 http://cs.e.ecust.edu.cn/download/fb58e608186be1326764bdb009f50592
@@ -21,4 +30,3 @@ http://cs.e.ecust.edu.cn/download/3687409a0fb40381dfa0e6503603075b
 http://cs.e.ecust.edu.cn/download/7878441b534bd1aa6c35cb37ffea91cc
 http://cs.e.ecust.edu.cn/download/260a5c01a2e9ab1d4af4b948e0db1dc7
 http://cs.e.ecust.edu.cn/download/9965e16d428b9f5b16bee4441c5dc1c8
-
