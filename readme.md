@@ -92,7 +92,7 @@ git clone --depth=1 https://hub.fastgit.org/tianyilt/ecust-CourseShare.git
 
 
 
-[文件结构](./文件结构.md)
+[文件结构](./doc/文件结构.md)
 
 ## 教材
 请到学校[课程网站](http://e-learning.ecust.edu.cn/Portal/CC#Index)查询教材
