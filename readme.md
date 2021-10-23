@@ -72,6 +72,7 @@ git clone --depth=1 https://hub.fastgit.org/tianyilt/ecust-CourseShare.git
 * [物理系](./物理系): 物理系开设的课程.
 * [计算机系](./信息科学与工程学院): 计算机系
 * [化学系](./化学系):化学系
+* [化工系](./化工系):化工系
 * 其他系:欢迎各专业加入该项目.
 
 <font size="12">！！！郑重警告，抄作业是没有前途的</font> 
