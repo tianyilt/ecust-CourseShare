@@ -36,6 +36,7 @@ git clone --depth=1 https://hub.fastgit.org/tianyilt/ecust-CourseShare.git
 
 访问地址：`http://gofile.me/6KieW/ezEKFle3g`
 
+想要快速浏览整个项目的文件结构可以访问 `https://github1s.com/tianyilt/ecust-CourseShare`
 
 
 
