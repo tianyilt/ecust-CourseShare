@@ -36,7 +36,9 @@ git clone --depth=1 https://hub.fastgit.xyz/tianyilt/ecust-CourseShare.git
 
 访问地址：`http://gofile.me/6KieW/ezEKFle3g`
 
-~~我们还提供了一个其他git库的镜像：https://serverless-100010881867.coding.net/public/ecust-courseshare/lfs-on/git/files~~
+我们成功找到了一个比较好的托管点，阿里云效平台，但是操作略微麻烦，在git clone的过程中需要输入用户名cic以及密码(>_<) (>_<)3
+
+访问地址：https://codeup.aliyun.com/62a2892ea61bf880d4caa148/ecust-courseshare/lfs-on.git
 
 ~~coding开始收钱了，只可惜我们没钱，在找别的地方托管~~
 
