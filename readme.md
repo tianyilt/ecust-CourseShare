@@ -30,13 +30,17 @@
 
 除了百度网盘之外还可以通过github的镜像来快速克隆，预计半小时就可以所有资料下载到本地，然后配合everything等文件检索工具来查找需要的资料。
 ```
-git clone --depth=1 https://hub.fastgit.org/tianyilt/ecust-CourseShare.git
+git clone --depth=1 https://hub.fastgit.xyz/tianyilt/ecust-CourseShare.git
 ```
 现在我有存储服务器了，同学们也可通过存储服务器来直接下载一个备份（不一定是最新的）。
 
 访问地址：`http://gofile.me/6KieW/ezEKFle3g`
 
-我们还提供了一个其他git库的镜像：https://serverless-100010881867.coding.net/public/ecust-courseshare/lfs-on/git/files
+我们成功找到了一个比较好的托管点，阿里云效平台，但是操作略微麻烦，在git clone的过程中需要输入用户名cic以及密码(>_<) (>_<)3
+
+访问地址：https://codeup.aliyun.com/62a2892ea61bf880d4caa148/ecust-courseshare/lfs-on.git
+
+~~coding开始收钱了，只可惜我们没钱，在找别的地方托管~~
 
 想要快速浏览整个项目的文件结构可以访问 `https://github1s.com/tianyilt/ecust-CourseShare`
 
