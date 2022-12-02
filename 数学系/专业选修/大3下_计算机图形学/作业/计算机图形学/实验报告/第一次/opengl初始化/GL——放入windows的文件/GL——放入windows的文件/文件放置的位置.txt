@@ -1,7 +1,0 @@
-
-
-1   将GLUT32.DLL放到   \WINDOWS\SYSTEM32里面
-
-2   将GLUT32.LIB放到   Program Files\Microsoft Visual Studio\VC98\Lib里面
-
-3   将GLUT.h放到   Program Files\Microsoft Visual Studio\VC98 \include \gl文件夹，后放入。

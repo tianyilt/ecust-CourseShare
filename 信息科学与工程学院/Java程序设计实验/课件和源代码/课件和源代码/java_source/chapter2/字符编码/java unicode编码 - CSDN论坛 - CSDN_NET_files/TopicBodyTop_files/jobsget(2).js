@@ -1,1 +1,0 @@
-document.write('<li><a href="http://www.csdn.net/article/2013-04-12/2814857-The-eight-IaaS-Players-Megaguide" target=_blank>横评美国IaaS“8匹狼”：AWS、GCE、Azure、Rackspace等</a></li>');

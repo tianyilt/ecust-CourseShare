@@ -1,1 +1,0 @@
-document.write("<a href='http://www.yangbang.cn/' target=_blank style='padding-left:4px'><font color=#ff0000>[上海央邦]学一送一,超值!</font></a><br><a href='http://www.uplooking.com/page/34g.php' target=_blank style='padding-left:4px'>50000年薪起，顶级4G手机开发！</a>");
