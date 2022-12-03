@@ -85,7 +85,8 @@ git clone --depth=1 https://hub.fastgit.xyz/tianyilt/ecust-CourseShare.git
 * 对于同名的不同学分课程，我们建议在文件夹名中备注学分。
 * 公共课程有专门的文件夹用来导航。
 
-课程开课学院完全按照[教务处公示](https://jwc.ecust.edu.cn/2022/0919/c3938a148491/page.htm) 。
+课程开课学院完全按照[教务处公示](https://jwc.ecust.edu.cn/2022/0919/c3938a148491/page.htm) <font color="red">更新于2022.12 下学期开学请更新</font> 。
+
 
 <font size="12">！！！郑重警告，抄作业是没有前途的</font> 
 
