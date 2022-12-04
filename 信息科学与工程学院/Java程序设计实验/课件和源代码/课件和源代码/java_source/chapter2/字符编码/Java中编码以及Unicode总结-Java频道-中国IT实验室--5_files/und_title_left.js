@@ -1,0 +1,1 @@
+document.write("<a href='http://www.yangbang.cn/' target=_blank style='padding-left:4px'><font color=#ff0000>央邦0首付，低押金先就业后付款</font></a><br>")

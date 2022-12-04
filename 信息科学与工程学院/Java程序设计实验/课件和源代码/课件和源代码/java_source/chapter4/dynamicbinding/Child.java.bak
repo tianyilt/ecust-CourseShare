@@ -1,0 +1,30 @@
+class  Parent
+{
+	public String str="Parent";
+	public void prn(){ System.out.println(str);}
+	public void prn1(){ System.out.println(str);}
+	 
+}
+
+public class Child extends Parent
+{
+
+    public String str="Child";
+	public void prn1(){ System.out.println(str);}
+	public static void main(String[] args) 
+	{
+		Parent parent=new Parent();
+        parent.prn1();
+		parent.prn();
+		
+		Child child=new Child();
+		child.prn1();
+		child.prn();
+
+        parent=child;
+        parent.prn1();
+		parent.prn();
+		
+		System.out.println(child.str);		 
+	}
+}

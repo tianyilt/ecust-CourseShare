@@ -1,0 +1,33 @@
+
+import java.util.ArrayList;
+class Employee{
+	private int age;
+	public void setAge(int age){this.age=age;}
+	public int getAge(){return age;}
+}
+public class TestArrayList
+{   
+	public static void main(String[] args) 
+	{
+		ArrayList<myEmployee>  list=new ArrayList<myEmployee> ();
+
+		for(int i=0;i<24;i++){
+           Employee myEmployee=new Employee();
+		   myEmployee.setAge(i);
+		   list.add(myEmployee);
+		}
+		
+		Employee e=null;
+		for(int i=0;i<24;i++){ 
+		   e=list.get(i);
+		   System.out.println(e.getAge());
+		}
+
+		for(Employee e2: list){
+
+             System.out.println(e2.getAge());
+		}
+
+		 
+	}
+}

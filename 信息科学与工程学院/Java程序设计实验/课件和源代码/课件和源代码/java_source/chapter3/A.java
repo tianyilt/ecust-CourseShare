@@ -1,0 +1,25 @@
+class  A{
+	A a=this;
+	String str;
+	 
+	 public void setStr(String str2){
+		 str=str2;
+	 }
+	 public String getStr(){
+		 return str;
+	 }
+	void prt(){
+		a=new A();
+		 a.setStr("222");
+		 
+		 String str3=a.getStr();
+		
+		System.out.println(str3);
+	}
+
+	public static void main(String[] args) 
+	{    
+		 A a1=new A( );
+		 a1.prt();
+	}
+}

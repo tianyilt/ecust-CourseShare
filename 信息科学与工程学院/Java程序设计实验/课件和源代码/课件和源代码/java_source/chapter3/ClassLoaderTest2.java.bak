@@ -1,0 +1,54 @@
+ 
+class ClassLoaderTest{
+ static {
+       System.out.println(" 执行静态 块 static 　block ");
+  }
+  public static int age=getAge();
+  public String str=getString();
+
+  public ClassLoaderTest(){
+	  System.out.println(" 执行 构造方法　ClassLoaderTest()");
+  }
+
+  public static int  getAge(){
+	  System.out.println("执行 getAge() ，给类变量age赋值");
+	  return 1;
+  }
+
+  public static String getString(){
+	  System.out.println(" 执行 getString(),给实例变量str赋值");
+	  return "String ";
+  } 
+  { 
+	  System.out.println(" 执行实例 块　block "); 
+  } 
+}
+
+
+
+public class ClassLoaderTest2
+{
+	public static void main(String[] args){
+	ClassLoaderTest c1;
+    System.out.println("before new ");
+	c1=new ClassLoaderTest();
+	System.out.println("after new ");
+
+	ClassLoaderTest c2;
+    System.out.println("before new2 ");
+	c2=new ClassLoaderTest();
+	System.out.println("after new2 ");
+  }
+};
+
+/*结果
+
+  before new 
+ 执行静态 块 static 　block 
+执行 getAge() ，给类变量age赋值
+ 执行 getString(),给实例变量str赋值
+ 执行实例 块　block 
+ 执行 构造方法　ClassLoaderTest()
+after new 
+
+*/

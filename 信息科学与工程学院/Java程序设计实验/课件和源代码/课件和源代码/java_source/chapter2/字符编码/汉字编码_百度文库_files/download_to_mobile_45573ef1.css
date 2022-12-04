@@ -1,0 +1,81 @@
+.dl-mbl-tip .arrow {
+	background: url("http://static.wenku.bdimg.com/static/common/ui/js_core/download_to_mobile/images/bg_dtm_bce66ffb.png") no-repeat;
+}
+.dl-mbl-tip .dtm-con a.close-btn {
+	background: url("http://static.wenku.bdimg.com/static/common/ui/js_core/download_to_mobile/images/bg_dtm_bce66ffb.png") no-repeat;
+}
+.dl-mbl-tip .send-suc {
+	background: url("http://static.wenku.bdimg.com/static/common/ui/js_core/download_to_mobile/images/bg_dtm_bce66ffb.png") no-repeat;
+}
+.download2mobile {
+	background: url("http://static.wenku.bdimg.com/static/common/ui/js_core/download_to_mobile/images/bg_dtm_bce66ffb.png") no-repeat;
+}
+.download2mobile {
+	background-position: left -33px; padding-left: 15px; cursor: pointer;
+}
+.download2mobile a {
+	color: rgb(51, 51, 51);
+}
+.view-download2mobile {
+	margin: 0px 20px; _padding-top: 2px;
+}
+.search-download2mobile {
+	margin: 0px 0px 0px 10px; _height: 17px;
+}
+.list-download2mobile {
+	margin: 0px 0px 0px 10px; _height: 17px;
+}
+.search-download2mobile a {
+	color: rgb(0, 169, 126) !important; font-size: 12px !important; text-decoration: none !important;
+}
+.list-download2mobile a {
+	color: rgb(0, 169, 126) !important; font-size: 12px !important; text-decoration: none !important;
+}
+.search-download2mobile a:hover {
+	text-decoration: underline !important;
+}
+.list-download2mobile a:hover {
+	text-decoration: underline !important;
+}
+.room-download2mobile {
+	background-position: left -32px; margin: 0px 0px 0px 15px; height: 15px; line-height: 15px; display: inline-block; _padding-top: 2px;
+}
+.dl-mbl-tip {
+	width: 398px; display: none; z-index: 1001;
+}
+.dl-mbl-tip .dtm-con {
+	border-radius: 2px; border: 1px solid rgb(199, 216, 208); box-shadow: 0px 0px 3px #b5cbc1; background-color: rgb(247, 251, 250);
+}
+.dl-mbl-tip a.close-btn {
+	margin: 8px 10px 10px 0px; width: 9px; height: 9px; text-indent: -9999px; overflow: hidden; float: right; display: block;
+}
+.dl-mbl-tip a.close-btn:hover {
+	background-position: left -10px;
+}
+.dl-mbl-tip .arrow {
+	background-position: left -22px; top: -7px; width: 17px; height: 8px; right: 50px; overflow: hidden; position: absolute;
+}
+.search-dl-mbl-tip .arrow {
+	left: 30px;
+}
+.list-dl-mbl-tip .arrow {
+	left: 30px;
+}
+.dl-mbl-tip .send-suc {
+	background-position: left -60px; margin: 0px 0px 25px 25px; text-align: left; color: rgb(51, 51, 51); padding-left: 55px; clear: both; font-family: "Î¢ÈíÑÅºÚ";
+}
+.dl-mbl-tip .send-suc h5 {
+	font-family: "Î¢ÈíÑÅºÚ"; font-size: 24px; font-weight: normal;
+}
+.dl-mbl-tip .send-suc p {
+	color: rgb(101, 101, 101); font-size: 14px;
+}
+.room-dl-mbl-tip .send-suc {
+	background-position: left -130px; margin: 0px 0px 32px 25px; padding-left: 60px;
+}
+.dl-mbl-tip .dl-install {
+	padding: 12px 0px 24px; text-align: center; background-color: rgb(235, 245, 242);
+}
+.dl-mbl-tip .dl-install p {
+	color: rgb(153, 153, 153); padding-bottom: 15px;
+}

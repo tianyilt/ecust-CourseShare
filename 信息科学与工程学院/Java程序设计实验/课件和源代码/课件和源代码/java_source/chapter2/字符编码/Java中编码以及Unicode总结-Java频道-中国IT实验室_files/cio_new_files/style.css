@@ -1,0 +1,45 @@
+* {
+	margin: 0px; padding: 0px; font-size: 12px;
+}
+li {
+	list-style: none;
+}
+.top {
+	background: url("../img/top_bj.gif") repeat-x left top; width: 660px; height: 31px; color: rgb(255, 255, 255); line-height: 31px; font-size: 16px; font-weight: bold;
+}
+.top .h1 {
+	padding: 0px 175px 0px 10px; font-size: 16px; font-weight: bold; float: left;
+}
+.a {
+	width: 414px; color: rgb(255, 255, 255); padding-right: 40px; font-size: 12px; text-decoration: none; display: inline;
+}
+.big {
+	background: rgb(255, 255, 255); border-width: medium 1px 1px; border-style: none solid solid; border-color: currentColor rgb(0, 153, 255) rgb(0, 153, 255); padding: 5px 4px; width: 650px; height: 250px;
+}
+.big .up {
+	width: 650px; height: auto; padding-top: 6px;
+}
+.big .up .left {
+	border: 1px solid rgb(125, 125, 125); width: 195px; height: auto; padding-bottom: 4px; padding-left: 10px; margin-right: 10px; float: left;
+}
+.big .up .middle {
+	border: 1px solid rgb(125, 125, 125); width: 192px; height: auto; padding-bottom: 4px; padding-left: 10px; margin-right: 10px; float: left;
+}
+.big .up .right {
+	border: 1px solid rgb(125, 125, 125); width: 199px; height: auto; padding-bottom: 4px; padding-left: 10px; float: left;
+}
+.big .down {
+	width: 650px; height: auto; margin-top: 20px;
+}
+.big .down .l {
+	border: 1px solid rgb(125, 125, 125); width: 195px; height: auto; padding-bottom: 4px; padding-left: 10px; margin-top: 12px; margin-right: 10px; float: left;
+}
+.big .down .m {
+	border: 1px solid rgb(125, 125, 125); width: 192px; height: auto; padding-bottom: 4px; padding-left: 10px; margin-top: 12px; margin-right: 10px; float: left;
+}
+.big .down .r {
+	border: 1px solid rgb(125, 125, 125); width: 199px; height: auto; padding-bottom: 4px; padding-left: 10px; margin-top: 12px; float: left;
+}
+.biaoti {
+	background: url("../img/biaobj.gif") no-repeat left; top: -8px; line-height: 18px; padding-left: 16px; font-size: 14px; font-weight: bold; position: relative;
+}

@@ -1,0 +1,17 @@
+import java.io.*;
+public class TestReadObject{
+  public static void main(String[] args){
+   try{
+      Employee zhang=null;       
+      FileInputStream zhangFile=new FileInputStream("d:/save/Test.dat");
+      ObjectInputStream in=new ObjectInputStream(zhangFile);
+      zhang=(Employee)in.readObject();
+      System.out.println(zhang.toString());
+      zhangFile.close();
+      in.close();
+    }catch(Exception e){
+      System.out.println("error "+e);
+    }
+ }
+}
+    

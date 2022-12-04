@@ -1,0 +1,48 @@
+class ArrayList<E> 
+{
+	private Object[]  elementData=null;
+	public ArrayList(){elementData=new Object[10];}
+	public ArrayList(int initialCapacity ){elementData=new Object[initialCapacity];}
+
+    public int size() {	      return elementData.length;    }
+	public int nextPosition(){
+		 int k=0;
+		 for(int i=0;i<elementData.length;i++){
+			 if (elementData[i]==null) {
+				 k=i;
+				 break;				 
+			 }  
+		 }
+		 if (k==(elementData.length-1)){
+			Object[] oldElementData=elementData;
+            elementData=new Object[elementData.length+10];
+			for(int i=0;i<oldElementData.length;i++){
+				elementData[i]=oldElementData[i];
+			} 
+		 }
+		 return k;
+	}
+	public void add(E element){ 
+		int position=nextPosition();
+		elementData[position]=element;  
+	}
+	public E get(int index){ return (E)elementData[index];	} 
+}
+
+public class TestArrayList
+{   
+	public static void main(String[] args) 
+	{
+		ArrayList<Integer>  list1=new ArrayList<Integer> ();
+		for(int i=0;i<24;i++){
+		   list1.add(i);
+		}
+		  System.out.println(" "+list1.size() );
+		for(int i=0;i<24;i++){
+		   System.out.print(" "+list1.get(i) );
+		   list1.get(i);
+		}
+
+		 
+	}
+}

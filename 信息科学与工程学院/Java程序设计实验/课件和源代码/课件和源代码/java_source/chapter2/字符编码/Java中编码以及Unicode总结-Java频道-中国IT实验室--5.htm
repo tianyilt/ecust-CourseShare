@@ -1,0 +1,578 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0048)http://java.chinaitlab.com/advance/816386_5.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD>
+<META content="text/html; charset=gb2312" http-equiv="Content-Type">
+<META name="Keywords" content="Java,Unicode,Java中编码以及Unicode总结">
+<META name="description" content="文章标题：Java中编码以及Unicode总结。中国IT实验室JAVA频道是一个专业的JAVA技术平台，着眼于业界尖端技术，提供及时全面的JAVA技术和资讯文章，为广大的JAVA爱好者提供一个技术学习共享的资源库。">
+<META name="classification" content="Information Technology and Scientice">
+<META name="robots" content="ALL">
+<META name="distribution" content="Global">
+<META name="rating" content="General">
+<META name="author" content="http://www.chinaitlab.com/">
+<META name="language" content="chinese">
+<META name="resource-type" content="document">
+<META content="no-cache" http-equiv="pragma">
+<META content="SUN,09 JAN 1998 00:00:01 GMT" http-equiv="expires"><LINK rel="SHORTCUT ICON" 
+href="http://www.chinaitlab.com/favicon.ico"><LINK rel="stylesheet" type="text/css" 
+href="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/style_new.css">
+<TITLE>Java中编码以及Unicode总结-Java频道-中国IT实验室</TITLE>
+<STYLE type="text/css">
+a.channel_keylink:link,a.channel_keylink:visited{	FONT-SIZE: 14px;COLOR: #0000FF;	line-height: 22px;}
+a.channel_keylink:hover,a.channel_keylink:active{	FONT-SIZE: 14px;COLOR: #FF3333;	TEXT-DECORATION: underline;line-height: 22px;}
+.STYLE1 a:link,.STYLE1 a:visited,.STYLE1 a:active{
+	COLOR: #ff0000; TEXT-DECORATION: none; font-family: "宋体"; font-size: 15px; font-weight:bold; padding-left:12px; padding-top:5px;
+}
+.STYLE1 a:hover{
+	COLOR: #000000; TEXT-DECORATION: underline; font-family: "宋体"; font-size: 15px; font-weight:bold;padding-left:12px; padding-top:5px;
+}
+.STYLE1 {
+	color: #000000;
+	font-weight: bold;padding-left:12px;
+	 padding-top:7px;
+}
+.STYLE11 {	color: #000000;
+	font-weight: bold;padding-left:12px;
+	 padding-top:7px;
+}
+</STYLE>
+
+<SCRIPT language="JavaScript">
+<!--
+//改变图片大小
+function resizepic(thispic)
+{
+if(thispic.width>700) thispic.width=700;
+}
+//无级缩放图片大小
+function bbimg(o)
+{
+  //var zoom=parseInt(o.style.zoom, 10)||100;
+  //zoom+=event.wheelDelta/12;
+  //if (zoom>0) o.style.zoom=zoom+'%';
+  return true;
+}
+-->
+</SCRIPT>
+
+<META name="GENERATOR" content="MSHTML 9.00.8112.16457"></HEAD>
+<BODY><!--顶端导航部分代码-->
+<DIV style="border: 0px currentColor; line-height: 23px;" class="tong">
+<DIV style="background: rgb(250, 250, 250); width: 100%; text-align: left; line-height: 23px; font-family: 宋体; font-size: 12px;"><A 
+title="中国IT实验室LOGO" href="http://www.chinaitlab.com/" target="_blank"><IMG 
+style="margin-right: 5px; float: left;" border="0" alt="中国IT实验室LOGO" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/logo_top.gif" 
+width="145" height="42"></A> <A title="中国IT实验室首页" href="http://www.chinaitlab.com/" 
+target="_blank">首页</A> | <A title="互联网频道首页" href="http://internet.chinaitlab.com/" 
+target="_blank">互联网</A> | <A title="IT动态频道首页" href="http://news.chinaitlab.com/" 
+target="_blank">IT动态</A> | <A title="IT培训频道首页" href="http://edu.chinaitlab.com/" 
+target="_blank"><FONT color="#ff0000">IT培训</FONT></A> | <A title="Cisco频道首页" 
+href="http://cisco.chinaitlab.com/" target="_blank">Cisco</A> | <A title="Windows频道首页" 
+href="http://windows.chinaitlab.com/" target="_blank">Windows</A> | <A title="Linux频道首页" 
+href="http://linux.chinaitlab.com/" target="_blank">Linux</A> | <A title="Java频道首页" 
+href="http://java.chinaitlab.com/" target="_blank">Java</A> | <A title=".Net频道首页" 
+href="http://dotnet.chinaitlab.com/" target="_blank">.Net</A> | <A title="Oracle频道首页" 
+href="http://oracle.chinaitlab.com/" target="_blank">Oracle</A> | <A title="软件测试频道首页" 
+href="http://softtest.chinaitlab.com/" target="_blank">软件测试</A> | <A title="C/C++频道首页" 
+href="http://c.chinaitlab.com/" target="_blank">C/C++</A> | <A title="嵌入式开发频道首页" 
+href="http://embed.chinaitlab.com/" target="_blank"><FONT 
+color="#ff0000">嵌入式</FONT></A> | <A title="存储世界频道首页" href="http://www.storworld.com/" 
+target="_blank">存储世界</A><A title="服务器频道首页" href="http://www.idcquan.com/" 
+target="_blank"><FONT color="#ff0000"></FONT></A><A href="http://server.chinaitlab.com/" 
+target="_blank">服务器</A> | <A title="华为频道首页" href="http://huawei.chinaitlab.com/" 
+target="_blank">华为</A> | <A title="网络设备频道首页" href="http://network.chinaitlab.com/" 
+target="_blank">网络设备</A> | <A title="IDC频道首页" href="http://www.idcquan.com/" 
+target="_blank">IDC</A> | <A title="安全频道首页" href="http://live.chinaitlab.com/" 
+target="_blank"></A><A href="http://security.chinaitlab.com/" 
+target="_blank">安全</A> | <A title="21世纪人才网首页" href="http://www.21itjob.com/" 
+target="_blank"><FONT color="#ff0000">求职招聘</FONT></A> | <A title="数字网校首页" href="http://school.chinaitlab.com/" 
+target="_blank">数字网校</A> | <A title="北大青鸟首页" href="http://edu.chinaitlab.com/special/bdqn/Index.html" 
+target="_blank">北大青鸟</A> | <A title="技术专题首页" href="http://special.chinaitlab.com/" 
+target="_blank">技术专题</A> | <A title="电子书下载频道首页" href="http://download.chinaitlab.com/" 
+target="_blank">电子书下载</A> | <A title="视频教学首页" href="http://download.chinaitlab.com/video.html" 
+target="_blank">教学视频</A> | <A title="源码下载首页" href="http://down.idcquan.com/" 
+target="_blank"><FONT color="#ff0000">源码下载</FONT></A> | <A title="中国IT实验室技术文章搜索" 
+href="http://search.chinaitlab.com/" target="_blank">搜索</A> | <A title="中国IT实验室技术博客" 
+href="http://blog.chinaitlab.com/" target="_blank">博客</A> | <A title="活动沙龙首页" 
+href="http://salon.chinaitlab.com/" target="_blank">活动沙龙</A> | <A title="中国IT实验室技术论谈" 
+href="http://bbs.chinaitlab.com/" target="_blank">论坛</A></DIV></DIV>
+<DIV class="blank"></DIV>
+<DIV class="tong"><!-- 广告位：JAVA文章页第一通栏 -->
+<SCRIPT type="text/javascript">BAIDU_CLB_SLOT_ID = "55152";</SCRIPT>
+
+<SCRIPT type="text/javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/o.js"></SCRIPT>
+</DIV><!--页面顶端通栏广告代码段-->
+<DIV class="blank"></DIV>
+<DIV class="tong"><SPAN id="udtop"></SPAN></DIV>
+<DIV class="blank"></DIV><!--频道导航代码段-->
+<DIV class="tong">
+<TABLE border="0" cellSpacing="0" cellPadding="0" width="960" align="center">
+  <TBODY>
+  <TR>
+    <TD width="223"><A title="欢迎光临中国IT实验室Java频道" href="http://java.chinaitlab.com/" 
+      target="_blank"><IMG border="0" alt="中国IT实验室Linux频道" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/00.gif" 
+      width="224" height="49"></A></TD>
+    <TD vAlign="bottom" background="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/02.gif" 
+    width="724">
+      <TABLE border="0" cellSpacing="0" cellPadding="0" width="712" align="center" 
+      height="38">
+        <TBODY>
+        <TR>
+          <TD class="zhi12" height="29" width="461">
+<SCRIPT language="JavaScript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/floatcard.js"></SCRIPT>
+            <IMG style="cursor: pointer;" id="tq_kefu_main" onclick="TQKF.kefuimg.Distrabute()" 
+            version="20100823"></TD>
+          <TD width="251">
+            <TABLE border="0" cellSpacing="0" cellPadding="0" width="220" align="center">
+              <FORM id="cse-search-box" action="http://www.google.com.hk/cse" 
+              target="_blank">
+              <DIV><INPUT name="cx" value="partner-pub-8985212780093870:x1p2o758mwk" 
+              type="hidden"><INPUT name="ie" value="GB2312" type="hidden"><INPUT 
+              name="q" size="24" type="text"><INPUT name="sa" value="搜索" type="submit"></DIV>
+              </FORM>
+<SCRIPT type="text/javascript&#13;&#10;"></SCRIPT>
+            </TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD width="13"><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/01.gif" 
+      width="13" height="49"></TD></TR></TBODY></TABLE>
+<TABLE border="0" cellSpacing="0" cellPadding="0" width="960" align="center">
+  <TBODY>
+  <TR>
+    <TD width="11"><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/03.gif" 
+      width="12" height="38"></TD>
+    <TD background="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/04.gif" width="935">
+      <TABLE border="0" cellSpacing="0" cellPadding="0" width="100%" 
+height="24">
+        <TBODY>
+        <TR align="middle">
+          <TD height="24"><A class="DHbnr" title="中国IT实验室Linux频道首页" href="http://java.chinaitlab.com/" 
+            target="_blank">首页</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="资讯动态" href="http://java.chinaitlab.com/List_171.html" 
+            target="_blank">资讯动态</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="认证考试" href="http://java.chinaitlab.com/List_172.html" 
+            target="_blank">认证考试</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="新手入门" href="http://java.chinaitlab.com/List_173.html" 
+            target="_blank">新手入门</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="核心技术" href="http://java.chinaitlab.com/List_174.html" 
+            target="_blank">核心技术</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="高级技术" href="http://java.chinaitlab.com/List_175.html" 
+            target="_blank">高级技术</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="J2EE" href="http://java.chinaitlab.com/List_176.html" 
+            target="_blank">J2EE</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="J2ME" href="http://java.chinaitlab.com/List_177.html" 
+            target="_blank">J2ME</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="Java&amp;XML" href="http://java.chinaitlab.com/List_178.html" 
+            target="_blank">Java&amp;XML</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="开源技术" href="http://java.chinaitlab.com/List_179.html" 
+            target="_blank">开源技术</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="其他技术" href="http://java.chinaitlab.com/List_180.html" 
+            target="_blank">其他技术</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="欢迎订阅Java频道文章" href="http://java.chinaitlab.com/rss.xml" 
+            target="_blank">RSS订阅</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="Java论坛" href="http://bbs.chinaitlab.com/forum-201-1.html" 
+            target="_blank">论坛</A></TD>
+          <TD><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/07.gif" 
+            width="3" height="38"></TD>
+          <TD><A class="DHbnr" title="Java专题" href="http://special.chinaitlab.com/List_1934.html" 
+            target="_blank">专题</A></TD></TR></TBODY></TABLE></TD>
+    <TD width="13"><IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/05.gif" 
+      width="13" height="38"></TD></TR></TBODY></TABLE></DIV>
+<DIV class="blank"></DIV>
+<DIV class="tong">
+<DIV class="Prt_left border_kuang">
+<DIV class="WeiZhi"> <IMG border="0" src="" width="9" 
+height="30">您现在的位置：&nbsp;<A class="LinkPath" 
+href="http://www.chinaitlab.com/">中国IT实验室</A>&nbsp;&gt;&gt;&nbsp;<A class="LinkPath" 
+href="http://java.chinaitlab.com/Index.html">Java</A>&nbsp;&gt;&gt;&nbsp;<A 
+class="LinkPath" 
+href="http://java.chinaitlab.com/List_174.html">核心技术</A>&nbsp;&gt;&gt;&nbsp;<A 
+class="LinkPath" 
+href="http://java.chinaitlab.com/List_191.html">高级编程</A>&nbsp;&gt;&gt;&nbsp;正文 
+</DIV>
+<H1 class="Article_tle">Java中编码以及Unicode总结 </H1>
+<DIV class="Ud_tle"> <SPAN style="width: 50%; border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: dashed; float: left;">
+<SCRIPT language="javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/und_title_left.js"></SCRIPT>
+
+<SCRIPT language="javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/tech_title_rencai.js"></SCRIPT>
+</SPAN> <SPAN style="width: 48%; float: right;">
+<SCRIPT language="javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/und_title_right.js"></SCRIPT>
+
+<SCRIPT language="javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/tech_title_school.js"></SCRIPT>
+</SPAN> </DIV>
+<DIV class="infor"> <IMG alt="文章来源" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/source.gif" 
+width="15" height="16"><A href="http://www.chinaitlab.com/ShowCopyFrom.asp?ChannelID=1004&amp;SourceName=中国IT实验室收集整理">中国IT实验室收集整理</A> 
+<IMG alt="作者" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/author.gif" width="14" 
+height="15">佚名 <IMG alt="更新时间" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/time.gif" 
+width="14" height="16">2010-7-15 14:48:46 <IMG alt="保存本文" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/save.gif" 
+width="16" height="16"><A href="javascript:window.external.AddFavorite('http://cisco.chinaitlab.com/advance/816386.html','Java中编码以及Unicode总结|中国IT实验室')" 
+target="_top">保存本文</A> <IMG alt="推荐给好友" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/tuijian.gif" 
+width="20" height="16"><A onclick="javascript:window.open('http://www.chinaitlab.com/www/news/sendfriend.asp?id1=32580&amp;location1='+document.all.location1.value)" 
+href="http://cisco.chinaitlab.com/advance/816386.html">推荐给好友</A> <IMG alt="收藏本页" 
+src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/faver.gif" width="14" height="15"><A 
+href="javascript:window.external.AddFavorite('http://www.chinaitlab.com','中国IT实验室')" 
+target="_top">收藏本页</A> </DIV>
+<DIV class="Article_content">
+<DIV class="STYLE11"><A class="STYLE11" href="http://bbs.chinaitlab.com/" 
+target="_blank">欢迎进入Java社区论坛，与200万技术人员互动交流  &gt;&gt;进入</A></DIV>
+<P></P>
+<P>&nbsp;</P>
+<P>　　5.3高位序列和低位序列的判断</P>
+<P>　　java.lang.String#getBytes(String) 的源代码</P>
+<P>　　java.lang.StringCoding.encode 的源代码，再通过其底层类库的字符集类sun.io.CharacterEncoding 
+可以找出 Unicode 的转换器，是采用sun.io.CharToByteUnicode 这个类的，这个类的 sun.io 
+包是读取file.encoding.pkg 这个系统属性拼接字符串反射而来的。</P>
+<P>　　6、</P>
+<P>　　常见问题</P>
+<P>　　6.1 通用UTF-8来编码</P>
+<P>　　大量使用国外的开源软件时，UTF-8才是编码界最通用的语言。对英文是单字节、中文是三字节。在大量的英文存在的情况下高效。</P>
+<P>　　6.2编码问题时查看</P>
+<P>　　%javahome%/jre/lib/charsets.jar</P>
+<P>　　6.3 语言的编码</P>
+<P>　　C、<A class="channel_keylink" href="http://c.chinaitlab.com/" target="_blank">C++</A>、Python2内部字符串都是使用当前系统默认编码。</P>
+<P>　　Python3、Java内部字符串用Unicode保存。</P>
+<P>　　Ruby有一个内部变量$KCODE用来表示可识别的多字节字符串的编码，变量值为”EUC” “SJIS” “UTF8″ 
+“NONE”之一。$KCODE的值为”EUC”时，将假定字符串或正则表达式的编码为EUC-JP。同样地，若为”SJIS”时则认定为Shift 
+JIS。若为”UTF8″时则认定为UTF-8。若为”NONE”时，将不会识别多字节字符串。在向该变量赋值时，只有第1个字节起作用，且不区分大小写字母。”e” 
+“E” 代表”EUC”，”s” “S” 代表 “SJIS”，”u” “U” 代表 “UTF8″，而”n” “N” 则代表 
+“NONE”。默认值为”NONE”。即默认情况下Ruby把字符串当成单字节序列来处理。</P>
+<P>　　6.4 js的unicode</P>
+<P>　　&lt;script type=”text/javascript”&gt;</P>
+<P>　　document.write(String.fromCharCode(72,69,76,76,79));</P>
+<P>　　document.write(”&lt;br /&gt;”);</P>
+<P>　　document.write(String.fromCharCode(65,66,67));</P>
+<P>　　&lt;/script&gt;</P>
+<P>　　13</P>
+<P>　　6.5 网页编码</P>
+<P>　　一个网页要在浏览器中正常显示，需要保持网页文件的编码、网页的meta标签声明(charset 
+来制定的其实是encoding编码而不是字符集)、浏览器编码设置是一致的。</P>
+<P>　　6.6 联通乱码</P>
+<P>　　在Win下的新建一个记事本文件，输入”联通”两个字之后，保存之后重新打开，发现出现乱码。这是因为GBK编码与UTF8编码产生了编码冲突。</P>
+<P>　　从UNICODE到UTF8的转换规则：</P>
+<P>　　Unicode UTF-8</P>
+<P>　　0000 – 007F 0xxxxxxx</P>
+<P>　　0080 – 07FF 110xxxxx 10xxxxxx</P>
+<P>　　0800 – FFFF 1110xxxx 10xxxxxx 10xxxxxx</P>
+<P>　　联的Unicode编码是[0x80] [0x54]</P>
+<P>　　通的Unicode编码是[0x90] [0x1A]</P>
+<P>　　8054和901A在0800-FFFF之间，所以要用3字节模板：1110xxxx 10xxxxxx 10xxxxxx。使用第三种转换得到</P>
+<P>　　[0xE8] [0x81] [0x94] [0xE9] [0x80] [0x9A]，这就是其UTF8的编码。</P>
+<P>　　新建一个文本文件时，记事本的编码默认是ANSI, 中文的就是GBK编码，而，此时”联通”的内码是：[0xC1] [0xAA] [0xCD] 
+[0xA8]</P>
+<P>　　C1 1100 0001</P>
+<P>　　AA 1010 1010</P>
+<P>　　CD 1100 1101</P>
+<P>　　A8 1010 1000</P>
+<P>　　其中联的两个字节、通的两个字节的起始部分的都是”110″和”10″，与UTF8规则里的两字节模板是一致，所以再次用记事本打开时，记事本误认为这是一个UTF8编码的文件。按照反编码得到UNICODE的0x 
+006A，和0×0368，0×0368这个字符什么也不是，这就是”联通”两个字的文件没有办法在记事本里正常显示的原因。如果多几个字的输入话，由于记事本检测到不是合格的uft-8编码的字节转而会采用GBK，乱码又不出现。</P>
+<P>　　6.7Google学习乱码</P>
+<P>　　<A 
+href="http://www.google.cn/search?hl=zh-CN&amp;newwindow=1&amp;q">http://www.google.cn/search?hl=zh-CN&amp;newwindow=1&amp;q</A>=学习</P>
+<P>　　出现乱码。</P>
+<P>　　6.8 java 编译时的乱码</P>
+<P>　　对于不是平台默认编码的情况下，java源文件在编译时，需要指定源文件的编码，否则无法正常编译。</P>
+<P>　　1、对于win下默认的GBK编码</P>
+<P>　　C:\&gt;javac SqlUtility.java</P>
+<P>　　C:\&gt;javac -encoding GBK SqlUtility.java</P>
+<P>　　C:\&gt;javac -encoding utf-8 SqlUtility.java</P>
+<P>　　14</P>
+<P>　　SqlUtility.java:24: 警告：编码 utf-8 的不可映射字符</P>
+<P>　　* ????????????????</P>
+<P>　　^</P>
+<P>　　2、对于unicode的默认是utf-16</P>
+<P>　　C:\&gt;javac SqlUtility.java</P>
+<P>　　SqlUtility.java:38: 非法字符： \0</P>
+<P>　　C:\&gt;javac -encoding utf-16 SqlUtility.java</P>
+<P>　　3、对于utf-8的编码，win下需要删除文件头的二进制编码EFBBBF(因为它是由Unicode标准的FEFF，为了保证字节序而存在)，并不是</P>
+<P>　　C:\&gt;javac SqlUtility.java</P>
+<P>　　SqlUtility.java:1: 警告：编码 GBK 的不可映射字符</P>
+<P>　　锘?**</P>
+<P>　　^</P>
+<P>　　SqlUtility.java:1: 非法字符： \65533</P>
+<P>　　锘?**</P>
+<P>　　^</P>
+<P>　　1 错误</P>
+<P>　　1 警告</P>
+<P>　　C:\&gt;javac -encoding utf-16 SqlUtility.java</P>
+<P>　　SqlUtility.java:1: 非法字符： \61371</P>
+<P>　　C:\&gt;javac -encoding utf-8 SqlUtility.java</P>
+<P>　　SqlUtility.java:1: 非法字符： \65279</P>
+<P>　　?/**</P>
+<P>　　^</P>
+<P>　　1 错误</P>
+<P>　　注：删除EFBBBF之后的</P>
+<P>　　C:\&gt;javac -encoding utf-8 SqlUtility.java</P>
+<P></P>
+<P align="center"><B><A 
+href="http://java.chinaitlab.com/advance/816386_4.html">上一页</A>&nbsp;&nbsp;<A 
+href="http://java.chinaitlab.com/advance/816386.html">[1]</A>&nbsp;<A href="http://java.chinaitlab.com/advance/816386_2.html">[2]</A>&nbsp;<A 
+href="http://java.chinaitlab.com/advance/816386_3.html">[3]</A>&nbsp;<A href="http://java.chinaitlab.com/advance/816386_4.html">[4]</A>&nbsp;<FONT 
+color="red">[5]</FONT>&nbsp;</B></P>
+<DIV style="margin: 3px 0px;" align="right"> <SPAN style="margin: 3px; border: 1px dashed rgb(204, 204, 204);">
+<SCRIPT type="text/javascript"><!--
+google_ad_client = "pub-8985212780093870";
+/* 468x60, 创建于 10-9-21 */
+google_ad_slot = "4499687408";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</SCRIPT>
+
+<SCRIPT type="text/javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/show_ads.js">
+</SCRIPT>
+</SPAN> <A title="Java频道&#13;&#10;中国IT实验室" href="http://java.chinaitlab.com/" 
+target="_blank"><IMG border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/logo14.gif" 
+width="14" height="14"></A>【责编:coco】        
+<SCRIPT language="javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/88.js"></SCRIPT>
+</DIV></DIV><BR>
+<P></P>
+<DIV style="border: 0px currentColor;" class="Fushu">
+<DIV style="float: left;" class="F_lst">
+<DIV class="F_tle"><IMG border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f06.gif" 
+width="9" height="7">相关文章</DIV>
+<DIV style="margin: 5px 10px; width: 90%;"><A class="LinkArticleCorrelative" 
+title="文章标题：Java&nbsp;8整装待发&nbsp;图谋云计算&#13;&#10;作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名&#13;&#10;更新时间：2011-8-13 12:58:22" 
+href="http://java.chinaitlab.com/dynamic/861016.html" 
+target="_self">Java&nbsp;8整装待发&nbsp;图谋云计算</A><BR><A class="LinkArticleCorrelative" 
+title="文章标题：Java开源工具：网站开发工具清单&#13;&#10;作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名&#13;&#10;更新时间：2011-8-13 12:54:53" 
+href="http://java.chinaitlab.com/tools/861015.html" 
+target="_self">Java开源工具：网站开发工具清单</A><BR><A class="LinkArticleCorrelative" title="文章标题：JRuby和Java&nbsp;7&nbsp;我们可以期待什么？&#13;&#10;作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名&#13;&#10;更新时间：2011-8-11 22:06:31" 
+href="http://java.chinaitlab.com/dynamic/860890.html" 
+target="_self">JRuby和Java&nbsp;7&nbsp;我们可以期待什么？</A><BR><A class="LinkArticleCorrelative" 
+title="文章标题：JAVA基础之Applet&#13;&#10;作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名&#13;&#10;更新时间：2011-8-11 15:39:16" 
+href="http://java.chinaitlab.com/base/860846.html" 
+target="_self">JAVA基础之Applet</A><BR><A class="LinkArticleCorrelative" title="文章标题：Java认证：JAVA可移植性广泛应用&#13;&#10;作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名&#13;&#10;更新时间：2011-8-8 23:14:22" 
+href="http://java.chinaitlab.com/experience/860423.html" 
+target="_self">Java认证：JAVA可移植性广泛应用</A><BR><A class="LinkArticleCorrelative" 
+title="文章标题：Java认证：Java编程中异常处理特殊情况&#13;&#10;作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名&#13;&#10;更新时间：2011-8-7 7:26:08" 
+href="http://java.chinaitlab.com/experience/860321.html" 
+target="_self">Java认证：Java编程中异常处理特殊情况</A><BR><A class="LinkArticleCorrelative" 
+title="文章标题：Java认证：Java线程同步方法&#13;&#10;作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名&#13;&#10;更新时间：2011-8-6 7:08:24" 
+href="http://java.chinaitlab.com/experience/860228.html" 
+target="_self">Java认证：Java线程同步方法</A><BR><A class="LinkArticleCorrelative" title="文章标题：Java&nbsp;7&nbsp;Hotspot&nbsp;循环Bug的详解&#13;&#10;作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名&#13;&#10;更新时间：2011-8-5 18:29:39" 
+href="http://java.chinaitlab.com/dynamic/860207.html" 
+target="_self">Java&nbsp;7&nbsp;Hotspot&nbsp;循环Bug的详解</A><BR><A class="LinkArticleCorrelative" 
+title="文章标题：写给浮躁的java程序员的&#13;&#10;作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名&#13;&#10;更新时间：2011-8-4 23:04:14" 
+href="http://java.chinaitlab.com/base/860109.html" 
+target="_self">写给浮躁的java程序员的</A><BR><A class="LinkArticleCorrelative" title="文章标题：简单介绍J2EE应用的五种核心策略&#13;&#10;作&nbsp;&nbsp;&nbsp;&nbsp;者：佚名&#13;&#10;更新时间：2011-8-4 13:13:13" 
+href="http://java.chinaitlab.com/core/860051.html" 
+target="_self">简单介绍J2EE应用的五种核心策略</A><BR></DIV></DIV>
+<DIV style="float: right;" class="F_lst">
+<DIV class="F_tle"><IMG border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f06.gif" 
+width="9" height="7">编辑推荐</DIV>·&nbsp;[<A href="http://java.chinaitlab.com/List_186.html">基础入门</A>]<A 
+title="利用字符串连接巧妙解决问题" href="http://java.chinaitlab.com/base/839656.html" target="_blank">利用字符串连接巧妙解决问题</A><BR>·&nbsp;[<A 
+href="http://java.chinaitlab.com/List_191.html">高级编程</A>]<A title="实现Java调用.net&nbsp;DLL的方法" 
+href="http://java.chinaitlab.com/advance/839653.html" 
+target="_blank">实现Java调用.net&nbsp;DLL的方法</A><BR>·&nbsp;[<A href="http://java.chinaitlab.com/List_192.html">网络编程</A>]<A 
+title="Java设置与读取Cookie属性" href="http://java.chinaitlab.com/net/839204.html" 
+target="_blank">Java设置与读取Cookie属性</A><BR>·&nbsp;[<A href="http://java.chinaitlab.com/List_186.html">基础入门</A>]<A 
+title="和我共同了解Java是什么" href="http://java.chinaitlab.com/base/826410.html" target="_blank">和我共同了解Java是什么</A><BR>·&nbsp;[<A 
+href="http://java.chinaitlab.com/List_186.html">基础入门</A>]<A title="Java语言与C++语言在作用域上的差异" 
+href="http://java.chinaitlab.com/base/823200.html" 
+target="_blank">Java语言与C++语言在作用域上的差异</A><BR>·&nbsp;[<A href="http://java.chinaitlab.com/List_186.html">基础入门</A>]<A 
+title="Java源代码的折行规则" href="http://java.chinaitlab.com/base/822786.html" target="_blank">Java源代码的折行规则</A><BR>·&nbsp;[<A 
+href="http://java.chinaitlab.com/List_186.html">基础入门</A>]<A title="Java中的静态数组与动态数组" 
+href="http://java.chinaitlab.com/base/811183.html" 
+target="_blank">Java中的静态数组与动态数组</A><BR>·&nbsp;[<A href="http://java.chinaitlab.com/List_186.html">基础入门</A>]<A 
+title="Java版简易俄罗斯方块" href="http://java.chinaitlab.com/base/811154.html" target="_blank">Java版简易俄罗斯方块</A><BR>·&nbsp;[<A 
+href="http://java.chinaitlab.com/List_186.html">基础入门</A>]<A title="随机数组合，随机号码产生器" 
+href="http://java.chinaitlab.com/base/811117.html" 
+target="_blank">随机数组合，随机号码产生器</A><BR>·&nbsp;[<A href="http://java.chinaitlab.com/List_192.html">网络编程</A>]<A 
+title="Java访问WebService返回xml数据" href="http://java.chinaitlab.com/net/810900.html" 
+target="_blank">Java访问WebService返回xml数据</A><BR></DIV></DIV>
+<DIV class="blank"></DIV>
+<DIV style="border: 0px currentColor;" class="Fushu"><IFRAME height="300" 
+marginHeight="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/816386_5.htm" 
+frameBorder="0" width="660" marginWidth="0" scrolling="no"></IFRAME></DIV>
+<DIV class="blank"></DIV>
+<DIV class="Fushu">
+<DIV class="title_line2 font14"> <IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f04.gif" 
+width="7" height="29">相关产品和培训 </DIV><IFRAME height="159" marginHeight="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/816386_5.htm" 
+frameBorder="0" width="660" marginWidth="0" scrolling="no"></IFRAME></DIV>
+<DIV class="blank"></DIV>
+<DIV class="Fushu">
+<DIV class="title_line2 font14"> <IMG src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f04(1).gif" 
+width="7" height="29">文章评论 </DIV><IFRAME height="330" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/cio_new.htm" 
+frameBorder="0" width="100%" scrolling="yes"></IFRAME></DIV>
+<DIV class="blank"></DIV>
+<DIV class="tjtitle">　友情推荐链接</DIV>
+<DIV class="yqtj">
+<DIV class="yqtj_lf">·<A title="Asp源码" href="http://down.idcquan.com/download/asp/asp-1-1.html" 
+target="_blank">Asp源码</A> <A title="PHP源码" href="http://down.idcquan.com/download/php/php-2-1.html" 
+target="_blank">PHP源码</A><BR>·<A title="CGI源码" href="http://down.idcquan.com/download/cgi/cgi-5-1.html" 
+target="_blank">CGI源码</A> <A title="JSP源码" href="http://down.idcquan.com/download/jsp/jsp-3-1.html" 
+target="_blank">JSP源码</A><BR>·<A title="书籍教程" href="http://down.idcquan.com/download/book/book-6-1.html" 
+target="_blank">建站书籍教程</A><BR>·<A title="服务器软件" href="http://down.idcquan.com/download/soft/soft-8-1.html" 
+target="_blank">服务器软件</A> <A title=".net源码" href="http://down.idcquan.com/download/dotnet/dotnet-4-1.html" 
+target="_blank">.net源码</A><BR>·<A title="工具软件" href="http://down.idcquan.com/download/tool/tool-9-1.html" 
+target="_blank">建站工具软件</A><BR></DIV>
+<DIV class="yqtj_rt">·<A href="http://www.idcquan.com/2007idcpages" target="_blank">IDC资讯大全</A><BR>·<A 
+href="http://www.idcquan.com/2007idcsurvey/" target="_blank">机房品质万里行</A><BR>·<A 
+href="http://www.idcquan.com/" target="_blank">IDC托管必备知识</A><BR>·<A href="http://www.idcquan.com/" 
+target="_blank">网站推广优化</A><BR>·<A href="http://www.idcquan.com/" 
+target="_blank">全国IDC报价</A><BR></DIV></DIV>
+<DIV class="blank"></DIV></DIV>
+<DIV style="height: 220px;" class="Prt_right"><!-- 广告位：JAVA文章页右侧画中画 -->
+<SCRIPT type="text/javascript">BAIDU_CLB_SLOT_ID = "55155";</SCRIPT>
+
+<SCRIPT type="text/javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/o.js"></SCRIPT>
+</DIV>
+<DIV class="Prt_right border_kuang">
+<DIV class="title_line"><IMG border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f06.gif" 
+width="9" height="7">　认证培训</DIV>
+<DIV class="right_lst">
+<SCRIPT language="javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/java_peixun.js"></SCRIPT>
+</DIV></DIV>
+<DIV class="Prt_right border_kuang">
+<DIV class="title_line"><IMG border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f06.gif" 
+width="9" height="7">　专题推荐</DIV><A title="Oracle&nbsp;10g&nbsp;OCP考证秘笈" href="http://oracle.chinaitlab.com/Special/Oracle_OCP/index.htm" 
+target="_blank"><IMG class="pic1" border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/3010042012090.jpg" 
+width="120" height="90"></A><A title="开发必备&nbsp;漫谈Java加密保护" href="http://java.chinaitlab.com/Special/javajm/Index.html" 
+target="_blank"><IMG class="pic1" border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/javajm.jpg" 
+width="120" height="90"></A><BR>　·<A title="Java&nbsp;EE&nbsp;6规范中文版" href="http://java.chinaitlab.com/Special/java_ee/index.html" 
+target="_blank">Java&nbsp;EE&nbsp;6规范中文版</A><BR>　·<A title="Oracle&nbsp;10g&nbsp;OCP考证秘笈" 
+href="http://oracle.chinaitlab.com/Special/Oracle_OCP/index.htm" 
+target="_blank">Oracle&nbsp;10g&nbsp;OCP考证秘笈</A><BR>　·<A title="算法分析与设计之五大常用算法" 
+href="http://c.chinaitlab.com/special/algorithm/Index.html" 
+target="_blank">算法分析与设计之五大常用算法</A><BR>　·<A title="开发必备&nbsp;漫谈Java加密保护" href="http://java.chinaitlab.com/Special/javajm/Index.html" 
+target="_blank">开发必备&nbsp;漫谈Java加密保护</A><BR>　·<A title="嵌入式开发--ARM技术专题" href="http://embed.chinaitlab.com/special/arm/Index.html" 
+target="_blank">嵌入式开发--ARM技术专题</A><BR>　·<A title="C/C++指针，认真了解，灵活运用" href="http://c.chinaitlab.com/special/pointer/Index.html" 
+target="_blank">C/C++指针，认真了解，灵活运用</A><BR>　·<A title=".NET开发：C#实用基础教程" href="http://dotnet.chinaitlab.com/special/c/Index.html" 
+target="_blank">.NET开发：C#实用基础教程</A><BR>　·<A title="软件测试工具QTP学习专题" href="http://softtest.chinaitlab.com/special/qtp/Index.html" 
+target="_blank">软件测试工具QTP学习专题</A><BR>　·<A title="嵌入式开发单片机解决方案专题" href="http://embed.chinaitlab.com/special/fan/Index.html" 
+target="_blank">嵌入式开发单片机解决方案专题</A><BR>　·<A title="Java开发环境&nbsp;Greenfoot&nbsp;程序员手册" 
+href="http://java.chinaitlab.com/Special/greenfootsc/Index.html" 
+target="_blank">Java开发环境&nbsp;Greenfoot&nbsp;程序员手册</A><BR></DIV>
+<DIV style="height: 250px;" class="Prt_right">
+<SCRIPT language="javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/274.js"></SCRIPT>
+</DIV>
+<DIV class="Prt_right border_kuang">
+<DIV class="title_line"><IMG border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f06.gif" 
+width="9" height="7">　今日更新</DIV>
+<DIV class="right_lst">·&nbsp;<A title="Java&nbsp;8整装待发&nbsp;图谋云计算" href="http://java.chinaitlab.com/dynamic/861016.html" 
+target="_blank">Java&nbsp;8整装待发&nbsp;图谋云计算</A><BR>·&nbsp;<A title="Java开源工具：网站开发工具清单" 
+href="http://java.chinaitlab.com/tools/861015.html" 
+target="_blank">Java开源工具：网站开发工具清单</A><BR>·&nbsp;<A title="选用Ibatis和Hibernate的区别" 
+href="http://java.chinaitlab.com/base/860912.html" 
+target="_blank">选用Ibatis和Hibernate的区别</A><BR>·&nbsp;<A title="让Eclipse使用Vibrant&nbsp;Ink等配色方案" 
+href="http://java.chinaitlab.com/tools/860909.html" 
+target="_blank">让Eclipse使用Vibrant&nbsp;Ink等配色方案</A><BR>·&nbsp;<A title="Servlet初始化：随服务器启动而运行" 
+href="http://java.chinaitlab.com/base/860907.html" 
+target="_blank">Servlet初始化：随服务器启动而运行</A><BR>·&nbsp;<A title="JRuby和Java&nbsp;7&nbsp;我们可以期待什么？" 
+href="http://java.chinaitlab.com/dynamic/860890.html" 
+target="_blank">JRuby和Java&nbsp;7&nbsp;我们可以期待什么？</A><BR>·&nbsp;<A title="IBatis一对一，一对多，多对多" 
+href="http://java.chinaitlab.com/base/860848.html" 
+target="_blank">IBatis一对一，一对多，多对多</A><BR>·&nbsp;<A title="JAVA基础之Applet" href="http://java.chinaitlab.com/base/860846.html" 
+target="_blank">JAVA基础之Applet</A><BR>·&nbsp;<A title="java认证：Servlet四种过滤器工作方式" 
+href="http://java.chinaitlab.com/experience/860730.html" 
+target="_blank">java认证：Servlet四种过滤器工作方式</A><BR>·&nbsp;<A title="反映射调用set和get方法" 
+href="http://java.chinaitlab.com/base/860699.html" 
+target="_blank">反映射调用set和get方法</A><BR></DIV></DIV>
+<DIV class="Prt_right border_kuang">
+<DIV class="title_line"><IMG border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f06.gif" 
+width="9" height="7">　社区讨论</DIV>
+<DIV class="right_lst"><IFRAME height="188" marginHeight="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/peixun_new.htm" 
+frameBorder="0" width="265" marginWidth="0" scrolling="no"></IFRAME></DIV></DIV>
+<DIV class="Prt_right border_kuang">
+<DIV class="title_line"><IMG border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f06.gif" 
+width="9" height="7">　博客论点</DIV>
+<DIV class="right_lst"><IFRAME height="188" marginHeight="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/ArticleComment.htm" 
+frameBorder="0" width="265" marginWidth="0" scrolling="no"></IFRAME></DIV></DIV>
+<DIV class="Prt_right border_kuang">
+<DIV class="title_line"><IMG border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f06.gif" 
+width="9" height="7">　频道精选</DIV>
+<DIV class="right_lst">· <A title="新版CCNA考试大纲 07年8月1日生效" href="http://cisco.chinaitlab.com/CCNACCDA/725394.html" 
+target="_blank">新版CCNA考试大纲 07年8月1日生效</A><BR \="">· <A title="新手学习宝典：Linux常用命令全集" 
+href="http://linux.chinaitlab.com/special/linuxcom/Index.html" 
+target="_blank">新手学习宝典：Linux常用命令全集</A><BR \="">· <A title="知已知彼，深入了解系统安全知识" 
+href="http://windows.chinaitlab.com/Special/systemsafety/Index.html" target="_blank">知已知彼，深入了解系统安全知识</A><BR 
+\="">· <A title="从入门到精通 java初学者实践系列教程" href="http://java.chinaitlab.com/Special/shijian/Index.html" 
+target="_blank">从入门到精通 java初学者实践系列教程</A><BR \="">· <A title="共同学习——Oracle入门基础专题" 
+href="http://www.chinaitlab.com/www/techspecial/OracleBasic/" 
+target="_blank">共同学习——Oracle入门基础专题</A><BR \="">· <A title="ADO.net与PowerBuilder的综合比" 
+href="http://dotnet.chinaitlab.com/ADONET/727687.html" 
+target="_blank">ADO.net与PowerBuilder的综合比较</A><BR \="">· <A title="评论：中国互联网“钱”途何在？" 
+href="http://internet.chinaitlab.com/observe/729460.html" 
+target="_blank">评论：中国互联网“钱”途何在？</A><BR \="">· <A title="中科院：龙芯要成“中国奔腾” 能卖1亿颗" 
+href="http://news.chinaitlab.com/ityw/729103.html" 
+target="_blank">中科院：龙芯要成"中国奔腾" 能卖1亿颗</A><BR \=""></DIV></DIV>
+<DIV class="Prt_right border_kuang">
+<DIV class="title_line"><IMG border="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/f06.gif" 
+width="9" height="7">　Java	频道导航</DIV>
+<DIV class="right_lst"><STRONG><A href="http://java.chinaitlab.com/List_173.html" 
+target="_blank">新手入门</A>：</STRONG> <BR><A href="http://java.chinaitlab.com/List_185.html" 
+target="_blank">安装配置</A> | <A href="http://java.chinaitlab.com/List_187.html" 
+target="_blank">开发工具</A> | <A href="http://java.chinaitlab.com/List_188.html" 
+target="_blank">JDK</A> | <A href="http://java.chinaitlab.com/List_189.html" 
+target="_blank">oop面向对象</A><BR><STRONG><A href="http://java.chinaitlab.com/List_174.html" 
+target="_blank">核心技术</A>：</STRONG> <BR><A href="http://java.chinaitlab.com/List_190.html" 
+target="_parent">SwingAwtApplet</A> | <A href="http://java.chinaitlab.com/List_191.html" 
+target="_blank">高级编程</A> | <A href="http://java.chinaitlab.com/List_192.html" 
+target="_blank">网络编程</A><A href="http://java.chinaitlab.com/List_193.html" 
+target="_blank">Jvm技术</A> | <A href="http://java.chinaitlab.com/List_194.html" 
+target="_blank">JavaMedia</A><BR><STRONG><A href="http://java.chinaitlab.com/List_175.html" 
+target="_blank">高级技术</A>：</STRONG> <BR><A href="http://java.chinaitlab.com/List_195.html" 
+target="_blank">设计模式</A> | <A href="http://java.chinaitlab.com/List_196.html" 
+target="_blank">UML／OO</A> | <A href="http://java.chinaitlab.com/List_197.html" 
+target="_blank">p2p／Jxta</A> | <A href="http://java.chinaitlab.com/List_198.html" 
+target="_blank">多线程</A> | <A 
+href="http://java.chinaitlab.com/List_199.html">JavaSecurity</A><BR><STRONG><A 
+href="http://java.chinaitlab.com/List_176.html" 
+target="_blank">J2EE</A>：</STRONG> <BR><A href="http://java.chinaitlab.com/List_200.html" 
+target="_blank">J2ee核心</A> | <A href="http://java.chinaitlab.com/List_201.html" 
+target="_blank">Servlet／Jsp</A> | <A href="http://java.chinaitlab.com/List_202.html" 
+target="_blank">EJB</A><BR>| <A href="http://java.chinaitlab.com/List_203.html" 
+target="_blank">JDBC／JDO</A> | <A href="http://java.chinaitlab.com/List_204.html" 
+target="_blank">Rmi／Corba／Jini</A> | <A href="http://java.chinaitlab.com/List_206.html" 
+target="_blank">Mvcwea</A> | <A href="http://java.chinaitlab.com/List_205.html" 
+target="_blank">应用服务器</A><BR><STRONG><A href="http://java.chinaitlab.com/List_177.html" 
+target="_blank">J2ME</A>：</STRONG> <BR><A href="http://java.chinaitlab.com/List_207.html" 
+target="_blank">核心技术</A> | <A href="http://java.chinaitlab.com/List_208.html" 
+target="_blank">嵌入式</A> | <A href="http://java.chinaitlab.com/List_209.html" 
+target="_blank">无线开发</A><BR><STRONG><A href="http://java.chinaitlab.com/List_178.html" 
+target="_blank">Java&amp;XML</A>：</STRONG> <BR><A href="http://java.chinaitlab.com/List_210.html" 
+target="_blank">XMLBeans</A> | <A href="http://java.chinaitlab.com/List_211.html" 
+target="_blank">WebServices</A><BR><STRONG><A href="http://java.chinaitlab.com/List_179.html" 
+target="_blank">开源技术</A>：</STRONG> <BR><A href="http://java.chinaitlab.com/List_212.html" 
+target="_blank">ANT</A> | <A href="http://java.chinaitlab.com/List_213.html" 
+target="_blank">Struts</A> | <A href="http://java.chinaitlab.com/List_214.html" 
+target="_blank">Hibernate</A> | <A href="http://java.chinaitlab.com/List_215.html" 
+target="_blank">Spring</A><BR><A href="http://java.chinaitlab.com/List_216.html" 
+target="_blank">Eclipse</A> | <A href="http://java.chinaitlab.com/List_218.html" 
+target="_blank">JBoss</A> | <A href="http://java.chinaitlab.com/List_219.html" 
+target="_blank">Tomcat</A> | <A href="http://java.chinaitlab.com/List_220.html" 
+target="_blank">JUnit</A><BR><STRONG><A href="http://java.chinaitlab.com/List_180.html" 
+target="_blank">其他技术</A></STRONG><BR></DIV></DIV></DIV>
+<DIV class="blank"></DIV>
+<DIV class="tong"><IFRAME height="200" marginHeight="0" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/816386_5.htm" 
+frameBorder="0" width="100%" marginWidth="0" scrolling="no"></IFRAME></DIV><!-- 广告位：A专家级频道通用漂浮右下 -->
+<SCRIPT type="text/javascript">BAIDU_CLB_SLOT_ID = "136211";</SCRIPT>
+
+<SCRIPT type="text/javascript" src="Java中编码以及Unicode总结-Java频道-中国IT实验室--5_files/o.js"></SCRIPT>
+<!-- tj -->
+<SCRIPT type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5039d1ba7ab33da6b0c51675b4deb8f0' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+</BODY></HTML>

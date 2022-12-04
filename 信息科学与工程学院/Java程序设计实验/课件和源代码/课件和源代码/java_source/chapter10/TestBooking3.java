@@ -1,0 +1,67 @@
+class Tickets{
+   private int total;
+
+   public Tickets(int total){ this.total=total;   }
+   public void setTotal(int total){     this.total=total;   }
+   public int getTotal( ){     return total;   }
+
+   public    void   sale(int num){      
+	   if(total>=num){    //这个条件放在前面,可以看出同步的作用
+		     try{  
+		         Thread.sleep(300);
+		        }catch(Exception e){
+		         }
+		     System.out.println(Thread.currentThread().getName()+"  剩余票数:"+total+ "    已经购买:"+num+"张" ); 
+			 total=total-num; 
+		  }else{
+			 System.out.println(Thread.currentThread().getName()+"  剩余票数不够  "+"  剩余票数:"+total+"   需购买:"+num ); 
+		  }
+	 
+	}
+}
+
+class Booking implements Runnable{
+	private Tickets tickets=null;// 共享数据
+	private int num;
+
+	public Booking( ){ 		}
+	public void setTickets(Tickets tickets){          this.tickets=tickets;	}
+	public Tickets getTickets(){		return tickets;	}
+	public void setNum(int num){          this.num=num;	}
+	public int getNum(){		return num;	}
+	 
+	public void run(){ 
+		synchronized(tickets){    //对象同步 
+		 tickets.sale(num);      
+		}
+	}
+}
+public class  TestBooking3{
+	public static void main(String[] args)	{	
+	   Tickets shanghai=new Tickets(100);   
+	   Booking booking1=new Booking( ); 
+	   booking1.setTickets(shanghai); // 线程共享数据tickets
+	   booking1.setNum(70);
+
+	   Booking booking2=new Booking( ); 
+	   booking2.setTickets(shanghai); // 线程共享数据tickets
+	   booking2.setNum(50);
+
+       
+       Thread thread1=new Thread(booking1,"thread1");
+	   thread1.start();
+	   Thread thread2=new Thread(booking2,"thread2");
+	   thread2.start();
+
+	   try{
+		   thread1.join();
+		   thread2.join();
+	   }catch(Exception e){
+	   }
+	   Tickets surplusTickets=booking1.getTickets();
+	   System.out.println(surplusTickets.getTotal());
+
+	     surplusTickets=booking2.getTickets();
+	   System.out.println(surplusTickets.getTotal());
+	}
+}
