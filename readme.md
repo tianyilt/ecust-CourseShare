@@ -51,11 +51,6 @@ https://alist.世界百流大学.com/ecust-CourseShare
 https://github1s.com/tianyilt/ecust-CourseShare
 ```
 
-~~现在我有存储服务器了，同学们也可通过存储服务器来直接下载一个备份（不一定是最新的）。~~(2022.12.4更新：暂时访问不了)
-
-```
-访问地址:http://gofile.me/6KieW/ezEKFle3g
-```
 
 
 
