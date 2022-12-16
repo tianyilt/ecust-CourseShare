@@ -1,0 +1,53 @@
+# Microsoft Developer Studio Generated Dependency File, included by OpenGL多文档.mak
+
+.\Debug.cpp : \
+	".\Debug.h"\
+	".\StdAfx.h"\
+	
+
+".\OpenGL多文档.cpp" : \
+	".\Debug.h"\
+	".\OpenGL多文档.h"\
+	".\OpenGL多文档Aw.h"\
+	".\StdAfx.h"\
+	
+
+".\OpenGL多文档.rc" : \
+	".\res\OpenGL多文档.ico"\
+	".\Template\ChildFrm.cpp"\
+	".\Template\ChildFrm.h"\
+	".\Template\confirm.inf"\
+	".\Template\Doc.cpp"\
+	".\Template\Doc.h"\
+	".\Template\GLEnabledView.cpp"\
+	".\Template\GLEnabledView.h"\
+	".\Template\MainFrm.cpp"\
+	".\Template\MainFrm.h"\
+	".\Template\newproj.inf"\
+	".\Template\ReadMe.txt"\
+	".\Template\res\Doc.ico"\
+	".\Template\res\root.ico"\
+	".\Template\res\root.rc2"\
+	".\Template\res\Toolbar.bmp"\
+	".\Template\Resource.h"\
+	".\Template\root.clw"\
+	".\Template\root.cpp"\
+	".\Template\root.h"\
+	".\Template\root.rc"\
+	".\Template\StdAfx.cpp"\
+	".\Template\StdAfx.h"\
+	".\Template\View.cpp"\
+	".\Template\View.h"\
+	
+
+".\OpenGL多文档Aw.cpp" : \
+	".\Debug.h"\
+	".\OpenGL多文档.h"\
+	".\OpenGL多文档Aw.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\Debug.h"\
+	".\StdAfx.h"\
+	

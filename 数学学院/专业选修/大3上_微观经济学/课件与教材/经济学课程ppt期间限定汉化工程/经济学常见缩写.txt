@@ -1,0 +1,33 @@
+MRS：marginal rate  of substitution 边际替代率
+U: utility 效用
+P：price 价格
+Q：quantity数量
+TU： total utility 总效用
+MU：Marginal utility 边际效用
+Ep：需求价格弹性
+TR： total revenue 总收益
+MR：marginal revenue 边际收益
+f：生产函数
+AP：Average Production 平均产量
+MP：marginal Production 边际产量
+TP：total production 总产量
+L：labor 劳动力
+K：c(k)apital 资本
+MRTS: marginal rateof technical substitution 边际技术替代率
+STC：short-run total cost 短期总成本
+LTC：long-run total cost 长期总成本
+TC：total cost 总成本
+FC：fixed cost 固定成本
+VC：variable cost 可变成本
+ATC：average total cost 平均总成本
+AFC：average fixed cost 平均固定成本
+AVC：average variable cost 平均可变成本
+MC：marginal cost 边际成本
+MRT：Marginal rate of transformation 边际转换率
+SMC：short-run marginal cost 短期边际成本
+SAC: short-run average cost  短期平均成本
+LMC: long-run marginal cost 长期边际成本
+LAC: long-run average cost 长期平均成本
+AR：average revenue 平均收益
+π：总收益
+R：反应函数
