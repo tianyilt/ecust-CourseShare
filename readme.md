@@ -4,7 +4,7 @@
 
 ![1574474713395](readme.assets/1574474713395.png)
 
-![size](https://img.shields.io/github/repo-size/Liz-Nozomi/ecust-CourseShare)
+![size](https://img.shields.io/github/repo-size/tianyilt/ecust-CourseShare)
 
 本项目以[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )为模板
 
@@ -99,7 +99,7 @@ https://github1s.com/tianyilt/ecust-CourseShare
 * 如果不同学院开设的同名课程，如由数学学院和信息学院分别开设的计算机网络，请分别归于开课学院，如[/数学学院/计算机网络](/数学学院/计算机网络) 和[/信息科学与工程学院/计算机网络](/信息科学与工程学院/计算机网络) 中。建议在readme中加入相互的跳转。
 * 对于同名的不同学分课程，我们建议在文件夹名中备注学分。
 * 公共课程设有专门的文件夹用来导航。
-* 建议各位贡献者们都在上方的**“在这里可以找到什么”**中留下自己的昵称或GitHub账号。
+* 建议各位贡献者们都在上方的“在这里可以找到什么”中留下自己的昵称或GitHub账号。
 
 课程开课学院完全按照[教务处公示](https://jwc.ecust.edu.cn/2022/0919/c3938a148491/page.htm) *<font color="red">更新于2022.12 2023春季学期开学请更新</font>* 。
 
