@@ -1,0 +1,319 @@
+<HTML>
+<HEAD>
+<TITLE>工程材料网络教程</TITLE>
+<META content="Microsoft FrontPage 4.0" name=GENERATOR>
+<STYLE type=text/css>
+BODY {
+	LINE-HEIGHT: 18px
+}
+TD {
+	FONT-SIZE: 8pt; LINE-HEIGHT: 18px
+}
+.NV1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; MARGIN-LEFT:0px; CURSOR: hand; TEXT-INDENT: -8px; FONT-FAMILY: Arial
+}
+.NV2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; TEXT-INDENT: 0px
+}
+</STYLE>
+
+
+<style>
+<!--
+.font8        { font-size: 8px }
+.font9        { font-size: 9px }
+.font10       { font-size: 10px }
+.font12       { font-size: 12px }
+.font14       { font-size: 14px }
+.font16       { font-size: 16px }
+.font18       { font-size: 18px }
+.font20       { font-size: 20px }
+.font22       { font-size: 22px }
+.font24       { font-size: 24px }
+-->
+</style>
+ 
+<META NAME="GENERATOR" Content="Microsoft FrontPage 4.0">
+<TITLE></TITLE>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+var i=0;
+function button1_onclick() {
+   if (text1.value=="锻造" &&
+       text2.value=="正火" && 
+       text3.value=="粗加工" && 
+       text4.value=="调质" &&
+       text5.value=="精加工" &&
+       text6.value=="表面淬火" &&
+       text7.value=="低温回火" &&
+       text8.value=="磨削加工"  )
+   {
+     alert("你做对了，祝贺你！");
+     i=0;
+   }
+   else
+   {
+      alert("你做错了，再做一次！");
+      text1.value="";
+      text2.value="";
+      text3.value="";
+      text4.value="";
+      text5.value="";
+      text6.value="";
+      text7.value="";
+      text8.value="";      
+      i=0;
+     }  
+      
+   
+}
+
+function switchstep(d){
+	i++;
+
+	switch (i){
+	case 1: text1.value=d.value;
+			break;
+	case 2: text2.value=d.value;
+			break;
+	case 3: text3.value=d.value;
+			break;
+	case 4: text4.value=d.value;
+			break;
+        case 5: text5.value=d.value;
+			break;
+        case 6: text6.value=d.value;
+			break;
+        case 7: text7.value=d.value;
+			break;
+        case 8: text8.value=d.value;
+			break;
+	
+
+	default: break;
+	}
+	
+}
+
+
+function step1_onclick() {
+	switchstep(step1);
+}
+function step2_onclick() {
+	switchstep(step2);
+}
+function step3_onclick() {
+	switchstep(step3);
+}
+function step4_onclick() {
+	switchstep(step4);
+}
+function step5_onclick() {
+	switchstep(step5);
+}
+function step6_onclick() {
+	switchstep(step6);
+}
+function step7_onclick() {
+	switchstep(step7);
+}
+function step8_onclick() {
+	switchstep(step8);
+}
+function step9_onclick() {
+	switchstep(step9);
+}
+function step10_onclick() {
+	switchstep(step10);
+}
+
+
+function reset_onclick() {
+	text1.value="";
+	text2.value="";
+	text3.value="";
+	text4.value="";
+        text5.value="";
+        text6.value="";
+        text7.value="";
+        text8.value="";	
+    
+	i=0;
+}
+
+//-->
+</SCRIPT>
+
+</HEAD>
+<BODY bgColor=#EEFFF4 leftMargin=0 
+<table border=0 cellpadding=0 cellspacing=0 width=770 topmargin="0">
+<table border="0" width="100%" style="font-family: 宋体; font-size: 10pt" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%" class="font14">
+      <p class="font12">　</p> 
+      <p class="font12">　</p> 
+</table> 
+<p class="font16" style="word-spacing: 0; line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 7; margin-bottom: 0" align="center">&nbsp;&nbsp;<font face="隶书" size="7">&nbsp;&nbsp;<font color="#FF0000">练习</font></font><font color="#FF0000" face="隶书" size="6">(6)</font><font face="隶书" size="7">&nbsp;</font></p>   
+<p class="font16" style="word-spacing: 0; line-height: 200%; margin-right: 0; margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp;&nbsp;</p>   
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" width="96%">
+    <tr>
+      <td width="100%">   
+<p class="font24" style="word-spacing: 0; line-height: 200%; margin: 0"><b><font size="5">&nbsp;<font color="#800000">&nbsp;&nbsp;车床主轴用45钢制造，整体硬度要求为220HB～250HB；轴颈和锥孔硬度要求为52HRC。请设计工艺路线。</font>&nbsp;</font></b></p>         
+  </center>  
+      <div align="center">
+        <center>
+        <table border="0" width="626" cellspacing="0" cellpadding="0" height="122">
+          <tr>
+            <td width="133" height="44">
+              <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0"><font size="5"><b><font color="#FF0000" face="宋体" size="5">请选择：</font> 
+</b></font></td>
+          </center>
+          <td width="164" height="44">
+            <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0"><font size="5" face="宋体">   
+ <input type=button id=step4 name=step4 value="低温回火"          
+     LANGUAGE=javascript onclick="return step4_onclick()" style="font-size: 18pt"></font></td>
+          <td width="148" height="44">
+            <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0" align="center"><font size="5" face="宋体"><input type=button id=step8 name=step8 value="精加工"          
+     LANGUAGE=javascript onclick="return step8_onclick()" style="font-size: 18pt"></font></td>
+          <td width="128" height="44">
+            <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0" align="center"><font size="5" face="宋体"><input type=button id=step2 name=step2 value="调质"               
+     LANGUAGE=javascript onclick="return step2_onclick()" style="font-size: 18pt"></font></td>
+          <td width="89" height="44">
+            <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0"><font size="5" face="宋体"><input type=button id=step3 name=step3 value="锻造"      
+     LANGUAGE=javascript onclick="return step3_onclick()" style="font-size: 18pt"></font></td>
+        </tr>
+        <center>
+        <tr>
+          <td width="180" height="34">
+            <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0"></td>
+        </center>
+        <td width="148" height="34">
+          <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0"><font size="5" face="宋体"><input type=button id=step5 name=step5 value="磨削加工"         
+     LANGUAGE=javascript onclick="return step5_onclick()" style="font-size: 18pt"></font></td>
+        <td width="152" height="34">
+          <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0" align="center"><font size="5" face="宋体"><input type=button id=step1 name=step1 value="粗加工"      
+     LANGUAGE=javascript onclick="return step1_onclick()" style="font-size: 18pt"></font></td>
+        <td width="150" height="34">
+          <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0" align="center">    
+<font size="5" face="宋体">    
+<input type=button id=step10 name=step10 value="渗碳"      
+     LANGUAGE=javascript onclick="return step10_onclick()" style="font-size: 18pt"></font> 
+      
+        </td>
+        <td width="111" height="34">
+          <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0"></td>
+        </tr>
+        <center>
+        <tr>
+          <td width="133" height="44">
+            <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0"></td>
+        </center>
+        <td width="164" height="44">
+          <p align="left" style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0">    
+<font size="5" face="宋体">    
+     <input type=button id=step9 name=step9 value="预冷淬火"      
+     LANGUAGE=javascript onclick="return step9_onclick()" style="font-size: 18pt"></font></td>
+        <center>
+        <td width="148" height="44">
+          <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0">    
+<font size="5" face="宋体">    
+<input type=button id=step6 name=step6 value="表面淬火"      
+     LANGUAGE=javascript onclick="return step6_onclick()" style="font-size: 18pt"></font></td>
+        </center>
+        <td width="128" height="44">
+          <p align="center" style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0"><font size="5" face="宋体"><input type=button id=step7 name=step7 value="正火"      
+     LANGUAGE=javascript onclick="return step7_onclick()" style="font-size: 18pt"></font></td>
+        <td width="89" height="44">
+          <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 4; margin-bottom: 0"></td>
+        </tr>
+        </table>
+      </div>
+      <p class="font24" align="left">
+  <center>
+  </center>  
+      <center>　</p>        
+  </center>  
+      <div align="center">
+        <table border="0" cellpadding="0" cellspacing="0" width="83%">
+          <tr>
+            <td width="20%" align="left">
+              <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0" align="left"><b><font color="#FF0000" size="5">&nbsp;&nbsp;第1步</font></b></td>
+            <center>
+  <td width="20%" align="left">
+    <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><b><font color="#FF0000" size="5">&nbsp;&nbsp;第2步</font></b></td>
+  <td width="20%" align="left">
+    <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><b><font color="#FF0000" size="5">&nbsp;&nbsp;第3步</font></b></td>
+  <td width="20%" align="left">
+    <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><b><font color="#FF0000" size="5">&nbsp;&nbsp;第4步</font></b></td>
+            </tr>
+            <tr>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><font size="5"> <INPUT id=text9 name=text1 size="9" style="font-size: 18pt"><span style="font-size:12.0pt;font-family:宋体;          
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;       
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;       
+mso-bidi-language:AR-SA">→</span></font></td>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><font size="5"><INPUT id=text10 name=text2 size="9" style="font-size: 18pt"><span style="font-size:12.0pt;font-family:宋体;       
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;       
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;       
+mso-bidi-language:AR-SA">→</span></font></td>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><font size="5"><INPUT id=text11 name=text3 size="9" style="font-size: 18pt"><span style="font-size:12.0pt;font-family:宋体;       
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;       
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;       
+mso-bidi-language:AR-SA">→</span></font></td>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><font size="5"><INPUT id=text12 name=text4 size="9" style="font-size: 18pt"><span style="font-size:12.0pt;font-family:宋体;       
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;       
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;       
+mso-bidi-language:AR-SA">→</span></font></td>
+            </tr>
+            <tr>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><b><font color="#FF0000" size="5">&nbsp;&nbsp;第5步</font></b></td>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><b><font color="#FF0000" size="5">&nbsp;&nbsp;第6步</font></b></td>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><b><font color="#FF0000" size="5">&nbsp;&nbsp;第7步</font></b></td>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><b><font color="#FF0000" size="5">&nbsp;&nbsp;第8步</font></b></td>
+            </tr>
+            <tr>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><font size="5"><INPUT id=text13 name=text5 size="9" style="font-size: 18pt"><span style="font-size:12.0pt;font-family:宋体;      
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;     
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;     
+mso-bidi-language:AR-SA">→</span></font></td>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><font size="5"><INPUT id=text14 name=text6 size="9" style="font-size: 18pt"><span style="font-size:12.0pt;font-family:宋体;     
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;     
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;     
+mso-bidi-language:AR-SA">→</span></font></td>
+              <td width="20%" align="left">
+                <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0"><font size="5"><INPUT id=text15 name=text7 size="9" style="font-size: 18pt"><span style="font-size:12.0pt;font-family:宋体;     
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;     
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;     
+mso-bidi-language:AR-SA">→</span></font></td>
+            <td width="20%" align="left">
+              <p style="line-height: 200%; margin-left: 0; margin-right: 0; margin-top: 6; margin-bottom: 0" align="left"><font size="5"><INPUT id=text16 name=text8 size="9" style="font-size: 18pt">&nbsp;&nbsp;&nbsp;</font></td>
+            </tr>
+          </table>
+        </center>
+      </div>
+<p class="font16" align="center"><font size="5">       
+<INPUT id=button2 title=button style="width: 107; height: 37; font-size: 18pt" type=button size=23 value="检验结果" name=button1 LANGUAGE=javascript onclick="return button1_onclick()">&nbsp;&nbsp; 
+<input type=button style="width: 109; height: 37; font-size: 18pt" id=reset0 name =reset value=重新设计  LANGUAGE=javascript onclick="return reset_onclick()">      
+</font>      
+</p>      
+  <center>
+      <P align=center class=c>　                                                                                                                                                   
+      </P>                                                                                                                                                   
+        <p>　</td>  
+    </tr>  
+  </table>  
+</div>  
+</BODY>     
+</HTML>     
+     
