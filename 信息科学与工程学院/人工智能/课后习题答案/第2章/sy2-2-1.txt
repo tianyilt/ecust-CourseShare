@@ -1,0 +1,1 @@
+华为云官方示例教程：https://support.huaweicloud.com/bestpractice-modelarts/modelarts_10_0002.html
