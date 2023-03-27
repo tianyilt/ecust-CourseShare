@@ -1,0 +1,55 @@
+  
+ Rigorous Column 'T1'
+  
+ ITERATIONS, MAXIMUM PER TRIAL           30
+             TOTAL ALL TRIALS             9
+  
+ COLUMN SUMMARY
+  
+                            ---------- NET FLOW RATES -----------     HEATER
+   TRAY    TEMP   PRESSURE   LIQUID    VAPOR    FEED     PRODUCT      DUTIES
+           DEG F    PSIA                 LB-MOL/HR                  MM BTU/HR
+  ------  ------- --------  -------- -------- --------- ---------  ------------
+       1C   234.0    20.00    3000.2                       200.0L      -42.3987
+       2    234.1    20.00    2991.4   3200.2
+       3    234.8    20.20    2988.3   3191.4
+       4    235.6    20.40    2982.4   3188.3
+       5    236.4    20.60    2970.2   3182.4
+       6    237.4    20.80    2936.6   3170.2
+       7    239.5    21.00    3019.1   3136.7    200.0M
+       8    240.5    21.20    3016.4   3019.1
+       9    241.5    21.40    3012.6   3016.4
+      10    242.7    21.60    3007.4   3012.6
+      11    243.9    21.80    2999.4   3007.4
+      12    245.3    22.00    2980.3   2999.4
+      13    247.6    22.20    2886.3   2980.3
+      14    256.9    22.40    4755.0   2886.3   1600.0L
+      15    259.8    22.60    4754.4   3155.0
+      16    262.9    22.80    4755.5   3154.4
+      17    266.0    23.00    4758.5   3155.6
+      18    269.0    23.20    4760.9   3158.5
+      19    272.0    23.40    4746.7   3161.0
+      20    276.4    23.60    4622.5   3146.7
+      21    291.0    23.80    4177.0   3022.5
+      22R   339.4    24.00             2577.1             1600.0L       50.9582
+  
+ FEED AND PRODUCT STREAMS
+  
+  TYPE     STREAM    PHASE   FROM  TO   LIQUID        FLOW RATES    HEAT RATES
+                             TRAY TRAY   FRAC         LB-MOL/HR     MM BTU/HR
+  ----- ------------ ------  ---- ----  ------       ------------  ------------
+  FEED  S5           MIXED           7  0.9757             200.00        3.7575
+  FEED  S6           LIQUID         14  1.0000            1600.00       14.2340
+  PROD  S2           LIQUID     1                          200.01        1.8203
+  PROD  S4           LIQUID    22                         1599.98       24.7355
+  
+  OVERALL MOLE BALANCE, (FEEDS - PRODUCTS)             4.4057E-13
+  OVERALL HEAT BALANCE, (H(IN) - H(OUT)  )                          -4.8336E-03
+  
+ SPECIFICATIONS
+  
+  SPECIFICATION  PARAMETER  TRAY   COMP   SPECIFICATION  SPECIFIED   CALCULATED
+     NUMBER        TYPE      NO     NO        TYPE         VALUE       VALUE
+  -------------  ---------  ----  ------  -------------  ----------  ----------
+    1 (ACTIVE)   STRM S2       1          MOL RATE        2.000E+02   2.000E+02
+    2 (ACTIVE)   UNIT T1       1          MOL RRATIO      1.500E+01   1.500E+01

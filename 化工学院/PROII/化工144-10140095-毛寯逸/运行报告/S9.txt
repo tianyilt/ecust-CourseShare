@@ -1,0 +1,21 @@
+ THERMODYNAMIC SYSTEM    NRTL
+  
+ STREAM 'S9'
+  
+                                 TOTAL       LIQUID
+                              ----------   ----------
+ RATE, LB-MOL/HR                169.9968     169.9968
+ TEMPERATURE, F                   233.94       233.94
+ PRESSURE, PSIA                    20.00        20.00
+ MOLECULAR WEIGHT                97.8681      97.8681
+ FRACTION                                      1.0000
+  
+ MOLAR FLOWRATES, LB-MOL/HR
+     1 - TOLUENE                  8.9741       8.9741
+     2 - MCH                    160.9871     160.9871
+     3 - PHENOL                   0.0356       0.0356
+  
+ MOLAR COMPOSITIONS
+     1 - TOLUENE                  0.0528       0.0528
+     2 - MCH                      0.9470       0.9470
+     3 - PHENOL               2.0945E-04   2.0945E-04

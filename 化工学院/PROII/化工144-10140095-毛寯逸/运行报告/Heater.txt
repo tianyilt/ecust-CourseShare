@@ -1,0 +1,19 @@
+  
+ UNIT 3, 'E1'
+  
+ OPERATING CONDITIONS
+  
+      DUTY, MM BTU/HR                          11.056
+  
+ HOT SIDE CONDITIONS                            INLET       OUTLET
+                                          -----------  -----------
+      FEED                                         S1
+      LIQUID PRODUCT                                            S6
+      LIQUID, LB-MOL/HR                      1600.000     1600.000
+              M LB/HR                         151.001      151.001
+          CP, BTU/LB-F                          0.490        0.540
+       TOTAL, LB-MOL/HR                      1600.000     1600.000
+              M LB/HR                         151.001      151.001
+      CONDENSATION, LB-MOL/HR                                0.000
+       TEMPERATURE, F                          77.000      220.000
+       PRESSURE, PSIA                          20.000       20.000
