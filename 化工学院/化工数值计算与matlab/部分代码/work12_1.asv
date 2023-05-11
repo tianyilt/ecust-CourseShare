@@ -1,0 +1,14 @@
+function work12_1
+
+
+
+function dydz = equations(z, y)
+R = 8.314;
+cT = y(1);
+cH = y(2);
+cB = y(3);
+cM = y(4);
+T = y(5);
+k = 3.5e9.*exp(-50900./R./T);
+rT = k.*cT.*cH.^0.5/3600;
+u = 

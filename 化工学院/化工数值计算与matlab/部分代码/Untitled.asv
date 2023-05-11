@@ -1,0 +1,26 @@
+% 首先输入离散数据
+x = linspace(0,2*pi,21);
+y = sin(x);
+
+% 指定求导点0,2,4,6
+xx = 0:2:6;
+
+% 对离散数据采用polyfit函数进行拟合，并通过polyder求导函数，
+% 然后通过polyval计算导数值
+pp1 = polyfit(x,y,3);
+dp1 = polyder(pp1);
+dpv1 = polyval(dp1,xx);
+
+% 对离散数据采用csaps函数进行插值，并通过fner求导函数，
+% 然后通过fnval计算导数值
+pp2 = csaps(x,y);
+dp2 = fnder(pp2);
+dpv2 = fnval(dp2,xx);
+
+% 画图对比
+plot(x,y,)
+
+
+
+hold off
+legend('data','pp','pp0','pp1')
