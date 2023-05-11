@@ -1,0 +1,3 @@
+[filename, pathname] = ...
+     uigetfile({'*.xls';'*.*'},'Ñ¡ÔñÊý¾Ý');
+[Data]= xlsread(filename, -1);
