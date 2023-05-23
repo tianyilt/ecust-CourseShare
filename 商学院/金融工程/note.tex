@@ -1,0 +1,282 @@
+    \documentclass{article}
+\usepackage[UTF8]{ctex}
+\usepackage{newtxtext}
+\usepackage{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage[strict]{changepage} % 提供一个 adjustwidth 环境
+\usepackage{framed} % 实现方框效果
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{booktabs}
+\geometry{a4paper,centering,scale=0.8}
+\definecolor{blueshade}{rgb}{0.95,0.95,1} % 文%本框颜色
+\definecolor{greenshade}{rgb}{0.90,0.99,0.91} % 绿色文本框，竖线颜色设为 Green
+\definecolor{redshade}{rgb}{1.00,0.90,0.90}% 红色文本框，竖线颜色设为 LightCoral
+\definecolor{brownshade}{rgb}{0.99,0.97,0.93} % 莫兰迪棕色，竖线颜色设为 BurlyWood
+\definecolor{yellowshade}{rgb}{1,0.945,0.7255}%米黄色
+\definecolor{DarkYellow}{rgb}{0.7843,0.61176,0.0549}
+
+\newenvironment{formal}[2][greenshade]{%
+\def\FrameCommand{%
+\hspace{1pt}%
+{\color{#2}\vrule width 2pt}%
+{\color{#1}\vrule width 4pt}%
+\colorbox{#1}%
+}%
+\MakeFramed{\advance\hsize-\width\FrameRestore}%
+\noindent\hspace{-4.55pt}% disable indenting first paragraph
+\begin{adjustwidth}{}{7pt}%
+\vspace{2pt}\vspace{2pt}%
+}
+{
+\vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+
+
+\title{\huge 中金所何时倒闭???}
+\author{NP\_123\\np123greatest@gmail.com}
+\date{\today}
+
+%\begin{tcolorbox}
+%    [colback=Emerald!10,colframe=cyan!40!black,title=\textbf{公式}]
+%\end{tcolorbox}
+
+\begin{document} 
+\maketitle
+\tableofcontents
+
+    一些需要记的数值：
+\begin{itemize}
+    \item N(0,1)在95\%置信水平下为1.96
+    \item S\&P500指数期货每点指数点代表250美元；
+    \item 沪深300指数期货（IF）每点指数点代表300元；
+    \item 上证50 指数期货（IH）每点指数点代表300元；
+    \item 中证500指数期货（IC）每点指数点代表200元。
+\end{itemize}
+
+\newpage
+\section{中国国债期货}
+
+默认$t$为现在的时间，国债券每年计息一次，所有公式按月计算。
+
+\subsection{已知信息}
+目前日期$t=$2020年1月。
+\begin{table}[htbp]
+    \centering
+    \caption{债券和国债期货信息}
+    \label{tab:my-table}
+    \begin{tabular}{@{}cccccc@{}}
+        \toprule
+        类别&债券到期日       & 息票率 & 报价   \\ \midrule
+        国债券$\mathcal{A} $&2024年10月 & 2.94\%  & 100.864元 \\
+        国债券$\mathcal{B} $&2025年03月 & 3.77\%  & 104.688元  \\
+        国债期货&2020年06月 & - & 100.360元 \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{计算步骤}
+
+
+\begin{enumerate}
+    \item 计算国债券在特定期货合约中的转换因子
+    
+    （将国债券的现金流贴现到期货合约到期时间-(国债券上一付息日->期货合约到期时间)的应计利息。两者时间跨度互为相反）
+    
+    $\mathcal{A} $的转换因子为
+    \[\sum_{i=0}^{4}\frac{{\color{red} 2.94\%}}{(1+3\%)^{i+\frac{{\color{red}4}}{12}}}+\frac{1}{(1+3\%)^{4\frac{{\color{red}4}}{12}}}-2.94\%\times\frac{{\color{red}8}}{12}=0.9975\]
+    其中{\color{red}4}=2020年10月-6月(第一次贴现)，{\color{red}8}=2020年6月-2019年10月(应计利息)。
+
+    类似的，设$\mathcal{B} $国债票息率为$3.77\%$，2025年3月到期。$\mathcal{B} $的转换因子$=1.0335$
+    
+    \textbf{{\color{red}*转换因子计算与$t$无关}}
+    \item 计算国债券$\mathcal{A} ,\mathcal{B} $\textbf{现货}交割全价
+    
+    （净价+(国债券上一付息日->现在)到的应计利息）
+
+    $\mathcal{A} $的交割全价$=100.864+2.94\times\frac{(1+12)-10}{12}=101.599$
+
+    $\mathcal{B} $的交割全价$=104.688+3.77\times\frac{(1+12)-3}{12}=107.830$
+    \item 计算国债券$\mathcal{A} ,\mathcal{B} $\textbf{期货}交割全价
+    
+    （国债期货报价*转换因子+(国债券上一付息日->配对缴款日(期货合约到期时间)的应计利息)）
+
+    转换因子的公式，所有可交割券之间建立起了一致的转换体系:
+    \[\text{\textbf{国债期货}标准券报价}=\frac{\text{可交割券j的}\textbf{\text{期货净价}}}{\text{可交割券j的}\textbf{\text{转换因子}}}\]
+    
+    国债券$\mathcal{A}$的期货交割全价$=100.360\times 0.9975 + 2.94\times \frac{(6+12)-10}{12}=102.0691 $
+
+    国债券$\mathcal{B}$的期货交割全价$=100.360\times 1.0335 + 3.77\times \frac{6-3}{12}=104.66456 $
+
+    \item 计算可交割券的IRR，判断准CTD券
+    
+    \begin{enumerate}
+        \item     若没有遇到债券付息日，在本例中为国债券$\mathcal{A} $：
+
+        \[I R R_{j, t}=\frac{t \text { 时刻锁定的债券 } j \text { 期货交割全价 }-t \text { 时刻债券 } j \text { 现货全价 }}{t \text { 时刻债券 } j \text { 现货全价 }} \times \frac{12}{T-t}\]
+        \textbf{简记：}
+        \begin{align}
+            I R R_{j, t}&=\frac{\text { 债券\textbf{期货}全价 } -\text { 债券\textbf{现货}全价  } }{\text { 债券\textbf{现货}全价  }} \times \frac{12}{\text{期货交割日}-t} \nonumber\\ 
+            IRR_{\mathcal{A} ,t}&=\frac{102.0691-101.599}{101.599}\times\frac{12}{6-1}=1.1104 \%\nonumber 
+        \end{align}
+        \item 若遇到债券付息日
+
+        \[I R R_{j, t}=\frac{t \text { 时刻锁定的债券 } j \text { 期货交割全价 }-t \text { 时刻债券 } j \text { 现货全价 }+\sum_i \text { 期货剩余期限内债券的票息 } }{t \text { 时刻债券 } j \text { 现货全价 } \times \frac{T-t}{365 \text { 或 } 366}-\sum_i \text { 期货剩余期限内债券 } j \text { 的票息 } i \times \frac{T-\tau_i}{365 \text { 或 } 366}}\]
+        \textbf{简记：}
+        \begin{align}
+        I R R_{j, t}&=\frac{\text { 债券\textbf{期货}全价 } -\text { 债券\textbf{现货}全价  } +\sum_i \text { \textbf{期货}剩余期限内债券的票息 }}{\text { 债券\textbf{现货}全价  }  \times \frac{\text{期货交割日}-t}{12}-\sum_i \text{\textbf{期货}剩余期限内债券的票息}\times \frac{\text{期货交割日}-\tau_i}{12}}\nonumber\\
+        IRR_{\mathcal{B} ,t}&=\frac{104.6646-107.830+3.77}{107.830\times\frac{6-1}{12}-3.77\times\frac{6-3}{12}}=1.375\%  \nonumber
+        \end{align}
+        因为$IRR_\mathcal{A} <IRR_\mathcal{B} $，因此，选债券$\mathcal{B} $进行交割的可能性更大。
+    \end{enumerate}
+
+
+    \item 计算CTD券全价（2.中已经计算）
+    
+    债券$\mathcal{B} $的全价为$107.830$元。
+    \item 计算CTD券期货全价
+    
+    （支付已知红利的期货定价公式$F=(S-I)^{(T-t)}$）
+    \[F=(107.830-3.77e^{-3.5\%\times (3-1)/12})e^{3.5\%(6-1)/12}=105.6109\]
+    \item 计算CTD券期货净价
+    
+    （全价-(国债券上一付息日->配对缴款日(期货合约到期时间)的应计利息)）
+    \[105.6109-3.77\times\frac{6-3}{12}=104.6684\]
+    \item 计算国债期货理论报价
+    
+    （CTD券净价/转换因子）
+    \[\text{国债期货的理论报价}=\frac{104.6684}{1.0335}=101.2757\]
+\end{enumerate}
+
+\subsection{总结}
+\subsubsection{时间锚点}
+\begin{enumerate}
+    \item {\color{blue}现在$t$}---时间点
+    \item {\color{red}配对缴款日(期货合约到期时间)}---时间点
+    \item {\color{Green}国债券上一付息日}---每年一次，穿过1,2的时间跨度
+    \item {\color{Green}$\tau_i$债券付息日==国债券上一付息日}---每年一次，此时默认为时间点($i=1$)
+\end{enumerate}
+\subsubsection{时间跨度}
+\begin{enumerate}
+    \item 转换因子：
+    
+    贴现：{\color{red}期货合约到期时间}--->{\color{Green}国债券上一付息日}
+    
+    应计利息：{\color{Green}国债券上一付息日}--->{\color{red}期货合约到期时间}
+    \item 国债券\textbf{现货}交割全价：应计利息：{\color{Green}国债券上一付息日}--->{\color{blue}现在$t$}
+    \item 国债券\textbf{期货}交割全价：应计利息：{\color{Green}国债券上一付息日}--->{\color{red}配对缴款日(期货合约到期时间)}
+    \item $IRR_j,t$的时间跨度：{\color{blue}现在$t$}--->{\color{red}期货合约到期时间}
+    \item $IRR_j,t$中付息日时间跨度：{\color{Green}国债券上一付息日$\tau_i$}--->{\color{red}期货合约到期时间}
+    \item 计算CTD券期货全价：
+
+    付息贴现：{\color{blue}现在$t$}--->{\color{Green}国债券上一付息日}
+
+    贴现：{\color{blue}现在$t$}--->{\color{red}期货合约到期时间}
+    \item 计算CTD券期货净价：应计利息：{\color{Green}国债券上一付息日}--->{\color{red}配对缴款日(期货合约到期时间)}
+\end{enumerate}
+\clearpage
+
+
+\section{期权定价}
+\subsection{美式期权提前行权可能性}
+\setcounter{footnote}{1}
+\begin{table}[htbp]
+    \centering
+    \caption{美式期权提前行权的可能性}
+    \label{tab:my-table}
+    \begin{tabular}{@{}llll@{}}
+        \toprule
+        红利     & 期权类型   & 可能性 & 条件                                           \\ \midrule
+        无       & 看涨期权   & 不可能 &  -                                             \\
+                & 看跌期权   & 有可能 & 实值程度较高\footnotemark[\value{footnote}]，利率较高                                               \\ \cmidrule(l){1-4} 
+        有       & 看涨期权   & 有可能 & $D_i \leq X[1-e^{-r(t_{t+1}-t_i)}]$           \\
+                &            &        & $D_n \leq X[1-e^{-r(T-t_n)}]$                 \\ 
+                & 看跌期权   & 有可能 &  过于复杂，不做阐述                                        \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+\footnotetext[\value{footnote}]{时间价值趋于0}
+
+\subsection{看跌期权与看涨期权之间的平价关系(PCP)}
+\subsubsection{欧式看涨期权和看跌期权之间的PCP}
+\[c=p+(F-K)e^{-r(T-t)}\]
+
+完美市场中，不知道远期价格时，用远期价格和现货的关系计算：
+\begin{align}
+    c+Ke^{-r(T-t)}&=p+S\nonumber\\
+    c+Ke^{-r(T-t)}&=p+S-I\nonumber\\
+    c+Ke^{-r(T-t)}&=p+Se^{-q(T-t)}\nonumber
+\end{align}
+\subsubsection{美式看涨期权和看跌期权之间的PCP}
+\begin{align}
+    S-K&\leq C-P\leq S-Ke^{-r(T-t)}\nonumber\\
+    Fe^{-r(T-t)}-K&\leq C-P\leq (F-K)e^{-r(T-t)}\nonumber
+\end{align}
+\subsection{BSM定价模型}
+\subsubsection{几何布朗运动}
+\[\ln S_T \sim \varphi\left\{\ln S_t+\left(\mu-\frac{\sigma^2}{2}\right) \cdot(T-t), \sigma \sqrt{T-t}\right\}\]
+
+根据对数正态分布的基本性质，$S_T$的条件均值与条件方差分别为：
+\begin{align}
+    E_t(S_T)&=S_te^{\mu (T-t)}\nonumber\\
+    var_t(S_T)&=S_t^2 e^{2\mu(T-t)}[e^{\sigma^2(T-t)}-1]\nonumber
+\end{align}
+
+当置信度为$95\%$时，下限：$\mu - 2\sigma$，上限：$\mu + 2\sigma$。
+\subsubsection{BSM定价}
+布莱克-舒尔斯-默顿期权定价公式中的$d_1,d_2$
+\begin{align}
+    d_1&=\frac{\ln \left(\frac{S_t}{K}\right)+\left(r+\frac{\sigma^2}{2}\right)(T-t)}{\sigma \sqrt{T-t}}\nonumber\\
+    d_2&=d_1-\sigma\sqrt{T-t}\nonumber
+\end{align}
+
+无红利资产欧式看涨期权
+\[c_t=S_tN(d_1)-Ke^{-r(T-t)}N(d_2)\]
+
+无红利资产欧式看跌期权
+\[p_t=Ke^{-r(T-t)}N(-d_2)-S_tN(-d_1)\]
+
+对于无红利美式期权的提前行权不做考虑，但是有红利美式期权的提前行权做考虑。
+对于有红利美式看涨期权是否提前行权，参考表2。
+
+\clearpage
+\section{套期保值}
+\subsection{对于价格变动进行回归}
+\[N=b\times\frac{Q_H}{Q_G}\]
+\subsection{对于收益率变动进行回归}
+\[N=b^{'}\times\frac{V_H}{V_G}\]
+
+其中，$b=b^{'}\frac{H_0}{G_0}$。H=holding,G=gearing。
+以$\beta$系数作为最优套期保值比率的近似值创建一个合成的短期国库券，大致表示为：
+
+股票多头+股指期货空头=短期国库券多头，或
+
+股指期货多头+短期国库券多头=股票多头
+\[N=(\beta^{*}-\beta)\frac{V_H}{V_G}\]
+\begin{itemize}
+    \item 当$\beta^{*}>\beta$时，意味着投资者希望提高所承担的系统性风险，获取更高的风险收益，应进入股指期货多头，这时$(\beta^{*}-\beta)V_H/V_G$大于零
+    \item 当$\beta^{*}<\beta$时，意味着投资者希望降低所承担的系统性风险，应进入股指期货空头，这时$(\beta^{*}-\beta)V_H/V_G$小于零。
+    \item 最小方差套期保值比率$\beta$是目标$\beta^{*}=0$的特例。
+\end{itemize}
+
+特别的，当$\beta$系数不是最小方差套期保值比率$b^{'}$的一个良好近似时：
+\[N=\frac{\beta^{*}-\beta}{\beta /b^{'}} \times \frac{V_H}{V_G}\]
+
+\subsection{基于久期的利率风险管理}
+\begin{align}
+    N&=\frac{D_H\times V_H}{D_G\times V_G}\nonumber\\
+    &=\frac{D_H^{*}-D_H}{D_G}\times\frac{V_H}{V_G} \nonumber
+\end{align}
+
+\subsection{最优套期保值数量(OLS)}
+\[n=b=\frac{\sum x_i y_i-n \overline{x y}}{\sum x_i^2-n \bar{x}^2}\]
+
+
+
+\end{document}
