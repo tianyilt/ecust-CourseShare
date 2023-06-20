@@ -1,0 +1,60 @@
+In-sample tests for one factor model with OLS:
+Predictor: DP
+Regressing Results: b = -0.016494, k = -0.006830
+Regressing Pvalues: p = 0.167258, p = 0.050744
+Inference: 在10%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: EP
+Regressing Results: b = -0.015230, k = -0.007963
+Regressing Pvalues: p = 0.160354, p = 0.041637
+Inference: 在5%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: VOL
+Regressing Results: b = -0.000123, k = 0.040301
+Regressing Pvalues: p = 0.971027, p = 0.023613
+Inference: 在5%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: BILL
+Regressing Results: b = 0.006610, k = -0.338122
+Regressing Pvalues: p = 0.000050, p = 0.111058
+Inference: 无样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: BOND
+Regressing Results: b = 0.006481, k = -1.757020
+Regressing Pvalues: p = 0.000060, p = 0.000002
+Inference: 在1%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: TERM
+Regressing Results: b = 0.005105, k = 0.090130
+Regressing Pvalues: p = 0.055423, p = 0.469501
+Inference: 无样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: CREDIT
+Regressing Results: b = 0.005278, k = 0.195136
+Regressing Pvalues: p = 0.094432, p = 0.616411
+Inference: 无样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: PPIG
+Regressing Results: b = 0.005719, k = 0.004027
+Regressing Pvalues: p = 0.000581, p = 0.009460
+Inference: 在1%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: IPG
+Regressing Results: b = 0.005545, k = 0.004120
+Regressing Pvalues: p = 0.000682, p = 0.000007
+Inference: 在1%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: MA112
+Regressing Results: b = -0.019090, k = 0.037279
+Regressing Pvalues: p = 0.000000, p = 0.000000
+Inference: 在1%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: MA312
+Regressing Results: b = -0.004082, k = 0.015589
+Regressing Pvalues: p = 0.156579, p = 0.000008
+Inference: 在1%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: MOM6
+Regressing Results: b = -0.017435, k = 0.036100
+Regressing Pvalues: p = 0.000000, p = 0.000000
+Inference: 在1%的显著性水平下有样本内预测能力
