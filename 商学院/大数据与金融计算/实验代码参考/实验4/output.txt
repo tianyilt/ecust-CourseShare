@@ -1,0 +1,84 @@
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: DP
+Stat gains: R2os = -0.005143, MFSEadj = 2.062252, MFSEpvalue = 0.039526
+Inference: 无样本外预测能力
+Econ Gains: Delta U = -0.000301, Upred = 0.003771, Umean = 0.004072
+Inference: 没有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: EP
+Stat gains: R2os = -0.015106, MFSEadj = 0.640065, MFSEpvalue = 0.522325
+Inference: 无样本外预测能力
+Econ Gains: Delta U = -0.000170, Upred = 0.003902, Umean = 0.004072
+Inference: 没有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: VOL
+Stat gains: R2os = 0.004113, MFSEadj = 2.097376, MFSEpvalue = 0.036293
+Inference: 在5%的显著性水平下有样本外预测能力
+Econ Gains: Delta U = -0.000069, Upred = 0.004003, Umean = 0.004072
+Inference: 没有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: BILL
+Stat gains: R2os = -0.000322, MFSEadj = 2.795891, MFSEpvalue = 0.005307
+Inference: 无样本外预测能力
+Econ Gains: Delta U = 0.000049, Upred = 0.004121, Umean = 0.004072
+Inference: 有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: BOND
+Stat gains: R2os = 0.011894, MFSEadj = 3.107020, MFSEpvalue = 0.001961
+Inference: 在1%的显著性水平下有样本外预测能力
+Econ Gains: Delta U = 0.000687, Upred = 0.004759, Umean = 0.004072
+Inference: 有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: TERM
+Stat gains: R2os = -0.001091, MFSEadj = 1.750775, MFSEpvalue = 0.080391
+Inference: 无样本外预测能力
+Econ Gains: Delta U = 0.000064, Upred = 0.004136, Umean = 0.004072
+Inference: 有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: CREDIT
+Stat gains: R2os = -0.000930, MFSEadj = 0.735414, MFSEpvalue = 0.462316
+Inference: 无样本外预测能力
+Econ Gains: Delta U = 0.000033, Upred = 0.004105, Umean = 0.004072
+Inference: 有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: PPIG
+Stat gains: R2os = -0.001019, MFSEadj = 0.862098, MFSEpvalue = 0.388908
+Inference: 无样本外预测能力
+Econ Gains: Delta U = -0.000006, Upred = 0.004066, Umean = 0.004072
+Inference: 没有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: IPG
+Stat gains: R2os = 0.000464, MFSEadj = -0.952251, MFSEpvalue = 0.341275
+Inference: 无样本外预测能力
+Econ Gains: Delta U = 0.000003, Upred = 0.004075, Umean = 0.004072
+Inference: 有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: MA112
+Stat gains: R2os = 0.001486, MFSEadj = 0.707132, MFSEpvalue = 0.479703
+Inference: 无样本外预测能力
+Econ Gains: Delta U = 0.000172, Upred = 0.004244, Umean = 0.004072
+Inference: 有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: MA312
+Stat gains: R2os = -0.001900, MFSEadj = 0.137456, MFSEpvalue = 0.890707
+Inference: 无样本外预测能力
+Econ Gains: Delta U = 0.000066, Upred = 0.004138, Umean = 0.004072
+Inference: 有经济意义
+
+Out-of-sample tests for one factor model with OLS:
+Predictor: MOM6
+Stat gains: R2os = -0.001505, MFSEadj = 0.490648, MFSEpvalue = 0.623818
+Inference: 无样本外预测能力
+Econ Gains: Delta U = 0.000062, Upred = 0.004134, Umean = 0.004072
+Inference: 有经济意义
