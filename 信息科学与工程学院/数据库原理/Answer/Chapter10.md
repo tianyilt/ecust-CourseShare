@@ -37,18 +37,18 @@ $S_2$不是冲突可串行化的
 |---|---------|---------|
 |<Checkpoint {T<sub>1</sub>,T<sub>2</sub>}>|{T<sub>1</sub>,T<sub>2</sub>}|{ }|
 |<T<sub>3</sub>,START>|T<sub>1</sub>,T<sub>2</sub>,T<sub>3</sub>}|{ }|
-|<T<sub>3</sub>,COMMIT>|{T<sub>1</sub>,T<sub>2</sub>}|{$t_3$}|
-|<T<sub>1</sub>,COMMIT>|{T<sub>2</sub>}|{T<sub>1</sub,T<sub>3</sub$}|  
+|<T<sub>3</sub>,COMMIT>|{T<sub>1</sub>,T<sub>2</sub>}|{T<sub>3</sub>}|
+|<T<sub>1</sub>,COMMIT>|{T<sub>2</sub>}|{T<sub>1</sub>,T<sub>3</sub>}|  
 
 
 (2) 撤销阶段：  
-<T<sub>2</sub , A, 20, 30>: A = 20  
-<T<sub>2</sub , C, 10, 20>: C = 20
-撤销后结果：$A = 20, C = 20$
+<T<sub>2</sub> , A, 20, 30>: A = 20  
+<T<sub>2</sub> , C, 10, 20>: C = 20  
+撤销后结果：A = 20, C = 20
 
 (3) 重做阶段：  
-<T<sub>1</sub,D,10,25>: D = 25  
-<T<sub>3</sub,A,10,20>: A = 20  
-<T<sub>3</sub,D,0,10>: D = 10
+<T<sub>1</sub>,D,10,25>: D = 25  
+<T<sub>3</sub>,A,10,20>: A = 20  
+<T<sub>3</sub>,D,0,10>: D = 10
 
-故恢复后结果：$A = 20, B = 10, C = 20, D = 10$
+故恢复后结果：A = 20, B = 10, C = 20, D = 10
