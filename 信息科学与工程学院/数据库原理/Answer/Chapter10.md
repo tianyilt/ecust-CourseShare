@@ -29,25 +29,26 @@ D2((T<sub>2</sub>)) --> D1((T<sub>1</sub>))
 D2((T<sub>2</sub>)) --> D3((T<sub>3</sub>))
 ```
 
-S<sub>2</sub>不是冲突可串行化的
+$S_2$不是冲突可串行化的
 
 ## 10.13
 (1) 分析阶段：  
 |   | UNDO-SET| REDO-SET|
 |---|---------|---------|
-|<Checkpoint {$T_1,T_2$}>|{$T_1,T_2$}|{ }|
-|<$T_3$,START>|{$T_1,T_2,T_3$}|{ }|
-|<$T_3$,COMMIT>|{$T_1,T_2$}|{$t_3$}|
-|<$T_1$,COMMIT>|{$T_2$}|{$T_1,T_3$}|
+|<Checkpoint {T<sub>1</sub>,T<sub>2</sub>}>|{T<sub>1</sub>,T<sub>2</sub>}|{ }|
+|<T<sub>3</sub>,START>|T<sub>1</sub>,T<sub>2</sub>,T<sub>3</sub>}|{ }|
+|<T<sub>3</sub>,COMMIT>|{T<sub>1</sub>,T<sub>2</sub>}|{$t_3$}|
+|<T<sub>1</sub>,COMMIT>|{T<sub>2</sub>}|{T<sub>1</sub,T<sub>3</sub$}|  
+
 
 (2) 撤销阶段：  
-$<T_2,A,20,30>: A = 20 $  
-$<T_2,C,10,20>: C = 20 $
+<T<sub>2</sub , A, 20, 30>: A = 20  
+<T<sub>2</sub , C, 10, 20>: C = 20
 撤销后结果：$A = 20, C = 20$
 
 (3) 重做阶段：  
- $<T_1,D,10,25>: D = 25$  
- $<T_3,A,10,20>: A = 20$  
- $<T_3,D,0,10>: D = 10$
+<T<sub>1</sub,D,10,25>: D = 25  
+<T<sub>3</sub,A,10,20>: A = 20  
+<T<sub>3</sub,D,0,10>: D = 10
 
 故恢复后结果：$A = 20, B = 10, C = 20, D = 10$
