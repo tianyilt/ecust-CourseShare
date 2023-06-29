@@ -34,7 +34,9 @@ Driver(<u>driverNo</u>, driverName, telephone, address)
 (4) 车辆实体集：  
 Vihecle(<u>registration</u>, model, productor, madeTime)  
 (5) 警察实体集：  
-Police(<u>policeNo</u>, policeName)
+Police(<u>policeNo</u>, policeName)  
+> 图片不显示的话可以保存md文件到本地用浏览器打开或者用vs code打开。
+> 或者直接查看代码复制图片的base64代码，用网络在线base64查看器查看。
 
 
 
