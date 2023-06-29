@@ -1,4 +1,3 @@
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 # Chapter4
 
 ## 4.1
