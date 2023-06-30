@@ -35,8 +35,10 @@ Driver(<u>driverNo</u>, driverName, telephone, address)
 Vihecle(<u>registration</u>, model, productor, madeTime)  
 (5) 警察实体集：  
 Police(<u>policeNo</u>, policeName)  
-> 图片不显示的话可以保存md文件到本地用浏览器打开或者用vs code打开。
-> 或者直接查看代码复制图片的base64代码，用网络在线base64查看器查看。
+> 图片不显示的话可以保存md文件到本地用浏览器打开或者用vs code打开。  
+> 浏览器得下载md预览插件，比如Markdown Viewer
+> 或者直接查看代码复制图片的base64代码，用网络在线base64查看器查看。  
+> base64格式： data:image/jpeg;base64, $\cdots$
 
 
 
