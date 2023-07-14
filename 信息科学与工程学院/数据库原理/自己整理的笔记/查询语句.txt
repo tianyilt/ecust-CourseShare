@@ -1,0 +1,75 @@
+#1
+select readerName,workUnit,identifycard from reader where substr(identifycard,7,4)='1991';
+#用substring来选择1991年出生的人
+#2
+select * from book where bookName like '%数据库%';
+#用like%%来进行模糊搜索
+#3
+select bookNo,publishingDate,shopDate,bookName from book where shopDate between '2015-1-1' and '2016-12-31' order by shopDate desc;
+#用between and来进行区间选择
+#4
+select c.bookNo,c.bookName,b.borrowDate,b.returnDate from reader a,borrow b,book c where readerName='喻自强'and a.readerNo=b.readerNo and b.bookNo=c.bookNo;
+#用外连接查询名字为喻自强的记录
+#5
+select r.readerNo,r.readerName,b.bookName,a.borrowDate,a.returnDate from reader r,borrow a,book b,publisher p
+                                                          where p.publisherName='清华大学出版社' and p.publisherNo=b.publisherNo and b.bookNo=a.bookNo and a.readerNo=r.readerNo;
+#用外连接查询出版社为清华大学的记录
+#6
+select r.readerNo,r.readerName,b.bookName,a.borrowDate,a.returnDate from reader r,borrow a,book b where r.workUnit='上海生物研究室' and a.returnDate is not null and r.readerNo=a.readerNo and a.bookNo=b.bookNo;
+#
+#7
+select r.readerNo,r.readerName,b.bookNo,a.borrowDate from reader r,borrow a,book b
+                                                      where a.borrowDate between '2015-1-1' and '2016-12-31' and a.returnDate is null and b.bookNo=a.bookNo and r.readerNo=a.readerNo;
+#外连接
+select c.classNo,c.className,max(b.price),avg(b.price) from bookclass c,book b where c.classNo=b.classNo group by b.classNo order by max(price) asc ;
+
+
+#9
+select count(bookNo) as bookNum,r.readerNo,readerName,workUnit from reader r, borrow b where r.readerNo=b.readerNo and b.returnDate is null group by r.readerNo order by bookNum desc;
+#用count聚合查询,group by用读者编号分类
+#10
+select publisherName,className,avg(price) from book b,publisher p,bookclass c where c.classNo=b.classNo and b.publisherNo=p.publisherNo group by b.classNo,b.publisherNo;
+#用avg聚合查询,group by用出版社编号和类编号分类，由于这两个单独一个都不能唯一区分，所以要用两个一块
+#11
+select r.readerNo,r.readerName,sum(price) as sm from reader r,borrow a, book b where r.readerNo=a.readerNo and b.bookNo=a.bookNo and returnDate is null group by r.readerNo having sm>=200 ;
+#检查了很多遍，和同学沟通过，大家都查不出来
+#12-IN
+select readerName,workUnit from reader where readerNo not in (select readerNo from borrow);
+
+#12-EXIST
+select readerName,workUnit from reader x where not exists(select readerNo from borrow where x.readerNo=borrow.readerNo);
+#这道题显然更适合用IN查询
+#13-IN
+select readerNo, readerName,substr(identifycard,7,8) birthdate from reader
+                                                               where readerNo not in(select readerNo from borrow
+                                                                                                 where bookNo in (select bookNo from book
+                                                                                                                                where classNo in(select classNo from bookclass
+                                                                                                                                                                where className='经济类')));
+#13-EXIST
+select readerNo, readerName,substr(identifycard,7,8) birthdate from reader x where not exists(select * from borrow a,book b,bookclass c where x.readerNo=a.readerNo and a.bookNo=b.bookNo and b.classNo=c.classNo and className='经济类')
+#IN语句筛选出来借经济类的书的人，并且在最外层选择not in即可。EXIST语句选择并不存在借经济类的书的人
+
+#14
+select r.readerNo,r.readerName,b.bookName,borrowDate,returnDate from reader r, borrow a,book b
+                                                              where r.readerNo=a.readerNo and a.bookNo=b.bookNo and (bookName ='政治经济学' or bookName='数据库系统概念') and r.readerNo
+                                                                                                                                                         in (select readerNo from borrow,book where borrow.bookNo =book.bookNo and bookName='政治经济学') and r.readerNo
+                                                                                                                                                                                                                                     in (select readerNo from borrow,book where borrow.bookNo=book.bookNo and bookName='数据库系统概念');
+#先在where中两个in语句筛选出来选了这两本书的人，在选择这种人选择这两本书。
+#15
+select r.readerNo,readerName,bookName,borrowDate,returnDate from borrow a,book b,reader r where a.readerNo=r.readerNo and a.bookNo=b.bookNo and bookName like '%数据库%';
+#外连接，like语句
+#16
+select readerNo,readerName,workUnit from reader r
+where not exists(select * from borrow b1,reader r1 where b1.readerNo=r1.readerNo and readerName='张小娟' and not exists(select * from borrow b2 where b2.bookNo=b1.bookNo and b2.readerNo=r.readerNo));
+#用not exists通过存在量词和取反来选择出“张小娟”所借阅过的所有图书
+#17
+select r.readerNo,readerName,b.bookNo,bookName from reader r, borrow a, book b where r.readerNo=a.readerNo and a.bookNo=b.bookNo and returnDate is null and r.readerNo in(select readerNo from borrow b2 where returnDate is null group by readerNo having count(*)>=3) order by a.readerNo asc ,a.borrowDate desc ;
+#将借书超过3本的人选出来，再用in语句包含进去
+
+
+
+#18
+select readerNo,readerName,substr(identifycard,7,8) as birthday from reader
+where readerNo in(select readerNo from borrow,book where borrow.bookNo=book.bookNo group by readerNo having sum(price) >=all(select sum(price) from borrow,book where borrow.bookNo=book.bookNo group by borrow.readerNo));
+#将读者编号分组求出每个人借书总价，再用>=ALL和每个读者进行比较选出总价最高的人并且最后包含在readerNo里输出
+
