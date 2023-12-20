@@ -10,3 +10,4 @@ desktop.ini
 **/.idea
 **/.conda
 **/.pycharm
+*.bak
