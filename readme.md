@@ -189,7 +189,7 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！
 - 17级：互相帮助合作 a.e.
 - 18级-0xffffffff级:欢迎每一个关注该项目的你们
 - 20级：由[wu2305](https://github.com/wu2305) 和[Liz](https://github.com/Liz-Nozomi) 等同学重构。欢迎大家来补文件！
-
+- 22级：dyc同学
 ## 许可
 
 [CC-BY-NC-SA：署名-非商业性使用-相同方式共享](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
