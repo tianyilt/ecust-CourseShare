@@ -21,3 +21,9 @@
 本人将ppt中的部分核心内容整理成英文版笔记，并且出了一些题目
 
 联系方式：np123greatest@gmail.com
+
+# 关于实验
+以下repo和blog仅供参考
+[https://github.com/Jeiwan/blockchain_go](https://github.com/Jeiwan/blockchain_go)
+[https://jeiwan.net/posts/](https://jeiwan.net/posts/)
+
