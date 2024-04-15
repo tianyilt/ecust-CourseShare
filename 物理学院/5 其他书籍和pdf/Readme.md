@@ -1,8 +1,8 @@
 这里列出了`ecust-CourseShare/物理学院` 目录下所有的物理书籍和资料的清单，以便寻找。
 
-如果您在`ecust-CourseShare/物理学院`的任一子目录下添加了书的pdf，务必同步更新这份书单。如果有在github里创建超链接的简单办法可以在issue里建议。
+如果您在`ecust-CourseShare/物理学院`的任一子目录下添加了书的pdf，务必同步更新这份书单。点击文中链接可转跳到pdf所在目录，如果有在github里创建超链接的简单办法可以在issue里建议。
 
-一般来说，教材类书籍放在对应学科的第一级目录下，其他书籍位于 `5 其他书籍和pdf` 目录下。
+一般来说，教材类书籍放在对应学科的第一级目录下，其他书籍位于 [`5 其他书籍和pdf`](https://github.com/AWeizihao/ecust-CourseShare/tree/e94bcbfb59860f9579267ecb36d9e06eda2015e2/%E7%89%A9%E7%90%86%E5%AD%A6%E9%99%A2/5%20%E5%85%B6%E4%BB%96%E4%B9%A6%E7%B1%8D%E5%92%8Cpdf) 目录下。
 
 ## 普物书籍
 ### 力学
