@@ -1,0 +1,29 @@
+# 关于课程
+
+这门课应该是计金（双）必修，其它专业选修。
+
+如果想学一些web3相关知识还是蛮不错的。
+
+# 关于课程难度
+
+虽然课程难度较大，但是想过还是很轻松的
+
+但是如果相冲高绩点难度可能略大
+
+# 关于老师
+
+徐贤老师是百年难遇的好老师，人真的很好。
+
+太赞了
+
+# 微小的工作
+
+本人将ppt中的部分核心内容整理成英文版笔记，并且出了一些题目
+
+联系方式：np123greatest@gmail.com
+
+# 关于实验
+以下repo和blog仅供参考
+[https://github.com/Jeiwan/blockchain_go](https://github.com/Jeiwan/blockchain_go)
+[https://jeiwan.net/posts/](https://jeiwan.net/posts/)
+

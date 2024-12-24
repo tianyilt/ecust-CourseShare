@@ -1,0 +1,50 @@
+In-sample tests for one factor model with OLS:
+Predictor: pe
+Regressing Results: b = -0.035785, k = 0.001706
+Regressing Pvalues: p = 0.064039, p = 0.007857
+Inference: 在1%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: eps
+Regressing Results: b = 0.010229, k = -0.002028
+Regressing Pvalues: p = 0.452604, p = 0.952433
+Inference: 无样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: roe
+Regressing Results: b = 0.009054, k = 0.000113
+Regressing Pvalues: p = 0.609831, p = 0.969530
+Inference: 无样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: incomeps
+Regressing Results: b = -0.000299, k = 0.001719
+Regressing Pvalues: p = 0.986288, p = 0.501143
+Inference: 无样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: monfulturnr
+Regressing Results: b = -0.046844, k = 0.002139
+Regressing Pvalues: p = 0.000159, p = 0.000000
+Inference: 在1%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: beta
+Regressing Results: b = -0.048494, k = 0.057102
+Regressing Pvalues: p = 0.066496, p = 0.019265
+Inference: 在5%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: volatility
+Regressing Results: b = -0.008093, k = 1.030551
+Regressing Pvalues: p = 0.513433, p = 0.034130
+Inference: 在5%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: liquidity
+Regressing Results: b = -0.000804, k = 21.355018
+Regressing Pvalues: p = 0.187262, p = 0.000000
+Inference: 在1%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: peakpoint
+Regressing Results: b = -0.396841, k = 0.443818
+Regressing Pvalues: p = 0.000000, p = 0.000000
+Inference: 在1%的显著性水平下有样本内预测能力
+In-sample tests for one factor model with OLS:
+Predictor: RSkew
+Regressing Results: b = 0.002258, k = 0.089842
+Regressing Pvalues: p = 0.765616, p = 0.000000
+Inference: 在1%的显著性水平下有样本内预测能力
