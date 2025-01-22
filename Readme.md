@@ -70,6 +70,7 @@
     <p>
         Fork 这个项目，在您的仓库里的对应位置上传文件，提交后创建 Pull Request 等待合并
     </p>
+    <img src="readme.assets/pr.png">
 </details>
 <details>
     <summary>我想长期合作</summary>
@@ -126,7 +127,6 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！大家的关
         └── 复习
             ├── 思维导图
             └── 复习文档
-
 ```
 
 
