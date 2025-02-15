@@ -58,10 +58,11 @@
         <li>安装 <a href="https://microsoftedge.microsoft.com/addons/detail/gitzip-for-github/nlgkiabjnbdndgblhcaobimbpifcdkjj">GitZip 插件</a>选择多个文件下载</li>
         <li>Alist 镜像：<a href="https://alist.xn--rhqr3ykwbm05aegjqxb.com/">公网（暂不可用）</a> / <a href="http://s.ecustvr.top/">校内（由VR俱乐部提供）</a></li>
         <li>CNB 镜像：<a href="https://cnb.cool/ecustcic/ecust-CourseShare">https://cnb.cool/ecustcic/ecust-CourseShare</a></li>
+        <li>腾讯云镜像：<a href="https://cnb.cool/ecustcic/ecust-CourseShare">https://cnb.cool/ecustcic/ecust-CourseShare 2025年2月11日更新</a></li>      
         <li>Git 命令行克隆到本地：
             <pre>git clone https://github.com/tianyilt/ecust-CourseShare.git --depth=1</pre>
         </li>
-        <li>百度网盘：<a href="https://pan.baidu.com/s/1toHeEz0oMvN1H5lXhZrCHw?pwd=f2fm">更新于 2020.05.14</a></li>
+        <li>百度网盘：<a href="https://pan.baidu.com/s/1toHeEz0oMvN1H5lXhZrCHw?pwd=f2fm">更新于 2020.05.14 尚未更新</a></li>
     </ul>
 </details>
 
