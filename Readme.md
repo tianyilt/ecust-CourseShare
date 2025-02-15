@@ -60,6 +60,7 @@
         <li>Git 命令行克隆到本地：
             <pre>git clone https://github.com/tianyilt/ecust-CourseShare.git --depth=1</pre>
         </li>
+        <li>CNB：<a href="https://cnb.cool/ecustcic/ecust-CourseShare">更新于 2025.02.11</a></li>
         <li>百度网盘：<a href="https://pan.baidu.com/s/1toHeEz0oMvN1H5lXhZrCHw?pwd=f2fm">更新于 2020.05.14</a></li>
     </ul>
 </details>
