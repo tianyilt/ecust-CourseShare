@@ -56,8 +56,21 @@
         <li>若要下载单文件，点击文件链接，再点击 Download 即可</li>
         <li>若要下载单个文件夹，复制该文件夹的网址，粘贴入 <a href="https://downgit.github.io/#/home">DownGit</a> 中，选择 Download 即可</li>
         <li>安装 <a href="https://microsoftedge.microsoft.com/addons/detail/gitzip-for-github/nlgkiabjnbdndgblhcaobimbpifcdkjj">GitZip 插件</a>选择多个文件下载</li>
-        <li>Alist 镜像：<a href="https://alist.xn--rhqr3ykwbm05aegjqxb.com/">公网（暂不可用）</a> / <a href="http://s.ecustvr.top/">校内（由VR俱乐部提供）</a></li>
-        <li>腾讯云镜像：<a href="https://cnb.cool/ecustcic/ecust-CourseShare">https://cnb.cool/ecustcic/ecust-CourseShare 2025年2月15日更新</a></li>      
+        <li>Alist 镜像：
+        <ul>
+            <li>
+            <a href="https://alist.xn--rhqr3ykwbm05aegjqxb.com/">公网</a>（<a href="https://github.com/wu2305">wu2305</a>提供（2023年9月19日更新））
+            </li>
+            <li>
+            <a href="http://alist.ecustvr.top/">公网</a>（由VR俱乐部提供）
+            </li>
+            <li>
+            <a href="http://s.ecustvr.top/">校内</a>（由VR俱乐部提供）
+            </li>
+        </ul>
+        </li>
+        <li>腾讯云CNB镜像：<a href="https://cnb.cool/ecustcic/ecust-CourseShare">https://cnb.cool/ecustcic/ecust-CourseShare</a></li>
+        <li>Gitcode镜像（由于平台审核机制，需要<a href="https://gitcode.com/invite/link/c8dc013aafe6494a9cfd">邀请</a>查看）：<a href="https://gitcode.com/ecust/ecust-CourseShare">https://gitcode.com/ecust/ecust-CourseShare</a></li>
         <li>Git 命令行克隆到本地：
             <pre>git clone https://github.com/tianyilt/ecust-CourseShare.git --depth=1</pre>
         </li>
