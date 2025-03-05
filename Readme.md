@@ -6,14 +6,14 @@
   <img src="https://img.shields.io/github/repo-size/tianyilt/ecust-CourseShare">
 </div>
 
-
 > [!NOTE]
 >
-> 本项目以[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles)为模板，致力于构建共建共治共享的华理课程攻略共享库。本项目是为了打破课程壁垒，在这里你可以找到各种课程的资料。
+> 本项目以[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles)为模板，致力于构建共建共治共享的华理课程攻略共享库，在这里你可以找到各种课程的资料。
 >
 > 如果对您有帮助，别忘了 star 哦！
 
 ## 前言
+
 引用[浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles)的前言：
 
 > 来到一所大学，从第一次接触许多课，直到一门一门完成，这个过程中我们时常收集起许多资料和情报。
@@ -30,9 +30,10 @@
 
 课程攻略共享计划走过了三个阶段。
 
-第一阶段是在 QQ 群里，完成了，但是年级之间交流很少，加之文件存储麻烦，资料在传递中消散。第二阶段转向网盘，由于多人共同编辑不方便、无法控制版本、长期更新很依赖于单个管理员，网盘难以承载长久更新的重量。如今的第三阶段，受到 GitHub 上众多相关项目的启发，将目光投向 GitHub。这里能用目录清楚地组织文件，README 标注每个目录的说明，还具备方便协作的 Issue 和 Pull Request 功能。
+第一阶段是在 QQ 群里，完成了，但是年级之间交流很少，加之文件存储麻烦，资料在传递中消散。第二阶段转向网盘，由于多人共同编辑不方便、无法控制版本、长期更新很依赖于单个管理员，网盘难以承载长久更新的重量。如今的第三阶段，受到 GitHub 上众多相关项目的启发，将目光投向 GitHub。这里能用目录清楚地组织文件，Readme 标注每个目录的说明，还具备方便协作的 Issue 和 Pull Request 功能。
 
 ## 内容及使用方法
+>
 > [!NOTE]
 >
 > 推荐使用电脑端浏览
@@ -44,60 +45,39 @@
 - 电子版教材（提供下载外链以节省项目空间）
 - 开卷考试 A4 纸（TODO）
 - 选课攻略（TODO）
-- 学院的全称~~（相信我，真的有小可爱不知道自己学院叫什么的）~~
+- 学院的全称 ~~（相信我，真的有小可爱不知道自己学院叫什么的）~~
 - 其他一些零散的内容
   
-
 **郑重警告，抄作业是没有前途的!!!**
 
-<details>
-    <summary>我想下载文件</summary>
-    <ul>
-        <li>若要下载单文件，点击文件链接，再点击 Download 即可</li>
-        <li>若要下载单个文件夹，复制该文件夹的网址，粘贴入 <a href="https://downgit.github.io/#/home">DownGit</a> 中，选择 Download 即可</li>
-        <li>安装 <a href="https://microsoftedge.microsoft.com/addons/detail/gitzip-for-github/nlgkiabjnbdndgblhcaobimbpifcdkjj">GitZip 插件</a>选择多个文件下载</li>
-        <li>Alist 镜像：
-        <ul>
-            <li>
-            <a href="https://alist.xn--rhqr3ykwbm05aegjqxb.com/">公网</a>（<a href="https://github.com/wu2305">wu2305</a>提供（2023年9月19日更新））
-            </li>
-            <li>
-            <a href="http://alist.ecustvr.top/">公网</a>（由VR俱乐部提供）
-            </li>
-            <li>
-            <a href="http://s.ecustvr.top/">校内</a>（由VR俱乐部提供）
-            </li>
-        </ul>
-        </li>
-        <li>腾讯云CNB镜像：<a href="https://cnb.cool/ecustcic/ecust-CourseShare">https://cnb.cool/ecustcic/ecust-CourseShare</a></li>
-        <li>Gitcode镜像（由于平台审核机制，需要<a href="https://gitcode.com/invite/link/c8dc013aafe6494a9cfd">邀请</a>查看）：<a href="https://gitcode.com/ecust/ecust-CourseShare">https://gitcode.com/ecust/ecust-CourseShare</a></li>
-        <li>Git 命令行克隆到本地：
-            <pre>git clone https://github.com/tianyilt/ecust-CourseShare.git --depth=1</pre>
-        </li>
-        <li>百度网盘：<a href="https://pan.baidu.com/s/1toHeEz0oMvN1H5lXhZrCHw?pwd=f2fm">更新于 2020.05.14 尚未更新</a></li>
-    </ul>
-</details>
+### 我想下载文件
 
+- 若要下载单文件，点击文件链接，再点击 Download 即可
+- 若要下载单个文件夹，复制该文件夹的网址，粘贴入 [DownGit](https://downgit.github.io/#/home) 中，选择 Download 即可
+- 安装 [GitZip 插件](https://microsoftedge.microsoft.com/addons/detail/gitzip-for-github/nlgkiabjnbdndgblhcaobimbpifcdkjj)选择多个文件下载
+- Alist 镜像：
+  - [公网](https://alist.xn--rhqr3ykwbm05aegjqxb.com/)（[wu2305](https://github.com/wu2305) 提供，更新于 2023.09.19）
+  - [公网](http://alist.ecustvr.top/)（由 VR 俱乐部提供）
+  - [校内](http://s.ecustvr.top/)（由 VR 俱乐部提供）
+- 腾讯云 CNB 镜像：[https://cnb.cool/ecustcic/ecust-CourseShare](https://cnb.cool/ecustcic/ecust-CourseShare)
+- Gitcode 镜像（由于平台审核机制，需要[邀请](https://gitcode.com/invite/link/c8dc013aafe6494a9cfd)查看）：[https://gitcode.com/ecust/ecust-CourseShare](https://gitcode.com/ecust/ecust-CourseShare)
+- Git 命令行克隆到本地：`git clone https://github.com/tianyilt/ecust-CourseShare.git --depth=1`
+- 百度网盘：[更新于 2020.05.14](https://pan.baidu.com/s/1toHeEz0oMvN1H5lXhZrCHw?pwd=f2fm)
 
-<details>
-    <summary>我想上传文件（请先阅读贡献指南）</summary>
-    <p>
-        Fork 这个项目，在您的仓库里的对应位置上传文件，提交后创建 Pull Request 等待合并
-    </p>
-    <img src="readme.assets/pr.png">
-</details>
-<details>
-    <summary>我想长期合作</summary>
-    <p>
-        看到这里的人，你应该有一定的 Git 基础或者想学习 Git，你可以在<a href="https://www.liaoxuefeng.com/wiki/896043488029600">这个网站</a>学习 Git 的知识。
-    </p>
-    <p>
-        当你了解 Git 之后，我相信你应该知道如何长期参与到我们的项目中来。我们欢迎任何人加入到这个项目中！
-    </p>
-</details>
+### 我想上传文件（请先阅读贡献指南）
 
+Fork 这个项目，在您的仓库里的对应位置上传文件，提交后创建 Pull Request 等待合并
+
+![PR](readme.assets/pr.png)
+
+### 我想长期合作
+
+看到这里的人，你应该有一定的 Git 基础或者想学习 Git，你可以在[这个网站](https://www.liaoxuefeng.com/wiki/896043488029600)学习 Git 的知识。
+
+当你了解 Git 之后，我相信你应该知道如何长期参与到我们的项目中来。我们欢迎任何人加入到这个项目中！
 
 ## 贡献指南
+
 ***非常欢迎贡献！***
 
 Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！大家的关注、维护和贡献，才是让这个攻略共享计划存在的动力~
@@ -111,6 +91,7 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！大家的关
 - 对于教师的评价请一律使用姓名拼音首字母缩写
 
 ### 课程分组
+
 华理有众多专业共享同一门课程，也有不同学院开设的同名课程。故进行了文件树的重构，依照开课学院进行分组，在其他学院的 Readme 中加入超链接来进行跳转。
 
 - 如果多个学院共享同一门课程，如化工学院、化分学院等都有化工原理课程，请全部归于单一开课学院，也就是 [/化工学院/化工原理](/化工学院/化工原理) 中。
@@ -122,7 +103,7 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！大家的关
 
 ### 文件结构
 
-```
+```text
 .
 ├── README.assets
 ├── README.md
@@ -143,42 +124,47 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！大家的关
             └── 复习文档
 ```
 
-
-
 ## TODO List
-- [ ] 向没有 git 基础的广大同学介绍简便使用方式
+
+- [ ] 向没有 Git 基础的广大同学介绍简便使用方式
 - [ ] 为项目制作网站首页，参考[中科大的项目](https://ustc-resource.github.io/USTC-Course/)
 - [ ] 邀请更多志同道合者
 - [ ] **形成项目传承长效机制，每一位来到学校的同学都能享受历年传承的攻略并可以贡献自己的智慧。**
 - [ ] **项目瘦身!!!!太大了!!!!**
 
 ## 参考
+
 - [清华大学计算机系课程攻略](https://github.com/PKUanonym/REKCARC-TSC-UHT)
 - [浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles )
 - [中国科技大学课程攻略共享计划](https://ustc-resource.github.io/USTC-Course/)
 - [上海交通大学求生手册](https://github.com/SurviveSJTU/SurviveSJTUManual)
 
 ## 传送门
+
 以下是非本仓库但是其他极客同学贡献的一些关于课程的仓库：
+
 - 🌟[华东理工大学飞跃手册](https://ecust-leap.github.io/)
 - [大物实验自动化脚本](https://github.com/ff6757442/experiment_kit)
 - [马原答题程序](https://github.com/YifeiYang210/2020ecustMAYUAN)
 - ~~计131资源共享站~~
 
 ## 致谢名单
+
 感谢每一位关注该项目、为该项目贡献过的同学！
 
-- 16 级：以PanJR XieYJ LuLW ChenGR TaoZH为代表的奆佬学长学姐帮助
+- 16 级：以 PanJR XieYJ LuLW ChenGR TaoZH 为代表的奆佬学长学姐帮助
 - 17 级：互相帮助合作 a.e.
 - 20 级：由 [wu2305](https://github.com/wu2305) 和 [Liz](https://github.com/Liz-Nozomi) 等同学重构
 - 22 级：dyc 同学、wzy 同学
 
 ## 许可
 
+[![CC BY-NC-SA](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)
 
 > [!IMPORTANT]
-> 
+>
 > 资料仅供参考，请自己判断其适用性。
-> 
+>
 > 我们非常重视版权保护，如有侵权内容，请在 issues 下指出，我们将会很快删除，非常感谢。
