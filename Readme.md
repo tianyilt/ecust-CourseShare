@@ -2,13 +2,13 @@
   <img src="readme.assets/logo.png" width="300px" alt="ECUST-CourseShare">
   <h1>华东理工大学课程攻略共享计划</h1>
   
-  [项目仓库](https://github.com/tianyilt/ecust-CourseShare)
+  <a href="https://github.com/tianyilt/ecust-CourseShare">项目仓库</a>
   /
-  [项目网站](https://ecust-courseshare.github.io/)
+  <a href="https://ecust-courseshare.github.io/">项目网站</a>
   /
-  [CNB镜像](https://cnb.cool/ecustcic/ecust-CourseShare)
+  <a href="https://cnb.cool/ecustcic/ecust-CourseShare">CNB镜像</a>
   /
-  [Gitcode镜像](https://gitcode.com/ecust/ecust-CourseShare)
+  <a href="https://gitcode.com/ecust/ecust-CourseShare">Gitcode镜像</a>
   
   <img src="https://img.shields.io/github/stars/tianyilt/ecust-CourseShare?style=flat">
   <img src="https://img.shields.io/github/contributors/tianyilt/ecust-CourseShare">
