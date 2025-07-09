@@ -1,0 +1,464 @@
+创建Django网站步骤：1、建立项目；2、创建应用程序；3、创建网页；4、管理用户；5、设置项目样式；6、部署上线。
+
+1	创建项目
+创建工作文件夹(learning)，在其中创建虚拟环境
+创建项目(learning_log)
+创建数据库(learning.db)
+创建超级用户
+
+2	创建应用程序
+创建应用程序(learning_logs、users)
+安装django-bootstrap3
+在settings.py中加入第三方应用程序bootstrap3和自定义应用程序
+
+3	定义并激活模型
+修改应用程序文件夹下文件models.py，在添加代码：
+from django.db import models
+from django.contrib.auth.models import User
+
+# Create your models here.
+class Topic(models.Model):
+    text=models.CharField(max_length=200)
+    date_added=models.DateTimeField(auto_now_add=True)
+    owner=models.ForeignKey(User,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.text
+
+class Entry(models.Model):
+    topic=models.ForeignKey(Topic,on_delete=models.CASCADE)
+    text=models.TextField()
+    date_added=models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural='entries'
+
+    def __str__(self):
+        if len(self.text)>50:
+            return self.text[:50]+'...'
+        else:
+            return self.text
+激活并迁移模型
+向管理网站注册模型
+
+4	创建网页
+创建客户端网页三个步骤：映射URL（即规定各网址由哪些视图函数处理）、编写视图（定义网页内容或者指定网页模板）、编写模板（定义网页内容，支持Python和Django代码）
+3.1	编写视图
+3.3.1	在learning_logs文件夹下创建文件forms.py，在内容如下：
+from django import forms
+from .models import Topic,Entry
+
+class TopicForm(forms.ModelForm):
+    class Meta:
+        model=Topic
+        fields=['text']
+        labels={'text':''}
+
+class EntryForm(forms.ModelForm):
+    class Meta:
+        model=Entry
+        fields=['text']
+        labels={'text':''}
+        widgets={'text':forms.Textarea(attrs={'cols':80})}
+
+3.1.2	修改learning_logs文件夹下文件views.py，在内容如下：
+'''为应用程序learning_logs编写视图函数'''
+from django.shortcuts import render,HttpResponse,get_object_or_404
+from .models import Topic,Entry
+from django.http import HttpResponseRedirect,Http404,StreamingHttpResponse
+from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+from .forms import TopicForm,EntryForm
+import os
+
+# Create your views here.
+def index(request):
+    return render(request,'learning_logs/index.html')
+
+@login_required
+def topics(request):
+    '''显示所有的主题'''
+    topics=Topic.objects.filter(owner=request.user).order_by('date_added')
+    context={'topics':topics}
+    return render(request,'learning_logs/topics.html',context)
+
+@login_required
+def topic(request,topic_id):
+    '''显示特定主题及其所有的条目'''
+    topic=get_object_or_404(Topic,id=topic_id)
+    #确认请求的主题属于当前用户
+    check_topic_owner(request,topic)
+    
+    entries=topic.entry_set.order_by('-date_added')
+    context={'topic':topic,'entries':entries}
+    return render(request,'learning_logs/topic.html',context)
+
+@login_required
+def new_topic(request):
+    '''添加新主题'''
+    if request.method!='POST':
+        #未提交数据：创建给一个新表单
+        form=TopicForm()
+    else:
+        #POST提交的表单，对数据进行处理
+        form=TopicForm(request.POST)
+        if form.is_valid():
+            new_topic=form.save(commit=False)
+            new_topic.owner=request.user
+            new_topic.save()
+            return HttpResponseRedirect(reverse('learning_logs:topics'))
+    context={'form':form}
+    return render(request,'learning_logs/new_topic.html',context)
+
+@login_required
+def new_entry(request,topic_id):
+    '''在特定的主题中添加新条目'''
+    topic=Topic.objects.get(id=topic_id)
+    check_topic_owner(request,topic)
+    
+    if request.method!='POST':
+        #未提交数据，创建一个空表单
+        form=EntryForm()
+    else:
+        #POST提交的数据，对数据进行处理
+        form=EntryForm(data=request.POST)
+        if form.is_valid():
+            new_entry=form.save(commit=False)
+            new_entry.topic=topic
+            new_entry.save()
+            return HttpResponseRedirect(reverse('learning_logs:topic',args=[topic_id]))
+    context={'topic':topic,'form':form}
+    return render(request,'learning_logs/new_entry.html',context)
+
+@login_required
+def edit_entry(request,entry_id):
+    '''编辑既有条目'''
+    entry=Entry.objects.get(id=entry_id)
+    topic=entry.topic
+    check_topic_owner(request,topic)
+    
+    if request.method!='POST':
+        #初次请求，使用当前条目填充表单
+        form=EntryForm(instance=entry)
+    else:
+        #POST提交的数据，对数据进行处理
+        form=EntryForm(instance=entry,data=request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('learning_logs:topic',args=[topic.id]))
+    context={'entry':entry,'topic':topic,'form':form}
+    return render(request,'learning_logs/edit_entry.html',context)
+
+def check_topic_owner(request,topic):
+    if topic.owner!=request.user:
+        raise Http404
+
+3.1.3	修改users文件夹下文件views.py，在内容如下：
+'''为应用程序users编写视图函数'''
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from django.contrib.auth import login,logout,authenticate
+from django.contrib.auth.forms import UserCreationForm
+
+# Create your views here.
+def logout_view(request):
+    '''注销用户'''
+    logout(request)
+    return HttpResponseRedirect(reverse('learning_logs:index'))
+
+def register(request):
+    '''注册新用户'''
+    if request.method!='POST':
+        #显示空的注册表单
+        form=UserCreationForm()
+    else:
+        #处理填写好的表单
+        form=UserCreationForm(data=request.POST)
+
+        if form.is_valid():
+            new_user=form.save()
+            #让用户自动登录，再重定向到主页
+            authenticated_user=authenticate(username=new_user.username,password=request.POST['password1'])
+            login(request,authenticated_user)
+            return HttpResponseRedirect(reverse('learning_logs:index'))
+        
+    context={'form':form}
+    return render(request,'users/register.html',context)
+
+
+3.2	映射URL
+规定项目内各应用程序的二级网址及由哪个应用程序的urls.py处理映射；规定应用程序各网址由哪些视图函数处理
+3.1.1	在learning_logs文件夹下创建新文件urls.py，内容如下：
+'''定义learning_logs的URL模式'''
+from django.urls import re_path
+from . import views
+
+app_name='learning_logs'
+urlpatterns=[
+    #主页
+    re_path(r'^$',views.index,name='index'),
+    #显示所有的主题
+    re_path(r'^topics$',views.topics,name='topics'),
+    re_path(r'^topics/(?P<topic_id>\d+)/$',views.topic,name='topic'),
+    re_path(r'^new_topic/$',views.new_topic,name='new_topic'),
+    re_path(r'^new_entry/(?P<topic_id>\d+)/$',views.new_entry,name='new_entry'),
+    re_path(r'^edit_entry/(?P<entry_id>\d+)/$',views.edit_entry,name='edit_entry'),
+    ]
+3.1.2	在users文件夹下创建新文件urls.py，内容如下：
+'''为应用程序users定义URL模式'''
+from django.urls import re_path,include
+from django.contrib.auth.views import LoginView
+from . import views
+
+app_name='users'
+urlpatterns=[
+    #登录页面
+    re_path(r'^login/$',LoginView.as_view(template_name='users/login.html'),name='login'),
+    #注销
+    re_path(r'^logout/$',views.logout_view,name='logout'),
+    #注册
+    re_path(r'^register/$',views.register,name='register'),
+    ]
+3.1.3	修改项目文件夹(learning_log)下文件urls.py，内容如下：
+'''为项目learning_log定义URL模式'''
+from django.contrib import admin
+from django.urls import path,include,re_path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',include('learning_logs.urls',namespace='learning_logs')),
+    path('users/',include('users.urls',namespace='users')),
+]
+
+3.3	编写模板
+3.3.1	修改settings.py，内容如下：
+        'DIRS': [
+            os.path.join(BASE_DIR,'learning_log/templates'),
+            os.path.join(BASE_DIR,'users/templates'),
+            ],
+注意：需要导入os模块
+在settings.py中添加如下内容：
+#我的设置
+LOGIN_URL='/users/login/'
+
+#django-bootstrap3的设置
+BOOTSTRAP3={
+    'include_jquery':True,
+    }
+
+3.3.2	在learning_logs文件夹下创建新文件夹templates，在此文件夹下创建learning_logs文件夹，再在此文件夹下创建base.html、index.html等模板文件，内容如下：
+base.html:
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Learning Log</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+  </head>
+<body>
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default navbar-static-top>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></button>
+        <a class="navbar-brand" href="{% url 'learning_logs:index' %}">Learning Log</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="{% url 'learning_logs:topics' %}">Topic</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {% if user.is_authenticated %}
+            <li><a>Hello,{{ user.username }}.</a></li>
+            <li><a href="{% url 'users:logout' %}">log out</a></li>
+          {% else %}
+            <li><a href="{% url 'users:register' %}">register</a></li>
+            <li><a href="{% url 'users:login' %}">log in</a></li>
+          {% endif %}
+        </ul>
+      </div><!-- .nav-collapse -->
+    </div>
+  </nav>
+  <div class="container">
+    <div class="page-header">
+      {% block header %}{% endblock header %}
+    </div>
+    <div>
+      {% block content %}{% endblock content %}
+    </div>
+  </div><!-- /container -->
+</body>
+</html>
+
+index.html:
+{% extends 'learning_logs/base.html' %}
+{% block header %}
+  <div class="jumbotron">
+    <h1>Track your learning.</h1>
+  </div>
+{% endblock header %}
+
+{% block content %}
+  <h2>
+    <a href="{% url 'users:register' %}">Register an account</a> to make your own Learning Log, and list the topics you're learning about.
+  </h2>
+  <h2>
+    Whenever you learn something new about a topic, make an entry summarizing what you've learned.
+  </h2>
+{% endblock content %}
+
+topics.html:
+{% extends 'learning_logs/base.html' %}
+
+{% block header %}
+  <h1>Topics</h1>
+{% endblock header %}
+
+{% block content %}
+  <ul>
+    {% for topic in topics %}
+      <li>
+        <h3>
+          <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+        </h3>
+      </li>
+    {% empty %}
+      <li>No topics have been added yet.</li>
+    {% endfor %}
+  </ul>
+  <h3><a href="{% url 'learning_logs:new_topic' %}">Add a new topic:</a></h3>
+{% endblock content %}
+
+topic.html:
+{% extends 'learning_logs/base.html' %}
+
+{% block header %}
+  <h2>{{ topic }}</h2>
+{% endblock header %}
+
+{% block content %}
+  <p><a href="{% url 'learning_logs:new_entry' topic.id %}">add new entry</a></p>
+  <ul>
+    {% for entry in entries %}
+      <div class="panel_panel-default">
+        <div class="panel-heading">
+          <h3>
+            {{ entry.date_added|date:'M d,Y H:i' }}
+            <small>
+              <a href="{% url 'learning_logs:edit_entry' entry.id %}">edit entry</a>
+            </small>
+          </h3>
+        </div>
+        <div class="panel-body">
+          {{ entry.text|linebreaks }}
+        </div>
+      </div><!-- panel -->
+    {% empty %}
+      There are no entries for this topic yet.
+    {% endfor %}
+  </ul>
+{% endblock content %}
+
+new_topic.html:
+{% extends 'learning_logs/base.html' %}
+{% load bootstrap3 %}
+
+{% block header %}
+  <h2>Add a new topic:</h2>
+{% endblock header %}
+
+{% block content %}
+  <form action="{% url 'learning_logs:new_topic' %}" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">add topic</button>
+    {% endbuttons %}
+  </form>
+{% endblock content %}
+
+new_entry.html:
+{% extends "learning_logs/base.html" %}
+{% load bootstrap3 %}
+
+{% block header %}
+  <h2><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></h2>
+  <h2>Add a new entry:</h2>
+{% endblock header %}
+
+{% block content %}
+  <form action="{% url 'learning_logs:new_entry' topic.id %}" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">add entry</button>
+    {% endbuttons %}
+  </form>
+{% endblock content %}
+
+edit_entry.html:
+{% extends "learning_logs/base.html" %}
+{% load bootstrap3 %}
+
+{% block header %}
+  <h2><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></h2>
+  <h2>Edit entry:</h2>
+{% endblock header %}
+
+{% block content %}
+  <form action="{% url 'learning_logs:edit_entry' entry.id %}" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">save changes</button>
+    {% endbuttons %}
+  </form>
+{% endblock content %}
+
+3.3.3	在users文件夹下创建新文件夹templates，在此文件夹下创建users文件夹，再在此文件夹下创建login.html、register.html模板文件，内容如下：
+login.html:
+{% extends 'learning_logs/base.html' %}
+{% load bootstrap3 %}
+
+{% block header %}
+  <h2>Log in to your account.</h2>
+{% endblock header %}
+
+{% block content %}
+  <form action="{% url 'users:login' %}" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">log in</button>
+    {% endbuttons %}
+    <input type="hidden" name="next" value="{% url 'learning_logs:index' %}"/>
+  </form>
+{% endblock content %}S
+
+register.html:
+{% extends 'learning_logs/base.html' %}
+{% load bootstrap3 %}
+
+{% block header %}
+  <h2>Register an account to make your own Learning Log</h2>
+{% endblock header %}
+
+{% block content %}
+  <form action="" method="post" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button name="submit" class="btn btn-primary">register</button>
+    {% endbuttons %}
+    <input type="hidden" name="next" value="{% url 'learning_logs:index' %}"/>
+  </form>
+{% endblock content %}
+
+3.3.4	在浏览器中查看主页（http://127.0.0.1:8000），通过超链接访问其他网页
+
+4、部署上线
