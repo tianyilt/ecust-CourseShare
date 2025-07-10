@@ -157,7 +157,6 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！大家的关
 - 🌟[华东理工大学飞跃手册](https://ecust-leap.github.io/)
 - [大物实验自动化脚本](https://github.com/ff6757442/experiment_kit)
 - [马原答题程序](https://github.com/YifeiYang210/2020ecustMAYUAN)
-- [材院酸碱滴定一阶微商作图](https://gitee.com/jzy-computer/p-h_-vand_p-h__-v_-v_curve)
 - ~~计131资源共享站~~
 
 ## 致谢名单
