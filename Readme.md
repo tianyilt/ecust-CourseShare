@@ -66,6 +66,10 @@
 - 若要下载单文件，点击文件链接，再点击 Download 即可
 - 若要下载单个文件夹，复制该文件夹的网址，粘贴入 [DownGit](https://downgit.github.io/#/home) 中，选择 Download 即可
 - 安装 [GitZip 插件](https://microsoftedge.microsoft.com/addons/detail/gitzip-for-github/nlgkiabjnbdndgblhcaobimbpifcdkjj)选择多个文件下载
+- 项目网站：
+  - Github Pages：[https://ecust-courseshare.github.io/](https://ecust-courseshare.github.io/)
+  - Edgeone镜像（回源Github Pages | 支持ipv6）：[https://ecust-courseshare.bestzyq.cn/](https://ecust-courseshare.bestzyq.cn/)
+  - Edgeone Pages：[https://ecust-courseshare.ecustvr.top/](https://ecust-courseshare.ecustvr.top/)
 - Alist 镜像：
   - [公网](https://alist.xn--rhqr3ykwbm05aegjqxb.com/)（[wu2305](https://github.com/wu2305) 提供，更新于 2023.09.19）
   - [公网](http://alist.ecustvr.top/)（由 VR 俱乐部提供）
