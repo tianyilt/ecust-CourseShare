@@ -81,6 +81,8 @@ Fork 这个项目，在您的仓库里的对应位置上传文件，提交后创
 
 ![PR](readme.assets/pr.png)
 
+VSCode插件 *[GitHub Repositories](https://marketplace.visualstudio.com/items?itemName=GitHub.remotehub)* 可用于快速修改仓库
+
 ### 我想长期合作
 
 看到这里的人，你应该有一定的 Git 基础或者想学习 Git，你可以在[这个网站](https://www.liaoxuefeng.com/wiki/896043488029600)学习 Git 的知识。
