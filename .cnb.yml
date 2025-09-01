@@ -1,0 +1,31 @@
+name: Sync from Github
+master:
+  # 定时任务配置
+  "crontab: 0 2 */7 * *":  # 每7天凌晨2点执行
+    - name: sync
+      runner:
+        cpus: 2
+      stages:
+        - name: setup-git
+          script: |
+            git remote add upstream https://github.com/tianyilt/ecust-CourseShare.git
+            git fetch upstream
+            git checkout master
+            git reset --hard upstream/master
+            git push origin master --force
+            echo "✅ 已同步 GitHub 的 master 分支到 cnb.cool 仓库"
+  
+  # Web触发器配置
+  web_trigger:
+    - name: manual-sync
+      runner:
+        cpus: 2
+      stages:
+        - name: setup-git
+          script: |
+            git remote add upstream https://github.com/tianyilt/ecust-CourseShare.git
+            git fetch upstream
+            git checkout master
+            git reset --hard upstream/master
+            git push origin master --force
+            echo "✅ 已同步 GitHub 的 master 分支到 cnb.cool 仓库"

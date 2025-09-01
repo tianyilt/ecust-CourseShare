@@ -74,6 +74,7 @@
   - [公网](https://alist.xn--rhqr3ykwbm05aegjqxb.com/)（[wu2305](https://github.com/wu2305) 提供，更新于 2023.09.19）
   - [公网](http://alist.ecustvr.top/)（由 VR 俱乐部提供）
   - [校内](http://s.ecustvr.top/)（由 VR 俱乐部提供）
+- 校内 Gitea 镜像: [https://git.ecustvr.top/ecustvr/ecust-CourseShare]
 - 腾讯云 CNB 镜像：[https://cnb.cool/ecustcic/ecust-CourseShare](https://cnb.cool/ecustcic/ecust-CourseShare)
 - Gitcode 镜像（由于平台审核机制，需要[邀请](https://gitcode.com/invite/link/c8dc013aafe6494a9cfd)查看）：[https://gitcode.com/ecust/ecust-CourseShare](https://gitcode.com/ecust/ecust-CourseShare)
 - Git 命令行克隆到本地：`git clone https://github.com/tianyilt/ecust-CourseShare.git --depth=1`
