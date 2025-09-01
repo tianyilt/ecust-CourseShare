@@ -1,0 +1,11 @@
+branch:
+  # 在所有分支详情页面显示的按钮
+  - buttons:
+      - name: 立即同步
+        description: 手动触发Github同步到CNB
+        event: web_trigger
+        # 权限控制，只有仓库负责人和管理员可以触发
+        permissions:
+          roles:
+            - owner
+            - master
