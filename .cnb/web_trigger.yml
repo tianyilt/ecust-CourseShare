@@ -9,3 +9,11 @@ branch:
           roles:
             - owner
             - master
+      - name: 同步到webdav
+        description: 手动触发同步到webdav
+        event: web_trigger_1
+        # 权限控制，只有仓库负责人和管理员可以触发
+        permissions:
+          roles:
+            - owner
+            - master

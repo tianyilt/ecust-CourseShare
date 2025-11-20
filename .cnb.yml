@@ -1,10 +1,12 @@
-name: Sync from Github
+name: Sync
 master:
   # 定时任务配置
   "crontab: 0 2 */7 * *":  # 每7天凌晨2点执行
     - name: sync
       runner:
-        cpus: 2
+        cpus: 1
+      imports:
+        - https://cnb.cool/bestzyq/key/-/blob/main/webdav.yml
       stages:
         - name: setup-git
           script: |
@@ -14,12 +16,40 @@ master:
             git reset --hard upstream/master
             git push origin master --force
             echo "✅ 已同步 GitHub 的 master 分支到 cnb.cool 仓库"
+        - name: Install Rclone
+          script: |
+            apt update
+            apt install unzip dnsutils -y
+            nslookup $WEBDAV_CNAME | grep 'Address:' | tail -n1 | awk -v host="$WEBDAV_HOST" '{print $2 " " host}' >> /etc/hosts
+            curl https://rclone.org/install.sh | bash
+        - name: Rclone Sync to WebDAV
+          timeout: 12h
+          script: |
+            # 配置 Rclone WebDAV
+            rclone config create mycloud webdav url=$WEBDAV_URL vendor=other user=$WEBDAV_USER pass=$WEBDAV_PASSWORD
+            
+            # 开始同步
+            rclone sync . mycloud:$WEBDAV_PATH \
+              --exclude ".git/**" \
+              --exclude ".github/**" \
+              --transfers 8 \
+              --retries 3 \
+              --retries-sleep 5s \
+              --size-only \
+              --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+            echo "✅ 已同步到webdav"
+
+            rclone check . mycloud:$WEBDAV_PATH \
+              --exclude ".git/**" \
+              --exclude ".github/**" \
+              --size-only
+            echo "✅ 已check"
   
   # Web触发器配置
   web_trigger:
-    - name: manual-sync
+    - name: manual-sync-github
       runner:
-        cpus: 2
+        cpus: 1
       stages:
         - name: setup-git
           script: |
@@ -29,3 +59,38 @@ master:
             git reset --hard upstream/master
             git push origin master --force
             echo "✅ 已同步 GitHub 的 master 分支到 cnb.cool 仓库"
+  web_trigger_1:
+    - name: manual-sync-webdav
+      runner:
+        cpus: 1
+      imports:
+        - https://cnb.cool/bestzyq/key/-/blob/main/webdav.yml
+      stages:
+        - name: Install Rclone
+          script: |
+            apt update
+            apt install unzip dnsutils -y
+            nslookup $WEBDAV_CNAME | grep 'Address:' | tail -n1 | awk -v host="$WEBDAV_HOST" '{print $2 " " host}' >> /etc/hosts
+            curl https://rclone.org/install.sh | bash
+        - name: Rclone Sync to WebDAV
+          timeout: 12h
+          script: |
+            # 配置 Rclone WebDAV
+            rclone config create mycloud webdav url=$WEBDAV_URL vendor=other user=$WEBDAV_USER pass=$WEBDAV_PASSWORD
+            
+            # 开始同步
+            rclone sync . mycloud:$WEBDAV_PATH \
+              --exclude ".git/**" \
+              --exclude ".github/**" \
+              --transfers 8 \
+              --retries 3 \
+              --retries-sleep 5s \
+              --size-only \
+              --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+            echo "✅ 已同步到webdav"
+
+            rclone check . mycloud:$WEBDAV_PATH \
+              --exclude ".git/**" \
+              --exclude ".github/**" \
+              --size-only
+            echo "✅ 已check"
