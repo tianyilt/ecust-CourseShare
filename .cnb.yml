@@ -6,7 +6,7 @@ master:
       runner:
         cpus: 1
       imports:
-        - https://cnb.cool/bestzyq/key/-/blob/main/webdav.yml
+        - https://cnb.cool/ecustcic/key/-/blob/main/webdav.yml
       stages:
         - name: setup-git
           script: |
@@ -21,7 +21,7 @@ master:
             apt update
             apt install unzip dnsutils -y
             nslookup $WEBDAV_CNAME | grep 'Address:' | tail -n1 | awk -v host="$WEBDAV_HOST" '{print $2 " " host}' >> /etc/hosts
-            curl https://rclone.org/install.sh | bash
+            curl https://cnb.cool/bestzyq/rclone/-/git/raw/main/install.sh | bash
         - name: Rclone Sync to WebDAV
           timeout: 12h
           script: |
@@ -64,14 +64,14 @@ master:
       runner:
         cpus: 1
       imports:
-        - https://cnb.cool/bestzyq/key/-/blob/main/webdav.yml
+        - https://cnb.cool/ecustcic/key/-/blob/main/webdav.yml
       stages:
         - name: Install Rclone
           script: |
             apt update
             apt install unzip dnsutils -y
             nslookup $WEBDAV_CNAME | grep 'Address:' | tail -n1 | awk -v host="$WEBDAV_HOST" '{print $2 " " host}' >> /etc/hosts
-            curl https://rclone.org/install.sh | bash
+            curl https://cnb.cool/bestzyq/rclone/-/git/raw/main/install.sh | bash
         - name: Rclone Sync to WebDAV
           timeout: 12h
           script: |
