@@ -66,10 +66,15 @@
 - 若要下载单文件，点击文件链接，再点击 Download 即可
 - 若要下载单个文件夹，复制该文件夹的网址，粘贴入 [DownGit](https://downgit.github.io/#/home) 中，选择 Download 即可
 - 安装 [GitZip 插件](https://microsoftedge.microsoft.com/addons/detail/gitzip-for-github/nlgkiabjnbdndgblhcaobimbpifcdkjj)选择多个文件下载
+- 项目网站：
+  - Github Pages：[https://ecust-courseshare.github.io/](https://ecust-courseshare.github.io/)
+  - Edgeone镜像（回源Github Pages | 支持ipv6）：[https://ecust-courseshare.bestzyq.cn/](https://ecust-courseshare.bestzyq.cn/)
+  - Edgeone Pages：[https://ecust-courseshare.ecustvr.top/](https://ecust-courseshare.ecustvr.top/)
 - Alist 镜像：
   - [公网](https://alist.xn--rhqr3ykwbm05aegjqxb.com/)（[wu2305](https://github.com/wu2305) 提供，更新于 2023.09.19）
   - [公网](http://alist.ecustvr.top/)（由 VR 俱乐部提供）
   - [校内](http://s.ecustvr.top/)（由 VR 俱乐部提供）
+- 校内 Gitea 镜像: [https://git.ecustvr.top/ecustvr/ecust-CourseShare](https://git.ecustvr.top/ecustvr/ecust-CourseShare)
 - 腾讯云 CNB 镜像：[https://cnb.cool/ecustcic/ecust-CourseShare](https://cnb.cool/ecustcic/ecust-CourseShare)
 - Gitcode 镜像（由于平台审核机制，需要[邀请](https://gitcode.com/invite/link/c8dc013aafe6494a9cfd)查看）：[https://gitcode.com/ecust/ecust-CourseShare](https://gitcode.com/ecust/ecust-CourseShare)
 - Git 命令行克隆到本地：`git clone https://github.com/tianyilt/ecust-CourseShare.git --depth=1`
@@ -80,6 +85,8 @@
 Fork 这个项目，在您的仓库里的对应位置上传文件，提交后创建 Pull Request 等待合并
 
 ![PR](readme.assets/pr.png)
+
+VSCode插件 *[GitHub Repositories](https://marketplace.visualstudio.com/items?itemName=GitHub.remotehub)* 可用于快速修改仓库
 
 ### 我想长期合作
 
