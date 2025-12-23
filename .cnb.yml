@@ -46,6 +46,12 @@ master:
 
             curl https://cnb.cool/bestzyq/rclone/-/git/raw/main/install.sh | bash
 
+            echo "🧹 清理空文件和空目录..."
+            find . -type f -empty -not -path "./.git/*" -delete
+            while [ -n "$(find . -type d -empty -not -path "./.git" -not -path "./.git/*" -print -quit)" ]; do
+              find . -type d -empty -not -path "./.git" -not -path "./.git/*" -delete
+            done
+
         - name: Rclone Sync to WebDAV
           timeout: 12h
           script: |
@@ -107,6 +113,12 @@ master:
             # ---------------
 
             curl https://cnb.cool/bestzyq/rclone/-/git/raw/main/install.sh | bash
+
+            echo "🧹 清理空文件和空目录..."
+            find . -type f -empty -not -path "./.git/*" -delete
+            while [ -n "$(find . -type d -empty -not -path "./.git" -not -path "./.git/*" -print -quit)" ]; do
+              find . -type d -empty -not -path "./.git" -not -path "./.git/*" -delete
+            done
         - name: Rclone Sync to WebDAV
           timeout: 12h
           script: |
@@ -127,5 +139,4 @@ master:
               --exclude ".github/**" \
               --size-only
             echo "✅ 已check"
-
 
