@@ -19,6 +19,7 @@ master:
         
         - name: Check & Install Rclone
           script: |
+            sudo sed -i 's/deb.debian.org/mirrors.tencentyun.com/g' /etc/apt/sources.list.d/debian.sources
             apt update
             # 确保安装 curl
             apt install unzip dnsutils curl -y
@@ -92,6 +93,7 @@ master:
       stages:
         - name: Check & Install Rclone
           script: |
+            sudo sed -i 's/deb.debian.org/mirrors.tencentyun.com/g' /etc/apt/sources.list.d/debian.sources
             apt update
             apt install unzip dnsutils curl -y
             nslookup $WEBDAV_CNAME | grep 'Address:' | tail -n1 | awk -v host="$WEBDAV_HOST" '{print $2 " " host}' >> /etc/hosts
@@ -125,3 +127,4 @@ master:
               --exclude ".github/**" \
               --size-only
             echo "✅ 已check"
+
