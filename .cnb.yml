@@ -15,10 +15,12 @@ $:
 
 master:
   push:
-    - name: sync to github
+    - name: sync
       runner:
         cpus: 1
-      imports: https://cnb.cool/ecustcic/key/-/blob/main/env.yml
+      imports: 
+        - https://cnb.cool/ecustcic/key/-/blob/main/env.yml
+        - https://cnb.cool/ecustcic/key/-/blob/main/webdav.yml
       stages:
         - name: Check Conflict & Push
           script: |
