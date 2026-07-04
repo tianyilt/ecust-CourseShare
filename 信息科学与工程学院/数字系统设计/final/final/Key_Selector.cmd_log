@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/test/final/Key_Selector.v -lang verilog -prj final -o Key_Selector.spl -module Key_Selector -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Key_Selector.spl D:/test/final/Key_Selector.sym 

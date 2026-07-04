@@ -1,0 +1,541 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Top.v" in library work
+Compiling verilog include file "./Key_Selector.v"
+Compiling verilog include file "./Key_Input.v"
+Module <Key_Selector> compiled
+Compiling verilog include file "./Key_Validator.v"
+Module <Key_Input> compiled
+Module <Key_Validator> compiled
+Module <Top> compiled
+No errors in compilation
+Analysis of file <"Top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Top> in library <work>.
+
+Analyzing hierarchy for module <Key_Selector> in library <work>.
+
+Analyzing hierarchy for module <Key_Validator> in library <work> with parameters.
+	Locked = "00000000000000000000000000000000"
+	Unlocked = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <Key_Input> in library <work> with parameters.
+	Selet_1 = "00"
+	Selet_2 = "01"
+	Selet_3 = "10"
+	Selet_4 = "11"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Top>.
+Module <Top> is correct for synthesis.
+ 
+Analyzing module <Key_Selector> in library <work>.
+Module <Key_Selector> is correct for synthesis.
+ 
+Analyzing module <Key_Validator> in library <work>.
+	Locked = 32'sb00000000000000000000000000000000
+	Unlocked = 32'sb00000000000000000000000000000001
+Module <Key_Validator> is correct for synthesis.
+ 
+Analyzing module <Key_Input> in library <work>.
+	Selet_1 = 2'b00
+	Selet_2 = 2'b01
+	Selet_3 = 2'b10
+	Selet_4 = 2'b11
+WARNING:Xst:905 - "./Key_Input.v" line 30: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Key_Select>, <Key_Input>
+WARNING:Xst:905 - "./Key_Input.v" line 41: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Key_1>, <Key_2>, <Key_3>, <Key_4>
+Module <Key_Input> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Key_Selector>.
+    Related source file is "./Key_Selector.v".
+WARNING:Xst:2475 - Clock and clock enable of counter <Key_Select> are driven by the same logic. The clock enable is removed.
+    Found 2-bit up counter for signal <Key_Select>.
+    Found 2-bit subtractor for signal <Key_Select$sub0000> created at line 22.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Key_Selector> synthesized.
+
+
+Synthesizing Unit <Key_Validator>.
+    Related source file is "./Key_Validator.v".
+WARNING:Xst:647 - Input <Key_Select> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <Lock_State>.
+    Found 4-bit comparator equal for signal <Lock_State$cmp_eq0000> created at line 48.
+    Found 4-bit comparator equal for signal <Lock_State$cmp_eq0001> created at line 48.
+    Found 4-bit comparator equal for signal <Lock_State$cmp_eq0002> created at line 48.
+    Found 4-bit comparator equal for signal <Lock_State$cmp_eq0003> created at line 48.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <Key_Validator> synthesized.
+
+
+Synthesizing Unit <Key_Input>.
+    Related source file is "./Key_Input.v".
+WARNING:Xst:737 - Found 4-bit latch for signal <Key_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 4-bit latch for signal <Key_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 4-bit latch for signal <Key_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 4-bit latch for signal <Key_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit 4-to-1 multiplexer for signal <Key_Current>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <Key_Input> synthesized.
+
+
+Synthesizing Unit <Top>.
+    Related source file is "Top.v".
+WARNING:Xst:653 - Signal <Key_4_real> is used but never assigned. This sourceless signal will be automatically connected to value 1000.
+WARNING:Xst:653 - Signal <Key_3_real> is used but never assigned. This sourceless signal will be automatically connected to value 0111.
+WARNING:Xst:653 - Signal <Key_2_real> is used but never assigned. This sourceless signal will be automatically connected to value 0101.
+WARNING:Xst:653 - Signal <Key_1_real> is used but never assigned. This sourceless signal will be automatically connected to value 0001.
+Unit <Top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 2-bit subtractor                                      : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Latches                                              : 4
+ 4-bit latch                                           : 4
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 4
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 2-bit subtractor                                      : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Latches                                              : 4
+ 4-bit latch                                           : 4
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 4
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Top> ...
+
+Optimizing unit <Key_Input> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Top.ngr
+Top Level Output File Name         : Top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 28
+#      INV                         : 1
+#      LUT2                        : 6
+#      LUT3                        : 11
+#      LUT4                        : 5
+#      MUXF5                       : 4
+#      VCC                         : 1
+# FlipFlops/Latches                : 19
+#      FDCP                        : 2
+#      FDR                         : 1
+#      LDE                         : 16
+# Clock Buffers                    : 3
+#      BUFG                        : 1
+#      BUFGP                       : 2
+# IO Buffers                       : 14
+#      IBUF                        : 6
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       14  out of   4656     0%  
+ Number of Slice Flip Flops:             18  out of   9312     0%  
+ Number of 4 input LUTs:                 23  out of   9312     0%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    232     6%  
+    IOB Flip Flops:                       1
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Key_Check                          | BUFGP                  | 1     |
+Key_Switch_right                   | BUFGP                  | 2     |
+Key_RW                             | IBUF+BUFG              | 16    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------+------------------------+-------+
+Control Signal                                       | Buffer(FF name)        | Load  |
+-----------------------------------------------------+------------------------+-------+
+m1/Key_Select_0__and0000(m1/Key_Select_0__and00001:O)| NONE(m1/Key_Select_0)  | 1     |
+m1/Key_Select_0__and0001(m1/Key_Select_0__and00011:O)| NONE(m1/Key_Select_0)  | 1     |
+m1/Key_Select_1__and0000(m1/Key_Select_1__and00001:O)| NONE(m1/Key_Select_1)  | 1     |
+m1/Key_Select_1__and0001(m1/Key_Select_1__and00011:O)| NONE(m1/Key_Select_1)  | 1     |
+-----------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 3.108ns (Maximum Frequency: 321.750MHz)
+   Minimum input arrival time before clock: 3.038ns
+   Maximum output required time after clock: 6.568ns
+   Maximum combinational path delay: 4.937ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Key_Switch_right'
+  Clock period: 3.108ns (frequency: 321.750MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               3.108ns (Levels of Logic = 1)
+  Source:            m1/Key_Select_0 (FF)
+  Destination:       m1/Key_Select_0 (FF)
+  Source Clock:      Key_Switch_right rising
+  Destination Clock: Key_Switch_right rising
+
+  Data Path: m1/Key_Select_0 to m1/Key_Select_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q            19   0.591   1.085  m1/Key_Select_0 (m1/Key_Select_0)
+     INV:I->O              1   0.704   0.420  m1/Key_Select_Q_mux0000<0>1_INV_0 (m1/Key_Select_Q_mux0000<0>)
+     FDCP:D                    0.308          m1/Key_Select_0
+    ----------------------------------------
+    Total                      3.108ns (1.603ns logic, 1.505ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Key_Switch_right'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.038ns (Levels of Logic = 2)
+  Source:            Key_Switch_left (PAD)
+  Destination:       m1/Key_Select_1 (FF)
+  Destination Clock: Key_Switch_right rising
+
+  Data Path: Key_Switch_left to m1/Key_Select_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.218   0.808  Key_Switch_left_IBUF (Key_Switch_left_IBUF)
+     LUT3:I0->O            1   0.704   0.000  m1/Key_Select_Q_mux0000<1>1 (m1/Key_Select_Q_mux0000<1>)
+     FDCP:D                    0.308          m1/Key_Select_1
+    ----------------------------------------
+    Total                      3.038ns (2.230ns logic, 0.808ns route)
+                                       (73.4% logic, 26.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Key_RW'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.113ns (Levels of Logic = 1)
+  Source:            Key_Input<3> (PAD)
+  Destination:       m3/Key_1_3 (LATCH)
+  Destination Clock: Key_RW falling
+
+  Data Path: Key_Input<3> to m3/Key_1_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.218   0.587  Key_Input_3_IBUF (Key_Input_3_IBUF)
+     LDE:D                     0.308          m3/Key_4_3
+    ----------------------------------------
+    Total                      2.113ns (1.526ns logic, 0.587ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Key_Check'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            m2/Lock_State (FF)
+  Destination:       Lock_State (PAD)
+  Source Clock:      Key_Check rising
+
+  Data Path: m2/Lock_State to Lock_State
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.591   0.420  m2/Lock_State (m2/Lock_State)
+     OBUF:I->O                 3.272          Lock_State_OBUF (Lock_State)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Key_Switch_right'
+  Total number of paths / destination ports: 14 / 6
+-------------------------------------------------------------------------
+Offset:              6.568ns (Levels of Logic = 3)
+  Source:            m1/Key_Select_0 (FF)
+  Destination:       Key_Current<3> (PAD)
+  Source Clock:      Key_Switch_right rising
+
+  Data Path: m1/Key_Select_0 to Key_Current<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q            19   0.591   1.260  m1/Key_Select_0 (m1/Key_Select_0)
+     LUT3:I0->O            1   0.704   0.000  m3/Mmux_Key_Current_3 (m3/Mmux_Key_Current_3)
+     MUXF5:I1->O           1   0.321   0.420  m3/Mmux_Key_Current_2_f5 (Key_Current_0_OBUF)
+     OBUF:I->O                 3.272          Key_Current_0_OBUF (Key_Current<0>)
+    ----------------------------------------
+    Total                      6.568ns (4.888ns logic, 1.680ns route)
+                                       (74.4% logic, 25.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Key_RW'
+  Total number of paths / destination ports: 16 / 4
+-------------------------------------------------------------------------
+Offset:              5.919ns (Levels of Logic = 3)
+  Source:            m3/Key_1_3 (LATCH)
+  Destination:       Key_Current<3> (PAD)
+  Source Clock:      Key_RW falling
+
+  Data Path: m3/Key_1_3 to Key_Current<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              2   0.676   0.526  m3/Key_1_3 (m3/Key_1_3)
+     LUT3:I1->O            1   0.704   0.000  m3/Mmux_Key_Current_43 (m3/Mmux_Key_Current_43)
+     MUXF5:I0->O           1   0.321   0.420  m3/Mmux_Key_Current_2_f5_2 (Key_Current_3_OBUF)
+     OBUF:I->O                 3.272          Key_Current_3_OBUF (Key_Current<3>)
+    ----------------------------------------
+    Total                      5.919ns (4.973ns logic, 0.946ns route)
+                                       (84.0% logic, 16.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               4.937ns (Levels of Logic = 2)
+  Source:            Key_RW (PAD)
+  Destination:       Key_RW_indicator (PAD)
+
+  Data Path: Key_RW to Key_RW_indicator
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.447  Key_RW_IBUF (Key_RW_IBUF1)
+     OBUF:I->O                 3.272          Key_RW_indicator_OBUF (Key_RW_indicator)
+    ----------------------------------------
+    Total                      4.937ns (4.490ns logic, 0.447ns route)
+                                       (90.9% logic, 9.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.30 secs
+ 
+--> 
+
+Total memory usage is 4506616 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

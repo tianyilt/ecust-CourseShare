@@ -1,0 +1,68 @@
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top.ucf -p xc3s500e-fg320-4 Top.ngc Top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -t 1 Top_map.ncd Top.ncd Top.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top.ucf -p xc3s500e-fg320-4 Top.ngc Top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -t 1 Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Top.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top.ucf -p xc3s500e-fg320-4 Top.ngc Top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -t 1 Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Top.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top.ucf -p xc3s500e-fg320-4 Top.ngc Top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -t 1 Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Top.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top.ucf -p xc3s500e-fg320-4 Top.ngc Top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -t 1 Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Top.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top.ucf -p xc3s500e-fg320-4 Top.ngc Top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -t 1 Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Top.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top.ucf -p xc3s500e-fg320-4 Top.ngc Top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -t 1 Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Top.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+xst -intstyle ise -ifn "D:/test/final/Top.xst" -ofn "D:/test/final/Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top.ucf -p xc3s500e-fg320-4 Top.ngc Top.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Top_map.ncd Top.ngd Top.pcf 
+par -w -intstyle ise -ol high -t 1 Top_map.ncd Top.ncd Top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Top.ucf 
+bitgen -intstyle ise -f Top.ut Top.ncd 
+vhdtdtfi -lib work D:/test/final/Top.v -lang verilog -prj final -o Top.spl -module Top -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Top.spl D:/test/final/Top.sym 
+vhdtdtfi -lang verilog -prj final -o D:/test/final/Top.tfi -lib work D:/test/final//Top.v -module Top -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

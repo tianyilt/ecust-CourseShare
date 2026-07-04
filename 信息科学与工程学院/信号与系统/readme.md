@@ -87,3 +87,14 @@
 6.5 2 4
 6.17
 ```
+
+## 2024学年补充
+
+网课推荐:
+
+- 深度理解: [【2022浙江大学信号与系统（含配套课件和代码） - 胡浩基老师】] (<https://www.bilibili.com/video/BV1g94y1Q76G/?share_source=copy_web&vd_source=146c73d267112934fbc38c065c808868>)
+- 考前复习: [【信号与系统10h期末速成课【清华信号哥】】] (<https://www.bilibili.com/video/BV1GM411C7cg/?share_source=copy_web&vd_source=146c73d267112934fbc38c065c808868>)
+
+[浙江大学信电学院2022信号与系统课程资料](https://github.com/VipaiLab/Signals-and-Systems-course)这个git里面有代码/PPT/小测/作业/答案。
+
+from [zhyDaDa](https://origin.zhydada.com/)

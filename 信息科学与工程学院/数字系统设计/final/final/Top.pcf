@@ -1,0 +1,35 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Jun 05 11:38:03 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Key_Switch_left" LOCATE = SITE "D18" LEVEL 1;
+PIN Key_Switch_left_pin<0> = BEL "Key_Switch_left" PINNAME PAD;
+PIN "Key_Switch_left_pin<0>" CLOCK_DEDICATED_ROUTE;
+COMP "Key_Input<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "Key_Current<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "Key_Input<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "Key_RW_indicator" LOCATE = SITE "E9" LEVEL 1;
+COMP "Key_Current<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "Key_Input<2>" LOCATE = SITE "H18" LEVEL 1;
+COMP "Key_Current<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "Key_Input<3>" LOCATE = SITE "N17" LEVEL 1;
+COMP "Key_Current<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "Lock_State" LOCATE = SITE "F9" LEVEL 1;
+COMP "Key_Switch_right" LOCATE = SITE "H13" LEVEL 1;
+PIN Key_Switch_right_pin<0> = BEL "Key_Switch_right" PINNAME PAD;
+PIN "Key_Switch_right_pin<0>" CLOCK_DEDICATED_ROUTE;
+COMP "Key_Select<0>" LOCATE = SITE "C11" LEVEL 1;
+COMP "Key_Select<1>" LOCATE = SITE "D11" LEVEL 1;
+COMP "Key_RW" LOCATE = SITE "V4" LEVEL 1;
+PIN Key_RW_pin<0> = BEL "Key_RW" PINNAME PAD;
+PIN "Key_RW_pin<0>" CLOCK_DEDICATED_ROUTE;
+COMP "Key_Check" LOCATE = SITE "K17" LEVEL 1;
+PIN Key_Check_pin<0> = BEL "Key_Check" PINNAME PAD;
+PIN "Key_Check_pin<0>" CLOCK_DEDICATED_ROUTE;
+NET "Key_Check_BUFGP/IBUFG" BEL "Key_Check_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
+NET "Key_Switch_right_BUFGP/IBUFG" BEL "Key_Switch_right_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
+SCHEMATIC END;
+

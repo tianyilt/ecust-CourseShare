@@ -1,0 +1,9 @@
+[Inputs]
+Key_Switch_left
+Key_Switch_right
+[Outputs]
+=Key_Select[1:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Key_Selector
+

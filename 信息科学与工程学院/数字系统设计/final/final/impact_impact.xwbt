@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\test\final\impact.xsl
+OUTFILE=D:\test\final\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=D:\test\final
+LICENSE=iMPACT
+USER_INFO=iMPACT

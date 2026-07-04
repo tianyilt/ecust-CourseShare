@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="Top">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2024-6-5T3:46:43</timestamp>
+    <attr value="Top" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-288" name="Key_Switch_left" />
+    <pin polarity="Input" x="0" y="-224" name="Key_Switch_right" />
+    <pin polarity="Input" x="0" y="-160" name="Key_Check" />
+    <pin polarity="Input" x="0" y="-96" name="Key_RW" />
+    <pin polarity="Input" x="0" y="-32" name="Key_Input(3:0)" />
+    <pin polarity="Output" x="512" y="-288" name="Key_RW_indicator" />
+    <pin polarity="Output" x="512" y="-208" name="Lock_State" />
+    <pin polarity="Output" x="512" y="-128" name="Key_Select(1:0)" />
+    <pin polarity="Output" x="512" y="-48" name="Key_Current(3:0)" />
+    <graph>
+        <rect width="384" x="64" y="-320" height="320" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="256" y="-328" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin Key_Switch_left" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin Key_Switch_right" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin Key_Check" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin Key_RW" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin Key_Input(3:0)" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-288" type="pin Key_RW_indicator" />
+        <line x2="512" y1="-288" y2="-288" x1="448" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-208" type="pin Lock_State" />
+        <line x2="512" y1="-208" y2="-208" x1="448" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-128" type="pin Key_Select(1:0)" />
+        <rect width="64" x="448" y="-140" height="24" />
+        <line x2="512" y1="-128" y2="-128" x1="448" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-48" type="pin Key_Current(3:0)" />
+        <rect width="64" x="448" y="-60" height="24" />
+        <line x2="512" y1="-48" y2="-48" x1="448" />
+    </graph>
+</symbol>

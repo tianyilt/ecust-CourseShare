@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\test\final\Top.ncd
+OUTFILE=D:\test\final\Top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=D:\test\final
+LICENSE=ISE
+USER_INFO=135256_15690819_173552794_661

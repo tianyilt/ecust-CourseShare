@@ -1,0 +1,22 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/test/final/t0_isim_beh.exe -prj D:/test/final/t0_beh.prj work.t0 work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 6
+Turning on mult-threading, number of parallel sub-compilation jobs: 12 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/test/final/Top.v" into library work
+Analyzing Verilog file "D:/test/final/t0.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module Key_Selector
+Compiling module Key_Validator
+Compiling module Key_Input
+Compiling module Top
+Compiling module t0
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 Verilog Units
+Built simulation executable D:/test/final/t0_isim_beh.exe
+Fuse Memory Usage: 28648 KB
+Fuse CPU Usage: 327 ms

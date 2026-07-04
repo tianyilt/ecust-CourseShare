@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+Top instance_name (
+    .Key_Input(Key_Input), 
+    .Key_Switch_left(Key_Switch_left), 
+    .Key_Switch_right(Key_Switch_right), 
+    .Key_Check(Key_Check), 
+    .Key_RW(Key_RW), 
+    .Key_RW_indicator(Key_RW_indicator), 
+    .Lock_State(Lock_State), 
+    .Key_Select(Key_Select), 
+    .Key_Current(Key_Current)
+    );
+
+

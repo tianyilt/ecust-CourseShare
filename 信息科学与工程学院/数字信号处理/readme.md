@@ -42,3 +42,15 @@ http://cs.e.ecust.edu.cn/download/e7503fb9defe1c39f5862b5d730ff63a
 ```
 
 ## [笔记](https://absx.pages.dev/farraginous/learning/dsp2.html)
+
+## 2024学年补充
+
+最爱的万老师(星星眼)!  
+一个能上B站的老师, 什么水准无需多言  
+第一节课给每个人准备了讲义, 还有自己写的书里的配图, 无敌  
+~~可惜最后考试一堆计算失误~~  
+这个课认真听讲，绝对能学的会。除了课上内容，还得多做做题，否则都懂了，题做不来。
+
+Matlab文件夹是实操代码, 以及我最后的报告, 仅供参考
+
+from [zhyDaDa](https://origin.zhydada.com/)

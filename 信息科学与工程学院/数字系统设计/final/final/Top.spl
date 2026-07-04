@@ -1,0 +1,15 @@
+[Inputs]
+Key_Switch_left
+Key_Switch_right
+Key_Check
+Key_RW
+=Key_Input[3:0]=
+[Outputs]
+Key_RW_indicator
+Lock_State
+=Key_Select[1:0]=
+=Key_Current[3:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Top
+

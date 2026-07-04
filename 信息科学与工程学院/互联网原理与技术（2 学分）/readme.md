@@ -45,3 +45,10 @@ https://cs.e.ecust.edu.cn/download/73362afed8b42418814fa8875a467b26
 https://cs.e.ecust.edu.cn/download/fcd0f2c5e737cd5597f1614dc821f070
 https://cs.e.ecust.edu.cn/download/33f936b2d02adf55d8e8d85f426e4a2c
 ```
+
+## 2024补充  
+
+到现在还记得! 考了一个名词解释: `RTS`, 考场上看到这个满脑子都是:`铁锈战争`...  
+这个课记忆为主，有很多的概念，其实就是背出来了你就能拿分，所以还算是比较正常的一门课。我详细的整理了一份文稿(超级详细)，供大家参考。
+
+from [zhyDaDa](https://origin.zhydada.com/)

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="Key_Selector">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2024-6-5T3:50:35</timestamp>
+    <attr value="Key_Selector" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-96" name="Key_Switch_left" />
+    <pin polarity="Input" x="0" y="-32" name="Key_Switch_right" />
+    <pin polarity="Output" x="496" y="-96" name="Key_Select(1:0)" />
+    <graph>
+        <rect width="368" x="64" y="-128" height="128" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="248" y="-136" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin Key_Switch_left" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin Key_Switch_right" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-96" type="pin Key_Select(1:0)" />
+        <rect width="64" x="432" y="-108" height="24" />
+        <line x2="496" y1="-96" y2="-96" x1="432" />
+    </graph>
+</symbol>

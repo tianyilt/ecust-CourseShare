@@ -1,0 +1,135 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Top.ucf
+
+Design file:              Top.ncd
+Physical constraint file: Top.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock Key_RW
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+Key_Input<0>|    0.914(F)|    1.406(F)|Key_RW_IBUF       |   0.000|
+Key_Input<1>|    0.971(F)|    1.312(F)|Key_RW_IBUF       |   0.000|
+Key_Input<2>|   -0.075(F)|    2.204(F)|Key_RW_IBUF       |   0.000|
+Key_Input<3>|    1.043(F)|    1.098(F)|Key_RW_IBUF       |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock Key_Switch_right
+---------------+------------+------------+----------------------+--------+
+               |Max Setup to|Max Hold to |                      | Clock  |
+Source         | clk (edge) | clk (edge) |Internal Clock(s)     | Phase  |
+---------------+------------+------------+----------------------+--------+
+Key_Switch_left|   -0.156(R)|    2.093(R)|Key_Switch_right_BUFGP|   0.000|
+---------------+------------+------------+----------------------+--------+
+
+Clock Key_Check to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+Lock_State  |    9.448(R)|Key_Check_BUFGP   |   0.000|
+------------+------------+------------------+--------+
+
+Clock Key_RW to Pad
+--------------+------------+------------------+--------+
+              | clk (edge) |                  | Clock  |
+Destination   |   to PAD   |Internal Clock(s) | Phase  |
+--------------+------------+------------------+--------+
+Key_Current<0>|   11.822(F)|Key_RW_IBUF       |   0.000|
+Key_Current<1>|   12.005(F)|Key_RW_IBUF       |   0.000|
+Key_Current<2>|   12.621(F)|Key_RW_IBUF       |   0.000|
+Key_Current<3>|   12.429(F)|Key_RW_IBUF       |   0.000|
+--------------+------------+------------------+--------+
+
+Clock Key_Switch_right to Pad
+--------------+------------+----------------------+--------+
+              | clk (edge) |                      | Clock  |
+Destination   |   to PAD   |Internal Clock(s)     | Phase  |
+--------------+------------+----------------------+--------+
+Key_Current<0>|   13.777(R)|Key_Switch_right_BUFGP|   0.000|
+Key_Current<1>|   13.898(R)|Key_Switch_right_BUFGP|   0.000|
+Key_Current<2>|   14.132(R)|Key_Switch_right_BUFGP|   0.000|
+Key_Current<3>|   13.988(R)|Key_Switch_right_BUFGP|   0.000|
+Key_Select<0> |   11.318(R)|Key_Switch_right_BUFGP|   0.000|
+Key_Select<1> |   11.281(R)|Key_Switch_right_BUFGP|   0.000|
+--------------+------------+----------------------+--------+
+
+Clock to Setup on destination clock Key_Check
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Key_RW         |         |    7.016|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Key_RW
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Key_Switch_right|         |         |    6.047|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Key_Switch_right
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Key_Switch_right|    2.017|         |         |         |
+----------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+----------------+---------+
+Source Pad     |Destination Pad |  Delay  |
+---------------+----------------+---------+
+Key_RW         |Key_RW_indicator|    9.076|
+---------------+----------------+---------+
+
+
+Analysis completed Wed Jun 05 11:38:14 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4500 MB
+
+
+

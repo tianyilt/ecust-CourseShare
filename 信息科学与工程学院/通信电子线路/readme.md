@@ -82,3 +82,13 @@ https://cs.e.ecust.edu.cn/download/9ad4dec0d552c42d5cdf862e703cb612
 https://cs.e.ecust.edu.cn/download/fcf9c86e997b91758705b5ee48ce34d8
 https://cs.e.ecust.edu.cn/download/3d07c9e677199fc3f4ca2f0804ed09da
 ```
+
+## 2024学年补充
+
+小峰声音太小了...然后不知道在讲什么, 批准翘课, 不过我记得中间好像搞过几次签到(？)  
+题巨难, 建议直接背作业题, 放在大三上这门课简直就是来捣乱的(恼)。  
+然后需要做实验，这个实验呢它有一个手册的, 甭管他说什么，你就闷头按照这个手册做(早做完早吃饭). 如果有东西一直晃个不停，那说明就是被隔壁干扰了 ///-_-
+
+上传了前辈的作业题复习课以及我的实验报告, 仅供参考
+
+from [zhyDaDa](https://origin.zhydada.com/)
