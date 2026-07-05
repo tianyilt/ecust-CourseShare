@@ -118,6 +118,21 @@ master:
             # 配置 Rclone WebDAV
             rclone config create mycloud webdav url=$WEBDAV_URL vendor=other user=$WEBDAV_USER pass=$WEBDAV_PASSWORD
             
+            # -------------------------------------------------------
+            # 清理远端大小写冲突（alist 对大小写不敏感，可能导致覆盖失败）
+            # -------------------------------------------------------
+            echo "🧹 扫描并清理远端 Readme 大小写冲突..."
+            find . -type f -iname "readme.md" -not -path "./.git/*" -printf '%P\n' | while IFS= read -r f; do
+              dir=$(dirname "$f")
+              base=$(basename "$f")
+              for variant in readme.md Readme.md README.md README.MD; do
+                if [ "${variant,,}" = "${base,,}" ] && [ "$variant" != "$base" ]; then
+                  rclone delete "mycloud:$WEBDAV_PATH/$dir/$variant" 2>/dev/null || true
+                fi
+              done
+            done
+            echo "✅ 远端大小写冲突清理完成"
+
             # 开始同步
             rclone sync . mycloud:$WEBDAV_PATH \
               --exclude ".git/**" \
@@ -199,6 +214,22 @@ master:
           script: |
             # 配置 Rclone WebDAV
             rclone config create mycloud webdav url=$WEBDAV_URL vendor=other user=$WEBDAV_USER pass=$WEBDAV_PASSWORD
+
+            # -------------------------------------------------------
+            # 清理远端大小写冲突（alist 对大小写不敏感，可能导致覆盖失败）
+            # -------------------------------------------------------
+            echo "🧹 扫描并清理远端 Readme 大小写冲突..."
+            find . -type f -iname "readme.md" -not -path "./.git/*" -printf '%P\n' | while IFS= read -r f; do
+              dir=$(dirname "$f")
+              base=$(basename "$f")
+              for variant in readme.md Readme.md README.md README.MD; do
+                if [ "${variant,,}" = "${base,,}" ] && [ "$variant" != "$base" ]; then
+                  rclone delete "mycloud:$WEBDAV_PATH/$dir/$variant" 2>/dev/null || true
+                fi
+              done
+            done
+            echo "✅ 远端大小写冲突清理完成"
+
             # 开始同步
             rclone sync . mycloud:$WEBDAV_PATH \
               --exclude ".git/**" \
