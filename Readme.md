@@ -83,9 +83,19 @@
 
 Fork 这个项目，在您的仓库里的对应位置上传文件，提交后创建 Pull Request 等待合并
 
+#### Github 上传
 ![PR](readme.assets/pr.png)
 
 VSCode插件 *[GitHub Repositories](https://marketplace.visualstudio.com/items?itemName=GitHub.remotehub)* 可用于快速修改仓库
+
+#### CNB 上传
+1. 点击fork到自己的仓库
+![Fork](readme.assets/fork.png)
+
+2. 在您的仓库里的对应位置上传文件（可点击云原生开发在网页中上传，但是考虑到仓库过大，可能加载比较缓慢（大约10-20min，运气好也可以秒开））
+
+3. 完成上传并提交后，点击“创建合并请求”
+![PR](readme.assets/image.png)
 
 ### 我想长期合作
 

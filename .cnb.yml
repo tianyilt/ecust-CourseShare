@@ -14,35 +14,35 @@ $:
         - docker
 
 master:
-  # push:
-  #   - name: sync
-  #     runner:
-  #       cpus: 1
-  #     imports: 
-  #       - https://cnb.cool/ecustcic/key/-/blob/main/env.yml
-  #     stages:
-  #       - name: Check Conflict & Push
-  #         script: |
-  #           git config --global user.name "$GITHUB_USERNAME"
-  #           git config --global user.email "$MAIL"
-  #           git remote add github https://$GITHUB_USERNAME:$GITHUB_ACCESS_TOKEN@github.com/tianyilt/ecust-CourseShare.git
+  push:
+    - name: sync
+      runner:
+        cpus: 1
+      imports: 
+        - https://cnb.cool/ecustcic/key/-/blob/main/env.yml
+      stages:
+        - name: Check Conflict & Push
+          script: |
+            git config --global user.name "$GITHUB_USERNAME"
+            git config --global user.email "$MAIL"
+            git remote add github https://$GITHUB_USERNAME:$GITHUB_ACCESS_TOKEN@github.com/tianyilt/ecust-CourseShare.git
             
-  #           echo "🔍 1. 获取 GitHub 最新状态..."
-  #           git fetch github master
+            echo "🔍 1. 获取 GitHub 最新状态..."
+            git fetch github master
             
-  #           if ! git pull --rebase github master; then
-  #             echo "❌ 冲突检测：GitHub 上有与本地冲突的修改！"
-  #             echo "⚠️ 请先手动在本地解决冲突，或者在 GitHub 上解决后再尝试。"
-  #             exit 1 # 退出脚本，防止错误推送
-  #           fi
+            if ! git pull --rebase github master; then
+              echo "❌ 冲突检测：GitHub 上有与本地冲突的修改！"
+              echo "⚠️ 请先手动在本地解决冲突，或者在 GitHub 上解决后再尝试。"
+              exit 1 # 退出脚本，防止错误推送
+            fi
             
-  #           echo "✅ 合并成功（或者无冲突），准备推送..."
+            echo "✅ 合并成功（或者无冲突），准备推送..."
 
-  #           # --- 推送 ---
-  #           git push origin master
-  #           echo "✅ 已推送到当前平台"
-  #           git push github master
-  #           echo "🚀 已成功同步到 GitHub"
+            # --- 推送 ---
+            git push origin master
+            echo "✅ 已推送到当前平台"
+            git push github master
+            echo "🚀 已成功同步到 GitHub"
 
   # 定时任务配置
   "crontab: 0 2 */7 * *":  # 每7天凌晨2点执行
